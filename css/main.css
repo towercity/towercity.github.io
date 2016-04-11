@@ -1,0 +1,93 @@
+/* Global styles */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #444;
+}
+
+/* Reset input box styling */
+input[type="text"] {
+  margin: 0;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* Individual styles */
+#side-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 42px;
+    left: 5px;
+    width: 207.125px;
+    max-height: 45vh;
+    overflow: scroll;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 2px 2px 5px #888;
+    border-radius: 2px;
+}
+
+#map-div {
+    position: absolute;;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Top searchbar */
+
+#search-container {
+    height: 30px;
+    background-color: white;
+    position: fixed;
+    top: 5px;
+    margin: 0 5px;
+    padding: 5px;
+    box-shadow: 2px 2px 5px #888;
+    border-radius: 2px;
+}
+
+#hamburger {
+    padding: 0 5px 0 2.5px;
+}
+
+#search-bar {
+    position: relative;
+    top: 0.5px;
+    font-size: 16px;
+}
+
+/* Locations list */
+
+.place-item {
+    padding: 5px 0;
+    border-bottom: 1px solid #888;
+}
+
+.place-item:first-child {
+    padding-top: 0;
+}
+
+.place-item:last-child {
+    border: none;
+    padding-bottom: 0;
+}
+
+.place-bullet {
+    padding: 0 3.5px;
+}
