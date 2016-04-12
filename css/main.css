@@ -24,43 +24,45 @@ input[type="text"]:focus {
   outline: none;
 }
 
-/* Individual styles */
-#side-menu {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    top: 42px;
-    left: 5px;
-    width: 220px;
-    max-height: 45vh;
-    overflow: scroll;
-    background-color: white;
-    padding: 5px;
-    box-shadow: 2px 2px 5px #888;
-    border-radius: 2px;
+/* Set cursor to pointer for all non-link buttons */
+#hamburger:hover,
+.place-item:hover {
+    cursor: pointer;
 }
 
+/* Individual styles */
+
 #map-div {
-    position: absolute;;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 515px) {
+    #map-div.with-popup {
+        height: 30vh;
+    }
+}
+
+@media (min-width: 516px) {
+    #map-div.with-popup {
+        width: 50vw;
+    }
 }
 
 /* Top searchbar */
 
 #search-container {
-    height: 30px;
     background-color: white;
     position: fixed;
-    top: 5px;
     width: 220px;
+    top: 5px;
     margin: 0 5px;
     padding: 5px;
     box-shadow: 2px 2px 5px #888;
-    border-radius: 2px;
 }
 
 #hamburger {
@@ -73,22 +75,70 @@ input[type="text"]:focus {
     font-size: 16px;
 }
 
+#side-menu {
+    display: none;
+    position: relative;
+    width: 100%
+    right: 5px;
+    top: 5px;
+    max-height: 45vh;
+    overflow: scroll;
+    background-color: white;
+}
+
+#popup {
+    position: absolute;
+    padding: 5px 20px;
+    overflow: scroll;
+}
+
+@media (max-width: 515px) {
+    #popup {
+        height: 70vh;
+        width: 100vw;
+        bottom: 0;
+        box-shadow: inset 0 1px 5px #888;
+    }
+}
+
+@media (min-width: 516px) {
+    #popup {
+        height: 100vh;
+        width: 50vw;
+        right: 0;
+        box-shadow: inset 1px 0 5px #888;
+    }
+}
+
+#popup-close {
+    position: fixed;;
+    right: 5px;
+    top: 5px;
+}
+
+/* Keep the close button within the div in mobile view */
+@media (max-width: 515px) {
+    #popup-close {
+        top: calc(30vh + 5px);
+    }
+}
+
+#popup-head {
+    text-align: center;
+}
+
+#popup-desc {
+    text-align: justify;
+}
+
 /* Locations list */
 
 .place-item {
     padding: 5px 0;
-    border-bottom: 1px solid #888;
-}
-
-.place-item:first-child {
-    padding-top: 0;
-}
-
-.place-item:last-child {
-    border: none;
-    padding-bottom: 0;
+    border-top: 1px solid #bbb;
 }
 
 .place-bullet {
     padding: 0 3.5px;
+    color: #bbb;
 }

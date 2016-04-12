@@ -12,38 +12,38 @@
     <link rel="stylesheet" href="css/libs/font-awesome-4.5.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!-- slide-in menu -->
-    <div id="side-menu">
-        <ul id="place-list" data-bind="foreach: locations">
-            <li class="place-item">
-                <span class="place-bullet"><i class="fa fa-map-marker"></i></span>
-                <span data-bind="text: name"></span>
-            </li>
-        </ul>
-    </div>
-
     <!-- map background -->
-    <div id="map-div"></div>
+    <div id="map-div" class="with-popup"></div>
 
     <!-- search header -->
-    <div id="search-container">
+    <header id="search-container">
         <span id="hamburger" data-bind="click: showMenu"><i class="fa fa-bars fa-lg"></i></span>
         <input type="text" value="Location" id="search-bar" autofocus>
-    </div>
 
-    <script type="text/template" id="map-popup">
-        <div class="popup">
-            <h2 class="popup-head"><!-- TODO: knockout data-bind name --></h2>
-            <p class="popup-desc"><!-- TODO: knockout data-bind desc --></p>
-            <!-- TODO: add instagram/other APIs here -->
+        <!-- slide-in menu -->
+        <div id="side-menu">
+            <ul id="place-list" data-bind="foreach: locations">
+                <li class="place-item" data-bind="click: $parent.centerToMarker">
+                    <span><i class="fa fa-map-pin place-bullet"></i></span>
+                    <span data-bind="text: name"></span>
+                </li>
+            </ul>
         </div>
-    </script>
+    </header>
+
+    <!-- Info popup that slides up/over on the screen -->
+    <article id="popup" data-bind="with: selectedLocation">
+        <div id="popup-close"><i class="fa fa-times" aria-hidden="true"></i></div>
+        <h2 id="popup-head" data-bind="text: name"><!-- TODO: knockout data-bind name --></h2>
+        <p id="popup-desc" data-bind="text: desc"><!-- TODO: knockout data-bind desc --></p>
+        <!-- TODO: add instagram/other APIs here -->
+    </article>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-s3K891rRSaySEtDuopi1HzJPQhBy5jE&callback=initMap"
     async defer></script>
-    <script src="scripts/map.js" async></script>
     <script src="scripts/libs/knockout-3.4.0.js" async></script>
     <script src="scripts/libs/jquery-1.12.3.min.js" async></script>
     <script src="scripts/viewmodel.js" async></script>
+    <script src="scripts/map.js" async></script>
 </body>
 <html>
