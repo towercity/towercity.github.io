@@ -10,18 +10,20 @@ function initMap() {
         zoom: 10
     });
 
-    // Iterate through locationArray and add markers to the map
-    locationArray.forEach(function(place) {
-        var marker = new google.maps.Marker({
-            position: {lat: place.lat, lng: place.lng},
-            map: map,
-            title: place.name,
-            label: place.mapLabel
-        });
+    $(document).ready(function() {
+        // Iterate through locationArray and add markers to the map
+        locationArray.forEach(function(place) {
+            var marker = new google.maps.Marker({
+                position: {lat: place.lat, lng: place.lng},
+                map: map,
+                title: place.name,
+                label: place.mapLabel
+            });
 
-        marker.addListener('click', function() {
-            map.setZoom(13);
-            map.panTo(marker.getPosition());
+            marker.addListener('click', function() {
+                map.setZoom(13);
+                map.panTo(marker.getPosition());
+            });
         });
     });
 };
