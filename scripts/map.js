@@ -24,4 +24,4 @@ function initMap() {
             map.panTo(marker.getPosition());
         });
     });
-}
+};
