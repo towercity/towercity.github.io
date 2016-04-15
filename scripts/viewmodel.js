@@ -69,18 +69,73 @@ var locationArray = [
 var ViewModel = function() {
     var self = this;
 
-    this.locations = locationArray;
-    this.selectedLocation = ko.observable(locationArray[0]);
+    //variables
+
+    this.locations = ko.observableArray(locationArray);
+    this.selectedLocation = ko.observable(this.locations()[0]);
+
+    //methods
+
+    this.switchLocation = function(data) {
+        self.selectedLocation(data);
+    }
 
     this.centerToMarker = function(data) {
         map.setZoom(13);
         map.panTo({lat: data.lat, lng: data.lng});
-        self.showMenu();
     };
 
-    this.showMenu = function() {
-        $('#side-menu').slideToggle('fast');
+    //container function to prevent mapmarker clicks from opening the menu
+    this.closeMenu = function() {
+        if ($('#slide-menu').hasClass('open')) {
+            self.toggleMenu();
+        }
     }
+
+    this.toggleMenu = function() {
+        $('#slide-menu').slideToggle('fast');
+        $('#slide-menu').toggleClass('open');
+    };
+
+    this.toggleInfoWindow = function() {
+        var $windowWidth = $(window).width();
+        var $popup = $('#popup');
+
+        if ($windowWidth <= 440) {
+            if ($popup.hasClass('active')) {
+                $popup.animate({
+                    bottom: '-100vh'
+                }, 300);
+            } else {
+                $popup.animate({
+                    bottom: 0
+                }, 300);
+            }
+        } else if ($windowWidth > 440) {
+            if ($popup.hasClass('active')) {
+                $popup.animate({
+                    right: -440
+                }, 300);
+            } else {
+                $popup.animate({
+                    right: 0
+                }, 300);
+            }
+        }
+
+        $popup.toggleClass('active');
+    };
+
+    //container function for all methods run when a location is clicked
+    this.clickLocation = function(data) {
+        self.switchLocation(data);
+        self.closeMenu();
+        self.centerToMarker(data);
+        //checks if info window is open before toggling it
+        if (!$('#popup').hasClass('active')) {
+            self.toggleInfoWindow();
+        }
+    };
 };
 
 var Location = function(data) {
@@ -90,6 +145,9 @@ var Location = function(data) {
     this.coordinates = {lat: data.lat, lng: data.lng};
 }
 
+//Declare veiwmodel outside of applyBindings so map functions can access it
+var my = {vm: null};
 window.onload = function() {
-    ko.applyBindings(new ViewModel());
+    my.vm = new ViewModel();
+    ko.applyBindings(my.vm);
 };

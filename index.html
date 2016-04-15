@@ -13,17 +13,17 @@
 </head>
 <body>
     <!-- map background -->
-    <div id="map-div" class="with-popup"></div>
+    <div id="map-div"></div>
 
     <!-- search header -->
     <header id="search-container">
-        <span id="hamburger" data-bind="click: showMenu"><i class="fa fa-bars fa-lg"></i></span>
-        <input type="text" value="Location" id="search-bar" autofocus>
+        <span id="hamburger" data-bind="click: toggleMenu"><i class="fa fa-bars fa-lg"></i></span>
+        <input type="text" placeholder="Location" id="search-bar" autofocus>
 
         <!-- slide-in menu -->
-        <div id="side-menu">
+        <div id="slide-menu">
             <ul id="place-list" data-bind="foreach: locations">
-                <li class="place-item" data-bind="click: $parent.centerToMarker">
+                <li class="place-item" data-bind="click: $parent.clickLocation">
                     <span><i class="fa fa-map-pin place-bullet"></i></span>
                     <span data-bind="text: name"></span>
                 </li>
@@ -33,10 +33,18 @@
 
     <!-- Info popup that slides up/over on the screen -->
     <article id="popup" data-bind="with: selectedLocation">
-        <div id="popup-close"><i class="fa fa-times" aria-hidden="true"></i></div>
-        <h2 id="popup-head" data-bind="text: name"><!-- TODO: knockout data-bind name --></h2>
-        <p id="popup-desc" data-bind="text: desc"><!-- TODO: knockout data-bind desc --></p>
-        <!-- TODO: add instagram/other APIs here -->
+        <div id="popup-header">
+            <div id="pophead-box">
+                <div id="popup-close" data-bind="click: $parent.toggleInfoWindow"><i class="fa fa-times lg" aria-hidden="true"></i></div>
+            </div>
+            <div id="pophead-border"></div>
+        </div>
+        <div id="popup-text">
+            <!-- TODO: add instagram/other APIs here -->
+            <img id="popup-pic" src="http://lorempixel.com/500/500/city">
+            <h2 id="popup-title" data-bind="text: name"></h2>
+            <p id="popup-desc" data-bind="text: desc"></p>
+        </div>
     </article>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-s3K891rRSaySEtDuopi1HzJPQhBy5jE&callback=initMap"
