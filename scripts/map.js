@@ -5,38 +5,74 @@ var map = 0;
 
 function initMap() {
     var mapDiv = document.getElementById('map-div');
+    var locationIndex = 0;
+
     // Create a map object and specify the DOM element for display.
     map = new google.maps.Map(mapDiv, {
-        center: {lat: 27.865, lng: -82.459},
+        center: {lat: 25.721, lng: -80.2777},
         mapTypeControl: false,
-        zoom: 10,
+        zoom: 13,
+        //container for functions to be called outside the map function
         methods: {
-            reenter: function(latLang) {
-                map.setCenter(latLang);
+            centerToMarker: function(place) {
+                var service = new google.maps.places.PlacesService(map);
+                var request = {
+                    query: place.address
+                };
+
+                service.textSearch(request, function(results, status) {
+                    if (status == google.maps.places.PlacesServiceStatus.OK) {
+                        map.setZoom(15);
+                        map.panTo(results[0].geometry.location);
+                    }
+                });
             }
         }
     });
 
-    // Waits till whole page is loaded to ensure vars from other files are available
-    $(document).ready(function() {
-        // Iterate through locationArray and add markers to the map
-        locationArray.forEach(function(place) {
-            var marker = new google.maps.Marker({
-                position: {lat: place.lat, lng: place.lng},
-                map: map,
-                title: place.name,
-                label: place.mapLabel
-            });
+    function pinMarkers() {
+        var service = new google.maps.places.PlacesService(map);
+        var locations = my.vm.locations();
+        locationIndex = 0;
 
-            marker.addListener('click', function() {
-                map.setZoom(13);
-                map.panTo(marker.getPosition());
-                my.vm.clickLocation(place);
+        locations.forEach(function(place) {
+            var request = {
+                query: place.address,
+                //sneaking the array index in here so that when you click on the
+                //marker, the correct location can be accessed
+                index: locationIndex
+            };
+            service.textSearch(request, function(results, status, i) {
+                if (status == google.maps.places.PlacesServiceStatus.OK) {
+                    var placeData = results[0];
+                    var lat = placeData.geometry.location.lat();
+                    var lon = placeData.geometry.location.lng();
+                    var name = placeData.formatted_address;
+
+                    var marker = new google.maps.Marker({
+                      map: map,
+                      position: placeData.geometry.location,
+                      name: name,
+                      index: request.index
+                    });
+
+                    marker.addListener('click', function() {
+                        var locations = my.vm.locations();
+                        map.setZoom(15);
+                        map.panTo(placeData.geometry.location);
+                        my.vm.clickLocation(locations[marker.index]);
+                    });
+                }
             });
+            locationIndex++;
         });
-    });
+    }
 
-    google.maps.event.addDomListener(mapDiv, 'click', function() {
-        //window.alert('Map was clicked!');
-    });
+    // Waits till whole page is loaded to ensure vars from other files are available
+    window.onload = function() {
+        //calls viewmodel here, so that its loaded for us in map function
+        my.vm = new ViewModel();
+        ko.applyBindings(my.vm);
+        pinMarkers();
+    };
 };

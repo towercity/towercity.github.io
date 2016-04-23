@@ -25,7 +25,7 @@
             <ul id="place-list" data-bind="foreach: locations">
                 <li class="place-item" data-bind="click: $parent.clickLocation">
                     <span><i class="fa fa-map-pin place-bullet"></i></span>
-                    <span data-bind="text: name"></span>
+                    <span data-bind="text: address"></span>
                 </li>
             </ul>
         </div>
@@ -41,14 +41,35 @@
         </div>
         <div id="popup-text">
             <!-- TODO: add instagram/other APIs here -->
-            <img id="popup-pic" src="http://lorempixel.com/500/500/city">
-            <h2 id="popup-title" data-bind="text: name"></h2>
+            <img id="popup-pic" data-bind="attr: {src: streetviewPhoto}">
+            <h2 id="popup-title" data-bind="text: address"></h2>
+            <h3 id="popup-rent">Rent: $<span data-bind="text: price"></span></h3>
+            <ul id="popup-info">
+                <li>Bedrooms: <span data-bind="text: bedrooms"></span></li>
+                <li>Bathrooms: <span data-bind="text: bathrooms"></span></li>
+                <li>Square Feet: <span data-bind="text: sqft"></span></li>
+                <li>Laundry: <span data-bind="text: laundry"></span></li>
+                <li>Available: <span data-bind="text: available"></span></li>
+            </ul>
             <p id="popup-desc" data-bind="text: desc"></p>
+            <ul id="popup-contact">
+                <li>Contact: <span data-bind="text: contactName"></span> - <span data-bind="text: contactPhone"></span></li>
+                <li><a data-bind="attr: {href: link}">More info</a></li>
+            </ul>
         </div>
     </article>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-s3K891rRSaySEtDuopi1HzJPQhBy5jE&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-s3K891rRSaySEtDuopi1HzJPQhBy5jE&callback=initMap&libraries=places"
     async defer></script>
+
+    <!-- required files for oauth -->
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha1.js" async></script>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha256.js" async></script>
+
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js" async></script>
+    
+    <script src="scripts/libs/oauth-1.0a.js" async></script>
+
     <script src="scripts/libs/knockout-3.4.0.js" async></script>
     <script src="scripts/libs/jquery-1.12.3.min.js" async></script>
     <script src="scripts/viewmodel.js" async></script>
