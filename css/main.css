@@ -1,0 +1,164 @@
+/* Global styles */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #444;
+}
+
+/* Reset input box styling */
+input[type="text"] {
+  margin: 0;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* Set cursor to pointer for all non-link buttons */
+#hamburger:hover,
+.place-item:hover {
+    cursor: pointer;
+}
+
+/* Individual styles */
+
+#map-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+/* Top searchbar */
+
+#search-container {
+    background-color: white;
+    position: fixed;
+    max-width: 400px;
+    min-width: 220px;
+    top: 5px;
+    margin: 0 5px;
+    padding: 5px;
+    box-shadow: 2px 2px 5px #888;
+}
+
+#search-cover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(150, 150, 150, 0.7);
+}
+
+#hamburger {
+    padding: 0 5px 0 2.5px;
+}
+
+#search-bar {
+    position: relative;
+    top: 0.5px;
+    font-size: 16px;
+}
+
+#slide-menu {
+    display: none;
+    position: relative;
+    width: 100%
+    right: 5px;
+    top: 5px;
+    max-height: 45vh;
+    overflow: scroll;
+    background-color: white;
+}
+
+#popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: -1px -1px 5px #888;
+    overflow: scroll;
+}
+
+@media (max-width: 440px) {
+    #popup {
+        height: 100vh;
+        width: 100vw;
+        bottom: -100vh;
+    }
+}
+
+@media (min-width: 441px) {
+    #popup {
+        height: 100vh;
+        width: 440px;
+        right: -440px;
+    }
+}
+
+#popup-header {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: -1px 1px 1px #888;
+}
+
+#pophead-box {
+    background-color: #007FFF;
+    height: 45px;
+    width: 100%;
+}
+
+#popup-close {
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+#pophead-border {
+    margin-top: 2px;
+    background-color: #1D7CF2;
+    width: 100%;
+    height: 3px;
+}
+
+#popup-text {
+    margin-top: 50px;
+    padding: 25px 20px;
+}
+
+#popup-pic {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#popup-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#popup-desc {
+    text-align: justify;
+}
+
+/* Locations list */
+
+.place-item {
+    padding: 5px 0;
+    border-top: 1px solid #bbb;
+}
+
+.place-bullet {
+    padding: 0 3.5px;
+    color: #bbb;
+}

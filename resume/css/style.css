@@ -1,0 +1,440 @@
+/* Globals */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+div,
+li,
+p {
+  padding:0;
+  margin:0;
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  letter-spacing: 0.75px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cabin', sans-serif;
+  text-align: center;
+}
+
+body {
+  background-color: #f4f2f1;
+}
+
+hr {
+  max-width: 1000px;
+  margin: 20px auto;
+  color: #4d2600;
+  border: 1px solid #999;
+  border-bottom: none;
+}
+
+.clear-fix {
+  overflow: auto;
+}
+
+h1 {
+  font-size: 46px;
+  color: #4d2600;
+  line-height: 48px;
+  display: inline;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 32px;
+  color: #4d2600;
+  line-height: 29px;
+  padding: 10px;
+  margin: 7px 0 15px 0;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 20px;
+  color: #4d2600;
+  line-height: 22px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4d2600;
+  line-height: 17px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  padding:5px 5%;
+
+}
+
+p {
+  color: #333;
+  line-height: 21px;
+}
+
+a {
+  color: #9da3ac;
+  text-decoration: none;
+  display: block;
+}
+
+.plain-list {
+  list-style-type: none;
+}
+
+span {
+  padding: 5px;
+}
+
+/* Colors */
+
+.dark-text {
+  color: #4d2600;
+}
+
+.white-text {
+  color: #f4f2f1;
+}
+
+.green {
+  background-color: #aaa1a1;
+}
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 18px;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999;
+  line-height: 18px;
+}
+
+.education-entry,
+.work-entry,
+.project-entry {
+  padding: 12.5px 5%;
+}
+
+.project-entry,
+.project-overlay {
+  width: 250px;
+  height: 360px;
+}
+
+.work-left,
+.work-right {
+  padding: 5px;
+}
+
+/* Flexbox setup */
+
+.container {
+    width: 100%;
+}
+
+.row { 
+    display: flex;
+    display: -webkit-flex;
+    max-width: 1028px;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-md-1 {
+    width: 8.333%;
+}
+
+.col-md-2 {
+    width: 16.666%;
+}
+
+.col-md-3 {
+    width: 25%;
+}
+
+.col-md-4 {
+    width: 33.333%;
+}
+
+.col-md-5 {
+    width: 41.666%;
+}
+
+.col-md-6 {
+    width: 50%;
+}
+
+.col-md-7 {
+    width: 58.333%;
+}
+
+.col-md-8 {
+    width: 66.666%;
+}
+
+.col-md-9 {
+    width: 75%;
+}
+
+.col-md-10 {
+    width: 83.333%;
+}
+
+.col-md-11 {
+    width: 91.666%;
+}
+
+.col-md-12 {
+    width: 100%;
+}
+
+/* Foundation.zurb ImageHover effects CSS adaptation */
+.image-wrapper {
+  width: 250px;
+  height: 360px;
+  margin: 15px auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image-overlay-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.overlay-fade-in p {
+  color: #f4f2f1;
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.overlay-fade-in img {
+  transition: all 0.2s linear;
+}
+
+.overlay-fade-in .image-overlay-content {
+  opacity: 0;
+  background-color: rgba(170, 161, 161, 0.7);
+  transition: all 0.4s ease-in-out;
+}
+
+.overlay-fade-in h2 {
+  color: #f4f2f1;
+  margin-top: 40%;
+  font-size: 26px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  font-family: 'EB Garamond', serif;
+}
+
+.overlay-fade-in .button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  background: #f4f2f1;
+  color: #4d2600;
+  text-transform: uppercase;
+  box-shadow: 0 0 1px #000;
+  position: relative;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  font-family: 'Cabin', sans-serif;
+  margin-top: 5px;
+}
+
+.overlay-fade-in:hover img {
+  transform: scale(1.2); 
+}
+
+.overlay-fade-in:hover .image-overlay-content {
+  opacity: 1; 
+}
+
+.overlay-fade-in:hover h2, .overlay-fade-in p, .overlay-fade-in .button {
+  opacity: 1; 
+}
+
+.overlay-fade-in:hover p {
+  transition-delay: 0.1s; 
+}
+
+.overlay-fade-in:hover .button {
+  transition-delay: 0.2s; 
+}
+
+/* Specific Elements/Classes */
+
+#main {
+  margin-bottom: 50px;
+}
+
+#header {
+  padding: 0 0 5px 0;
+}
+
+#header-box {
+  width: 100%;
+  height: 700px;
+  background: url("../images/background.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#header-text {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  top: 600px;
+  color: #f4f2f1;
+}
+
+#header-text h1 { 
+  color: #f4f2f1;
+  padding-bottom: 10px;
+}
+
+#topContacts {
+  padding: 5px 0;
+  margin-bottom: 30px;
+}
+
+#map {
+  display: block;
+  height: 100%;
+  margin: 0 5%;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+#mapDiv {
+  height: 400px;
+  padding-bottom: 5%;
+}
+
+/* Format altering classes */
+
+.center-content {
+  padding: 2.5% 5%;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 1024px) {
+  hr {
+    margin: 20px 25px;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .biopic {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .project-container {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #header-box {
+    height: 450px;
+  }
+
+  #header-text {
+    top: 350px;
+  }
+
+  #welcome-message {
+    margin: 0 25px;
+  }
+
+  #skills {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  #skills-h3 {
+    text-align: center;
+  }
+
+  #skillsList {
+    margin: 0 auto;
+    list-style-position: inside;
+    text-align: center;
+    padding: 0;
+  }
+
+  #mapDiv {
+    width: 100%;
+    order: 2;
+    padding: 20px 0;
+    border-top: 1px solid #999;
+    margin: 0 25px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  #header-text {
+    top: 325px;
+  }
+}
+
+@media only screen and (min-width: 1380px) {
+  #header-box {
+    background-position: center top;
+  }
+}

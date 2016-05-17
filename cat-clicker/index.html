@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Cat Clicker - Cat List Style</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header data-bind = "with: currentCat">
+        <h1 class = "left">Cat Clicker - <span data-bind = "text: name"></span></h1>
+        <h1 class = "right"><span data-bind = "text: score"></span> clicks</h1>
+    </header>
+    <article>
+        <div id = "cat-list">
+            <div data-bind = "foreach: catList">
+                <a href = "#" data-bind = "text: name, click: $parent.switchCat"></a>
+            </div>
+        </div>
+
+        <div id = "cat-display" data-bind = "with: currentCat">
+            <h2 id = "cat-name">Level: <span data-bind = "text: level"></span></h2>
+            <figure>
+                <img data-bind = "click: $parent.incrementCounter, attr: {src: img}" alt = "The cat you should be clicking on, not hovering over">
+                <figcaption>The beautiful <span data-bind = "text: name"></span>, awaiting your click. It's just like petting <span data-bind = "text: pronoun"></span>.</figcaption>
+            </figure>
+        </div>
+    </article>
+
+    <!-- scripts to run app-->
+    <script src="scripts/lib/knockout-3.4.0.js"></script>
+    <script src="scripts/lib/jquery-2.2.2.min.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
