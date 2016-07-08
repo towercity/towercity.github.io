@@ -6,17 +6,18 @@ var view = {
     	"role" : "Front-End Developer",
     	"contacts" : {
     		"mobile" : "813.758.8512",
-    		"email" : "mnerger@lsu.edu",
+    		"email" : "matthewjnerger3@gmail.com",
     		"github" : "towercity",
-    		"twitter" : "towercitydrive",
-    		"location" : "Baton Rouge, LA"
+        //"twitter" : "towercitydrive",
+    		"location" : "Miami, FL"
     	},
-    	"bioPic" : "images/me.jpg",
-    	"welcomeMessage" : "I'm a beginning front-end web designer with strong experience in writing," + " " +
-    						"audio, and education.",
+    	"welcomeMessage" : "Web designer with strong experience in the creative fields " +
+                          "of writing, audio, and education.",
     	"skills" : [
-    		"Writing", "Web Design", "Teaching", "Javascript", "CSS", "HTML", "Adobe Audition"
-    	]
+    		"Javascript", "CSS", "HTML", "Adobe Audition", "Microsoft Office", "Writing", "Teaching"
+    	],
+      //TODO: add a specific page section for languages and frameworks
+      "languages" : ["jQuery", "Knockout", "Backbone.js", "Jasmine", "Javascript", "CSS", "HTML"]
     },
 
     //work object
@@ -26,19 +27,20 @@ var view = {
     		"employer" : "DIG Baton Rouge",
     		"title" : "Reporter",
     		"location" : "Baton Rouge, LA",
-    		"dates" : "August 2015 - Present",
+    		"dates" : "August 2015 - February 2016",
     		"description" : [
     			"Researched and wrote articles about community events",
-    			"Pitched stories for publication",
-    			"Worked independently on stories from inception to deadline"]
+    			"Worked independently on stories from inception to deadline"
+          ]
     		},
     		{
     		"employer" : "Franciscan Ministries of Our Lady Health System",
     		"title" : "AP Clerk",
     		"location" : "Baton Rouge, LA",
-    		"dates" : "December 2014 - Present",
+    		"dates" : "December 2014 - May 2016",
     		"description" : [
-    			"Processed invoices"]
+    			"Processed invoices"
+          ]
     		},
     		{
     		"employer" : "LSU Cox Center for Student Athletes",
@@ -48,32 +50,39 @@ var view = {
     		"description" : [
     			"Tutored student-athletes in composition and literature",
     			"Generated and presented educational materials",
-    			"Helped students set and meet structured learning goals"]
+    			"Helped students set and meet structured learning goals"
+          ]
     		},
     		{
     		"employer" : "WFSU-FM",
     		"title" : "Production Assisstant",
     		"location" : "Tallahassee, FL",
     		"dates" : "January - July 2014",
-    		"description" : ["Ran automation software, maintained databases"]
+    		"description" : [
+          "Ran automation software, maintained databases"
+          ]
     		},
     		{
     		"employer" : "Solution Skills, Inc.",
     		"title" : "Marketing Assisstant",
     		"location" : "Tallahassee, FL",
     		"dates" : "January - July 2014",
-    		"description" : ["Wrote, edited, and formatted marketing materials, strategy guides, and practice tests",
+    		"description" : [
+          "Wrote, edited, and formatted marketing materials, strategy guides, and practice tests",
     			"Researched and compiled information on standardized tests",
-    			"Organized and led focus groups and workshops with high-school and college aged students"]
+    			"Organized and led focus groups and workshops with high-school and college aged students"
+          ]
     		},
     		{
     		"employer" : "Leon County Schools",
     		"title" : "Substitute Teacher",
     		"location" : "Tallahassee, FL",
     		"dates" : "January - July 2014",
-    		"description" : ["Taught large groups of students a variety of subjects",
+    		"description" : [
+          "Taught large groups of students a variety of subjects",
     			"Worked individually with students as needed",
-    			"Reported progress and specific student needs to primary teacher"]
+    			"Reported progress and specific student needs to primary teacher"
+          ]
     		},
     		{
     		"employer" : "WVFS Tallahassee",
@@ -83,7 +92,8 @@ var view = {
     		"description" : [
     			"Wrote reviews for albums entered into catalog",
     			"Researched, wrote, and read summaries of articles on air",
-    			"Wrote and produced station identifications"]
+    			"Wrote and produced station identifications"
+          ]
     		}
     	]
     },
@@ -101,13 +111,24 @@ var view = {
     		"description" : [
     			"Produced sixty pages of original fiction for honors thesis",
     			"Attended four limited access writing workshops, each of which required approval for enrollment based on writing samples"]
+    		},
+        {
+    		"name" : "University of Miami",
+    		"location" : "Miami, FL",
+    		"major" : "Creative Writing",
+    		"degree" : "Master of Fine Arts",
+    		"dates" : "August 2016 - Present",
+    		"years" : 1,
+    		"description" : [
+    			"[[To update when the time comes]]"
+          ]
     		}
     	],
     	"onlineCourses" : [
     		{
     		"title"  : "Front-End Developer",
     		"school" : "Udacity",
-    		"dates" : 2016,
+    		"dates" : "February 2016 - May 2016",
     		"url" : "https://www.udacity.com/",
     		"description" : [
     			"Learned fundamentals of HTML, CSS, and Javascript",
@@ -121,17 +142,17 @@ var view = {
     	"projects" : [
     	{
     		"title" : "Work Portfolio",
-    		"dates" : 2016,
-    		"description" : "Portfolio of audio experience",
+    		"dates" : "July 2016",
+    		"description" : "Web portfolio with fully functional HTML5 audio player.",
     		"image" : "images/project01.jpg",
-    		"link" : "#"
+    		"link" : "../portfolio"
     	},
     	{
-    		"title" : "Dummy Project 1",
-    		"dates" : 2016,
-    		"description" : "Stand in for later Udacity Projects",
-    		"image" : "http://lorempixel.com/250/360/cats",
-    		"link" : "#"
+    		"title" : "Snake",
+    		"dates" : "February 2016",
+    		"description" : "A basic snake arcade game clone using the HTML5 canvas.",
+    		"image" : "images/project_snake.jpg",
+    		"link" : "http://towercity.github.io/snake"
     	},
     	{
     		"title" : "Dummy Project 2",
@@ -143,18 +164,19 @@ var view = {
     	]
     },
 
-    //reusable text variablesHTMLclear: '<div class="clear"></div>',
+    //reusable text variables
+    HTMLclear: '<div class="clear"></div>',
     HTMLheaderBox: '<div id="header-box"></div>',
     HTMLheaderName: '<h1 id="name">%data%</h1>',
     HTMLheaderRole: '<div>%data%</div>',
     HTMLheaderText: '<div id="header-text"></div>',
 
     HTMLcontactGeneric: '<li class="flex-item"><span class="dark-text">%contact%</span><span class="white-text">%data%</span></li>',
-    HTMLmobile: '<li class="flex-item"><span class="dark-text">mobile</span><span class="white-text">%data%</span></li>',
-    HTMLemail: '<li class="flex-item"><span class="dark-text">email</span><span class="white-text">%data%</span></li>',
-    HTMLtwitter: '<li class="flex-item"><span class="dark-text">twitter</span><span class="white-text">%data%</span></li>',
-    HTMLgithub: '<li class="flex-item"><span class="dark-text">github</span><span class="white-text">%data%</span></li>',
-    HTMLblog: '<li class="flex-item"><span class="dark-text">blog</span><span class="white-text">%data%</span></li>',
+    HTMLmobile: '<li class="flex-item"><span class="dark-text">mobile</span><a href="tel:%data%" class="white-text contact-link">%data%</a></li>',
+    HTMLemail: '<li class="flex-item"><span class="dark-text">email</span><a href="mailto:%data%" class="white-text contact-link">%data%</a></li>',
+    HTMLtwitter: '<li class="flex-item"><span class="dark-text">twitter</span><a href="http://www.twitter.com/%data%" target="_blank" class="white-text contact-link">%data%</a></li>',
+    HTMLgithub: '<li class="flex-item"><span class="dark-text">github</span><a href="http://www.github.com/%data%" target="_blank" class="white-text contact-link">%data%</a></li>',
+    HTMLblog: '<li class="flex-item"><span class="dark-text">blog</span><a href="%data%" class="white-text contact-link">%data%</a></li>',
     HTMLlocation: '<li class="flex-item"><span class="dark-text">location</span><span class="white-text">%data%</span></li>',
 
     HTMLwelcomeMsg: '<h2 class="center-text">Welcome!</h2><p id="welcome-message" class="row">%data%</p>',
@@ -175,9 +197,9 @@ var view = {
     HTMLprojectOverlay: '<div class="project-overlay image-overlay-content"></div>',
     HTMLprojectTitle: '<h2>%data%</h2>',
     HTMLprojectDates: '<div class="white-text">%data%</div>',
-    HTMLprojectDescription: '<p>%data%</p>',
+    HTMLprojectDescription: '<p class="project-description">%data%</p>',
     HTMLprojectImage: '<img src="%data%">',
-    HTMLprojectLink: '<a href="%data%" class="button">View project</a>',
+    HTMLprojectLink: '<a href="%data%" target="_blank" class="button">View project</a>',
 
     HTMLschoolStart: '<div class="education-entry row"></div>',
     HTMLschoolLeft: '<div class="education-left col-md-5"></div>',
@@ -202,17 +224,17 @@ var view = {
     render: function() {
         //bio render
         $("#topContacts").append(
-    		this.HTMLmobile.replace("%data%", this.bio.contacts.mobile) +
-    		this.HTMLemail.replace("%data%", this.bio.contacts.email) +
-    		this.HTMLgithub.replace("%data%", this.bio.contacts.github) +
-    		this.HTMLtwitter.replace("%data%", this.bio.contacts.twitter) +
+    		this.HTMLmobile.replace(/%data%/g, this.bio.contacts.mobile) +
+    		this.HTMLemail.replace(/%data%/g, this.bio.contacts.email) +
+    		this.HTMLgithub.replace(/%data%/g, this.bio.contacts.github) +
+    		// this.HTMLtwitter.replace(/%data%/g, this.bio.contacts.twitter) +
     		this.HTMLlocation.replace("%data%", this.bio.contacts.location)
     		);
     	$("#footerContacts").append(
-    		this.HTMLmobile.replace("%data%", this.bio.contacts.mobile) +
-    		this.HTMLemail.replace("%data%", this.bio.contacts.email) +
-    		this.HTMLgithub.replace("%data%", this.bio.contacts.github) +
-    		this.HTMLtwitter.replace("%data%", this.bio.contacts.twitter) +
+        this.HTMLmobile.replace(/%data%/g, this.bio.contacts.mobile) +
+    		this.HTMLemail.replace(/%data%/g, this.bio.contacts.email) +
+    		this.HTMLgithub.replace(/%data%/g, this.bio.contacts.github) +
+    		// this.HTMLtwitter.replace(/%data%/g, this.bio.contacts.twitter) +
     		this.HTMLlocation.replace("%data%", this.bio.contacts.location)
     		);
     	$(this.HTMLheaderBox).insertBefore("#main");
@@ -224,7 +246,7 @@ var view = {
     	$("#header").append(this.HTMLwelcomeMsg.replace("%data%", this.bio.welcomeMessage));
     	//checks for skills before printing skills header
     	if (this.bio.skills.length > 0) {
-    		$("#bottomRow").append(this.HTMLskillsStart);
+    		$("#mapRow").append(this.HTMLskillsStart);
     		for (var skill in this.bio.skills) {
     			$("#skillsList").append(this.HTMLskills.replace("%data%", this.bio.skills[skill]));
     		}
@@ -312,7 +334,7 @@ var octopus = {
         $("#mapDiv").append(view.googleMap);
         initializeMap();
     }
-}
+};
 
 var model = {
     clickLocations: [],
@@ -341,29 +363,18 @@ var model = {
 };
 
 
-/*
-This is the fun part. Here's where we generate the custom Google Map for the website.
-See the documentation below for more details.
-https://developers.google.com/maps/documentation/javascript/reference
-*/
-var map;    // declares a global map variable
+//Google map
+var map;
 
-
-/*
-Start here! initializeMap() is called when page is loaded.
-*/
 function initializeMap() {
 
   var locations;
 
   var mapOptions = {
-    disableDefaultUI: true
+    disableDefaultUI: true,
+    mapTypeId: google.maps.MapTypeId.TERRAIN
   };
 
-  /*
-  For the map to be displayed, the googleMap var must be
-  appended to #mapDiv in resumeBuilder.js.
-  */
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
 
 
@@ -372,25 +383,19 @@ function initializeMap() {
   written for bio, education, and work.
   */
   function locationFinder() {
-
-    // initializes an empty array
     var locations = [];
 
     // adds the single location property from bio to the locations array
     locations.push(view.bio.contacts.location);
 
     // iterates through school locations and appends each location to
-    // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide:
-    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
+    // the locations array
     view.education.schools.forEach(function(school){
       locations.push(school.location);
     });
 
     // iterates through work locations and appends each location to
-    // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide:
-    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
+    // the locations array.
     view.work.jobs.forEach(function(job){
       locations.push(job.location);
     });
@@ -411,40 +416,25 @@ function initializeMap() {
     var name = placeData.formatted_address;   // name of the place from the place service
     var bounds = window.mapBounds;            // current boundaries of the map window
 
-    // marker is an object with additional data about the pin for a single location
     var marker = new google.maps.Marker({
       map: map,
       position: placeData.geometry.location,
       title: name
     });
 
-    map.setMapTypeId(google.maps.MapTypeId.TERRAIN);
-
-    // infoWindows are the little helper windows that open when you click
-    // or hover over a pin on a map. They usually contain more information
-    // about a location.
     var infoWindow = new google.maps.InfoWindow({
       content: name
     });
 
-    // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       infoWindow.open(map, marker);
     });
 
-    // this is where the pin actually gets added to the map.
-    // bounds.extend() takes in a map location object
     bounds.extend(new google.maps.LatLng(lat, lon));
-    // fit the map to the new marker
     map.fitBounds(bounds);
-    // center the map
     map.setCenter(bounds.getCenter());
   }
 
-  /*
-  callback(results, status) makes sure the search returned results for a location.
-  If so, it creates a new map marker for that location.
-  */
   function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       createMapMarker(results[0]);
@@ -457,8 +447,7 @@ function initializeMap() {
   */
   function pinPoster(locations) {
 
-    // creates a Google place search service object. PlacesService does the work of
-    // actually searching for location data.
+    // creates a Google place search service object
     var service = new google.maps.places.PlacesService(map);
 
     // Iterates through the array of locations, creates a search object for each location
@@ -486,12 +475,6 @@ function initializeMap() {
 
 }
 
-/*
-Uncomment the code below when you're ready to implement a Google Map!
-*/
-
-// Vanilla JS way to listen for resizing of the window
-// and adjust map bounds
 window.addEventListener('resize', function(e) {
   //Make sure the map bounds get updated on page resize
   map.fitBounds(mapBounds);
