@@ -107,3 +107,7 @@ header img {
   max-height: 25vh;
   padding-bottom: 5px;
 }
+
+.audio-bar {
+  margin: 0 4px;
+}
