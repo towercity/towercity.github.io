@@ -141,6 +141,10 @@ span {
   height: 360px;
 }
 
+.project-description {
+  margin-bottom: 5px;
+}
+
 .work-left,
 .work-right {
   padding: 5px;
@@ -152,7 +156,7 @@ span {
     width: 100%;
 }
 
-.row { 
+.row {
     display: flex;
     display: -webkit-flex;
     max-width: 1028px;
@@ -256,7 +260,7 @@ span {
 
 .overlay-fade-in h2 {
   color: #f4f2f1;
-  margin-top: 40%;
+  margin-top: 33%;
   font-size: 26px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
@@ -279,29 +283,29 @@ span {
 }
 
 .overlay-fade-in:hover img {
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
 .overlay-fade-in:hover .image-overlay-content {
-  opacity: 1; 
+  opacity: 1;
 }
 
 .overlay-fade-in:hover h2, .overlay-fade-in p, .overlay-fade-in .button {
-  opacity: 1; 
+  opacity: 1;
 }
 
 .overlay-fade-in:hover p {
-  transition-delay: 0.1s; 
+  transition-delay: 0.1s;
 }
 
 .overlay-fade-in:hover .button {
-  transition-delay: 0.2s; 
+  transition-delay: 0.2s;
 }
 
 /* Specific Elements/Classes */
 
 #main {
-  margin-bottom: 50px;
+  margin-bottom: 0;
 }
 
 #header {
@@ -310,7 +314,7 @@ span {
 
 #header-box {
   width: 100%;
-  height: 700px;
+  height: 66vh;
   background: url("../images/background.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -322,11 +326,11 @@ span {
   position: relative;
   text-align: center;
   margin: 0 auto;
-  top: 600px;
+  top: calc(66vh - 100px);
   color: #f4f2f1;
 }
 
-#header-text h1 { 
+#header-text h1 {
   color: #f4f2f1;
   padding-bottom: 10px;
 }
@@ -336,9 +340,18 @@ span {
   margin-bottom: 30px;
 }
 
+#footer {
+  margin-top: 50px;
+  padding: 0;
+}
+
+#footerContacts {
+  padding: 5px 0;
+}
+
 #map {
   display: block;
-  height: 100%;
+  height: calc(100% - 30px);
   margin: 0 5%;
   border: 1px solid #999;
   border-radius: 4px;
@@ -367,6 +380,10 @@ span {
   clear: both;
 }
 
+.contact-link {
+  display: inline;
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
@@ -389,14 +406,6 @@ span {
 }
 
 @media only screen and (max-width: 750px) {
-  #header-box {
-    height: 450px;
-  }
-
-  #header-text {
-    top: 350px;
-  }
-
   #welcome-message {
     margin: 0 25px;
   }
@@ -424,12 +433,11 @@ span {
     padding: 20px 0;
     border-top: 1px solid #999;
     margin: 0 25px;
+    height: 450px;
   }
-}
 
-@media screen and (max-width: 340px) {
-  #header-text {
-    top: 325px;
+  #map {
+    height: calc(100% - 80px);
   }
 }
 
