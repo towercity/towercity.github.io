@@ -164,7 +164,6 @@ var methods = {
 
     //Changes the info in the player bar
     $('.title').text(trackTitle);
-    $('.album').text(albumTitle);
 
     //Inits song, plays
     song = new Audio(url);
