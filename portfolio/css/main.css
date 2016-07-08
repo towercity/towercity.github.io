@@ -1,0 +1,285 @@
+/* Globals */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+h1 {
+  color: #747704;
+  text-transform: uppercase;
+  text-align: right;
+  margin-bottom: 0;
+}
+
+h2 {
+  color: #bcbbbb;
+}
+
+h3 {
+  color: #747704;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+p, p i {
+  text-align: justify;
+  font-family: 'EB Garamond', serif;
+  color: #bcbbbb;
+}
+
+/* Flex-box grid setup */
+.container {
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: white;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.col-md-1 {
+  width: 8.333%;
+}
+
+.col-md-2 {
+  width: 16.666%;
+}
+
+.col-md-3 {
+  width: 25%;
+}
+
+.col-md-4 {
+  width: 33.333%;
+}
+
+.col-md-5 {
+  width: 41.666%;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+.col-md-7 {
+  width: 58.333%;
+}
+
+.col-md-8 {
+  width: 66.666%;
+}
+
+.col-md-9 {
+  width: 75%;
+}
+
+.col-md-10 {
+  width: 83.333%;
+}
+
+.col-md-11 {
+  width: 91.666%;
+}
+
+.col-md-12 {
+  width: 100%;
+}
+
+/* Sections */
+
+/* Header */
+header {
+  margin: 50px 0 0 0;
+  padding: 5px 10px;
+  border-bottom: 3px solid #bcbbbb;
+}
+
+header p {
+  color: #747704;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  text-align: right;
+  margin: 0;
+}
+
+/* Splash */
+.focus-img {
+  background: url("../images/focus.jpg") no-repeat center center;
+  width: 100%;
+  height: 350px;
+}
+
+/* Samples */
+.samples-heading {
+  padding-left: 5px;
+}
+
+.samples-heading h2 {
+  padding: 0;
+}
+
+.samples {
+  margin-bottom: 50px;
+}
+
+.samples .col-md-4 {
+  max-width: 320px;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.samples img {
+  width: 300px;
+  margin:0 10px 0 10px;
+}
+
+.samples a:link,
+.samples a:hover,
+.samples a:visited,
+.samples a:active {
+  color: #bcbbbb;
+  text-decoration: none;
+}
+
+.sample-img {
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.sample-title {
+  margin-top: 10px;
+}
+
+.description p {
+  margin-top: 15px;
+}
+
+/* Modals */
+
+.modal-dialog {
+  margin-top: 150px;
+}
+
+.modal-content {
+  border-bottom: 5px solid #bcbbbb;
+  max-width: 98%;
+  margin: 0 auto;
+}
+
+.modal-heading {
+  padding: 5px 15px;
+}
+
+.modal-title {
+  text-align: left;
+  text-transform: none;
+}
+
+/* Modal playlist */
+.playlist {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #bcbbbb;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 168.75px;
+}
+
+.playlist img {
+  width: 45%;
+}
+
+.song-list {
+  list-style-type: none;
+  padding: 0 10px;
+  margin: 2.5px;
+  width: 55%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.song-list::-webkit-scrollbar:vertical {
+    display: none;
+}
+
+.song-list li {
+  color: white;
+  border-bottom: 0.5px solid white;
+  padding: 2.5px 0 3px 0;
+  cursor: pointer;
+}
+
+.song-right {
+  float: right;
+}
+
+.song-list li:last-child {
+  border-bottom: none;
+}
+
+/* Audio bar */
+.audio-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  z-index: 1041;
+  margin: 0 7px;
+  width: 586px;
+}
+
+.player {
+  padding: 0 5px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #bcbbbb;
+  font-weight: bold;
+  font-family: 'EB Garamond', serif;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.player div {
+  vertical-align: top;
+  padding: 0 2.5px;
+  width: auto;
+}
+
+.controls {
+  margin-right: auto;
+}
+
+.controls span {
+  padding: 0 2.5px;
+  cursor: pointer;
+}
+
+.volume {
+  margin-left: auto;
+  cursor: pointer;
+}
