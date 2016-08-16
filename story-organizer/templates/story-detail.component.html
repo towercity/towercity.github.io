@@ -1,0 +1,59 @@
+<div *ngIf="story">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">{{story.title}}</h2>
+    </div>
+
+    <div class="panel-body">
+      <form>
+        <div class="form-group">
+          <label for="id">ID:</label>
+          <input [(ngModel)]="story.id" class="form-control" readonly>
+        </div>
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input [(ngModel)]="story.title" type="text" placeholder="title" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="status">Status:</label>
+          <div class="input-group">
+            <span class="input-group-addon">{{ids.status[story.status]}}</span>
+            <input [(ngModel)]="story.status" class="form-control">
+          </div>
+        </div>
+        <div>
+          <label for="series">Series:</label>
+          <div class="form-group">
+              <!-- TODO: add a separate input for each series, later "add series" and "remove item" buttons -->
+            <span *ngFor="let ser of story.series; let idx = index">
+              <div class="input-group series-input-box">
+                <span class="input-group-addon">{{ids.series[ser]}}</span>
+                <input [(ngModel)]="story.series[idx]" class="form-control">
+                <span class="input-group-btn" (click)="removeSeries(idx)">
+                  <button class="btn btn-default">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                  </button>
+                </span>
+              </div>
+            </span>
+            
+            <div class="input-group series-input-box">
+              <span class="input-group-addon">{{ids.series[newSeriesID]}}</span>
+              <input [(ngModel)]="newSeriesID" class="form-control">
+              <span class="input-group-btn" (click)="addSeries(newSeriesID)">
+                <button class="btn btn-default">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                  Add series
+                </button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="desc">Description:</label>
+          <textarea class="form-control" rows="3" [(ngModel)]="story.desc"></textarea>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

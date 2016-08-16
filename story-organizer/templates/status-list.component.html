@@ -1,0 +1,33 @@
+<div *ngFor="let status of ids.status; let idx = index">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">{{status}}</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-hover">
+
+        <tr>
+          <th class="table-title">Title</th>
+          <th class="table-stat-ser">Series</th>
+          <th class="table-desc">Description</th>
+        </tr>
+
+        <tr *ngFor="let story of stories">
+          <td *ngIf="story.status == idx" (click)="goToStory(story)" class="table-title">
+            {{story.title}}
+          </td>
+          <td *ngIf="story.status == idx" (click)="goToStory(story)" class="table-stat-ser">
+            <span *ngFor="let ser of story.series; let idx = index">
+              <!-- in one line to avoid whitespace -->
+              <span>{{ids.series[ser]}}</span><span *ngIf="idx + 1 < story.series.length">,</span>
+            </span>
+          </td>
+          <td *ngIf="story.status == idx" (click)="goToStory(story)" class="table-desc">
+            {{story.desc}}
+          </td>
+        </tr>
+
+      </table>
+    </div>
+  </div>
+</div>

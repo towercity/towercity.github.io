@@ -1,0 +1,9 @@
+.app-wrapper {
+  margin: 5px 5%;
+}
+
+.bottom-buttons {
+  margin-top: 25px;
+  margin-left: calc(50vw - 50%);
+  width: 90%;
+}
