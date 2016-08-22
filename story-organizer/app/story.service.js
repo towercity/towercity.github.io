@@ -13,16 +13,46 @@ var temp_stories_2 = require('./temp-stories');
 var core_1 = require('@angular/core');
 var StoryService = (function () {
     function StoryService() {
+        this.hasStoredLocalStories = (localStorage["story.organizer.story.array"]);
     }
     StoryService.prototype.getStories = function () {
-        return Promise.resolve(temp_stories_1.STORIES);
+        if (!this.hasStoredLocalStories) {
+            console.log("Using default STORIES.");
+            return temp_stories_1.STORIES;
+        }
+        else {
+            var dataArray = JSON.parse(localStorage["story.organizer.story.array"]);
+            var localStories = dataArray[0];
+            return localStories;
+        }
     };
     StoryService.prototype.getIDs = function () {
-        return Promise.resolve(temp_stories_2.LIST_IDS);
+        if (!this.hasStoredLocalStories) {
+            console.log("Using default IDS.");
+            return temp_stories_2.LIST_IDS;
+        }
+        else {
+            var dataArray = JSON.parse(localStorage["story.organizer.story.array"]);
+            var localIDs = dataArray[1];
+            return localIDs;
+        }
     };
     StoryService.prototype.getStory = function (id) {
-        return this.getStories()
-            .then(function (stories) { return stories.find(function (story) { return story.id === id; }); });
+        var stories = this.getStories();
+        return stories.find(function (story) { return story.id === id; });
+    };
+    StoryService.prototype.saveStories = function (storiesArray, ids) {
+        var dataArray = [];
+        dataArray[0] = storiesArray;
+        dataArray[1] = ids;
+        var stringifiedArray = JSON.stringify(dataArray);
+        localStorage["story.organizer.story.array"] = stringifiedArray;
+    };
+    StoryService.prototype.loadStories = function (uploadFile) {
+        var dataArray = JSON.parse(uploadFile);
+        var stories = dataArray[0];
+        var ids = dataArray[1];
+        this.saveStories(stories, ids);
     };
     StoryService = __decorate([
         core_1.Injectable(), 

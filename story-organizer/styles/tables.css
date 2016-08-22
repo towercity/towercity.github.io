@@ -17,3 +17,9 @@
 .table-desc {
   width: 62%;
 }
+
+@media screen and (max-width: 560px) {
+  .table-desc {
+    display: none;
+  }
+}

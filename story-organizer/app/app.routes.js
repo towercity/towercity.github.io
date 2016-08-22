@@ -5,6 +5,8 @@ var status_list_component_1 = require('./status-list.component');
 var table_component_1 = require('./table.component');
 var story_detail_component_1 = require('./story-detail.component');
 var new_story_component_1 = require('./new-story.component');
+var upload_file_component_1 = require('./upload-file.component');
+var edit_series_component_1 = require('./edit-series.component');
 var routes = [
     {
         path: '',
@@ -30,6 +32,14 @@ var routes = [
     {
         path: 'new-story',
         component: new_story_component_1.NewStoryComponent
+    },
+    {
+        path: 'upload-file',
+        component: upload_file_component_1.UploadFileComponent
+    },
+    {
+        path: 'edit-series',
+        component: edit_series_component_1.EditSeriesComponent
     }
 ];
 exports.appRouterProviders = [

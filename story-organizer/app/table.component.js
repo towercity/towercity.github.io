@@ -26,13 +26,11 @@ var TableComponent = (function () {
     TableComponent.prototype.log = function (info) {
         console.log(info);
     };
-    TableComponent.prototype.getStories = function () {
-        var _this = this;
-        this.storyService.getStories().then(function (stories) { return _this.stories = stories; });
-    };
     TableComponent.prototype.getIDs = function () {
-        var _this = this;
-        this.storyService.getIDs().then(function (ids) { return _this.ids = ids; });
+        this.ids = this.storyService.getIDs();
+    };
+    TableComponent.prototype.getStories = function () {
+        this.stories = this.storyService.getStories();
     };
     TableComponent.prototype.ngOnInit = function () {
         this.getStories();
@@ -41,7 +39,7 @@ var TableComponent = (function () {
     TableComponent = __decorate([
         core_1.Component({
             selector: 'table-view',
-            //styleUrls:  ['styles/list.component.css'],
+            styleUrls: ['styles/tables.css'],
             templateUrl: 'templates/table.component.html',
             providers: [story_service_1.StoryService]
         }), 

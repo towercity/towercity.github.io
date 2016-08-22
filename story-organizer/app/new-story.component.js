@@ -18,6 +18,7 @@ var NewStoryComponent = (function () {
         this.route = route;
         this.router = router;
         this.newStory = {
+            id: -1,
             title: '',
             desc: '',
             status: 2,
@@ -34,22 +35,28 @@ var NewStoryComponent = (function () {
         console.log(info);
     };
     NewStoryComponent.prototype.getIDs = function () {
-        var _this = this;
-        this.storyService.getIDs().then(function (ids) { return _this.ids = ids; });
+        this.ids = this.storyService.getIDs();
     };
     NewStoryComponent.prototype.getStories = function () {
-        var _this = this;
-        this.storyService.getStories().then(function (stories) { return _this.stories = stories; });
+        this.stories = this.storyService.getStories();
     };
     NewStoryComponent.prototype.removeSeries = function (arrayID) {
         this.newStory.series.splice(arrayID, 1);
     };
-    NewStoryComponent.prototype.addSeries = function (seriesID) {
-        this.newStory.series.push(seriesID);
+    NewStoryComponent.prototype.changeStatus = function (id) {
+        this.newStory.status = id;
+    };
+    NewStoryComponent.prototype.addSeries = function (newSeriesID) {
+        this.newStory.series.push(newSeriesID);
+    };
+    NewStoryComponent.prototype.changeSeries = function (locationID, seriesID) {
+        this.newStory.series[locationID] = seriesID;
     };
     NewStoryComponent.prototype.addStory = function () {
         this.newStory.id = this.stories.length;
+        this.newStory.series.push(this.newSeriesID);
         this.stories.push(this.newStory);
+        this.storyService.saveStories(this.stories, this.ids);
         this.goToPage('table');
     };
     NewStoryComponent.prototype.goToPage = function (page) {

@@ -1,0 +1,27 @@
+<div *ngIf="ids">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title">Edit Series</h2>
+    </div>
+
+    <div class="panel-body">
+      <form>
+        <div *ngFor="let series of ids.series; let idx = index">
+          <div class="input-group series-input">
+            <span class="form-control">{{series}}</span>
+            <span class="input-group-addon" (click)="removeSeries(idx)">
+              Remove Series
+            </span>
+          </div>
+        </div>
+        <div class="input-group series-input">
+          <input type="text" placeholder="New Series" class="form-control" [(ngModel)]="newSeries">
+          <span class="input-group-addon" (click)="addSeries()">
+            Add Series
+          </span>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>

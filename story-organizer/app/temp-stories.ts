@@ -61,7 +61,7 @@ export var STORIES: Story[] = [
   {
     id: 8,
     title: 'Onus of Mystery',
-    desc: "Somebody has stolen Joshua's notebook. So she sets out to find it.",
+    desc: "Somebody has stolen Joshua's notebook. So she sets out to find it. In next draft, Mr Dracula reluctantly helps her. Mrs Doris just buys her a new one.",
     status: 1,
     series: [1]
   },
@@ -92,6 +92,48 @@ export var STORIES: Story[] = [
     desc: "After a prophecy, separatist exile mother moves her family from Miami to Tacoma, WA; after a series of Theodore Drieser style events, the family learns their separatist movement has been dead for years, and they are nothing more that Americans",
     status: 1,
     series: []
+  },
+  {
+    id: 13,
+    title: "Born Again",
+    desc: "AKA the dumpster fire story: starts with description of high school boy (and pals) murdering a peer by stabing hi, throwing him into a dumpster, lighting it; middles with investigation style review of him and the victims friendship (think that one Edgar Allen Poe story), rivalry, etc; ends with his desc of how it felt--like he was born again--and theories of why he did it (tho, of course, the narrator questions whether the boy would count as a more reliable source)",
+    status: 2,
+    series: [0]
+  },
+  {
+    id: 14,
+    title: "The Vanishing Peninsula",
+    desc: "False essay about Maria Gombr., author of the Dick Fought detective novels. Dick, a lover of words and books but not their contents (in an exageration of commercial bougie book-lovers), finds out records of missing children are being taken from the Miami records office and thrown into a canal; concerned with the loss of documents over th eloss of children, he investigates (w/ Maria's help). Eventually he (and Maria) go missing.",
+    status: 2,
+    series: []
+  },
+  {
+    id: 15,
+    title: "Sticks of Fire, Ch 1",
+    desc: 'Selena moves home (after unclear circumstances) to Tampa suburbs, "a city of liars." Her father wants her to get a job. She moves between her past there and the present',
+    status: 1,
+    series: [0]
+  },
+  {
+    id: 16,
+    title: "'The Center of the Universe'",
+    desc: 'In post sea rise florida, an (at first unclearly depicted) cat who sleeps on the center of the universe bridge in lithia is discovered by a parade of humans who are pulling up iron from the (new) train tracks to sell for $. One kind member cares for the cat as they take it to sunken Tampa, where it is put down "for its own good": done as a terrifying parade a la Paprika',
+    status: 2,
+    series: [0]
+  },
+  {
+    id: 17,
+    title: "The Revolution",
+    desc: "The largest traffic jam in Tampa history, on the Gandy bridge. Jumps between many many people stuck in the traffic, but focuses on three narratives: 1) the anarchist couple (could be cut?); 2) the cops and the crying madonna at the source of the traffic; 3) the undercover lawyers for radio djs who are working on the conspiracy--this narrative should stretch back over the history of the event, detailing the dj feud, hulk hogans connection, Peter theill's financing of this over radical life extension, climaxing in the details of the Reagan revolution and its effects",
+    status: 2,
+    series: [0]
+  },
+  {
+    id: 18,
+    title: "'Suburbs I'",
+    desc: "Scott believes that reality is a malleable concept, which is a nice way of saying he's a pathological liar. He was my best friend back in high school, and here's the many ways he lied... His lies are a way of attempting to regain strong, masculine power in the absurdist world of the Tampa housing bubble. In revision, update the stories to be both gayer and more absurd/violent. ",
+    status: 1,
+    series: [0]
   }
 ];
 
@@ -102,7 +144,7 @@ export var LIST_IDS: any = {
     "To-write"
   ],
   series: [
-    "Tampa Stories",
+    "Sticks of Fire",
     "Corn",
     "Three Sentimental Novellas"
   ]

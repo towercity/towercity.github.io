@@ -26,16 +26,11 @@ var StatusListComponent = (function () {
     StatusListComponent.prototype.log = function (info) {
         console.log(info);
     };
-    StatusListComponent.prototype.getStories = function () {
-        var _this = this;
-        this.storyService
-            .getStories()
-            .then(function (stories) { return _this.stories = stories; })
-            .catch(function (error) { return _this.error = error; });
-    };
     StatusListComponent.prototype.getIDs = function () {
-        var _this = this;
-        this.storyService.getIDs().then(function (ids) { return _this.ids = ids; });
+        this.ids = this.storyService.getIDs();
+    };
+    StatusListComponent.prototype.getStories = function () {
+        this.stories = this.storyService.getStories();
     };
     StatusListComponent.prototype.ngOnInit = function () {
         this.getStories();

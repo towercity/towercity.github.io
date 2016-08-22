@@ -17,11 +17,21 @@ export class AppComponent {
   author = 'Matthew Nerger';
 
   constructor(
-    private router: Router
+    private router: Router,
+    private storyService: StoryService
   ) {}
 
   goToPage(page: string) {
     let link = ['/' + page]
     this.router.navigate(link);
+  }
+
+  saveToDisk() {
+    var stories = this.storyService.getStories();
+    var ids = this.storyService.getIDs();
+    this.storyService.saveStories(stories, ids);
+
+    var blob = new Blob([localStorage["story.organizer.story.array"]], {type: "text/plain;charset=utf-8"});
+    saveAs(blob, "story-organizer-data.sod")
   }
 }

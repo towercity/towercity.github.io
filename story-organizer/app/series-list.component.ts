@@ -45,12 +45,12 @@ export class SeriesListComponent implements OnInit {
     this.router.navigate(link);
   }
 
-  getStories() {
-    this.storyService.getStories().then(stories => this.stories = stories);
+  getIDs() {
+    this.ids = this.storyService.getIDs();
   }
 
-  getIDs() {
-    this.storyService.getIDs().then(ids => this.ids = ids);
+  getStories() {
+    this.stories = this.storyService.getStories();
   }
 
   ngOnInit() {

@@ -10,52 +10,80 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var story_1 = require('./story');
 var story_service_1 = require('./story.service');
 var temp_stories_1 = require('./temp-stories');
 var StoryDetailComponent = (function () {
-    function StoryDetailComponent(storyService, route) {
+    function StoryDetailComponent(storyService, route, router) {
         this.storyService = storyService;
         this.route = route;
-        this.navigated = false;
+        this.router = router;
         this.ids = temp_stories_1.LIST_IDS;
     }
     StoryDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.getIDs();
+        this.getStories();
         this.route.params.forEach(function (params) {
-            if (params['id'] !== undefined) {
-                var id = +params['id'];
-                _this.navigated = true;
-                _this.storyService.getStory(id)
-                    .then(function (story) { return _this.story = story; });
-            }
-            else {
-                _this.navigated = false;
-                _this.story = new story_1.Story();
-            }
+            var id = +params['id'];
+            _this.story = _this.storyService.getStory(id);
+            _this.displayStory = _this.story;
         });
     };
     StoryDetailComponent.prototype.log = function (info) {
         console.log(info);
     };
     StoryDetailComponent.prototype.getIDs = function () {
-        var _this = this;
-        this.storyService.getIDs().then(function (ids) { return _this.ids = ids; });
+        this.ids = this.storyService.getIDs();
+    };
+    StoryDetailComponent.prototype.getStories = function () {
+        this.stories = this.storyService.getStories();
+    };
+    StoryDetailComponent.prototype.changeStatus = function (id) {
+        this.displayStory.status = id;
     };
     StoryDetailComponent.prototype.removeSeries = function (arrayID) {
-        this.story.series.splice(arrayID, 1);
+        this.displayStory.series.splice(arrayID, 1);
     };
-    StoryDetailComponent.prototype.addSeries = function (seriesID) {
-        this.story.series.push(seriesID);
+    StoryDetailComponent.prototype.addSeries = function (newSeriesID) {
+        this.displayStory.series.push(newSeriesID);
+    };
+    StoryDetailComponent.prototype.changeSeries = function (locationID, seriesID) {
+        this.displayStory.series[locationID] = seriesID;
+    };
+    StoryDetailComponent.prototype.removeStory = function () {
+        var storyID = this.story.id;
+        var storiesLength = this.stories.length - 1;
+        // maintains ID chronology by reducing all ids later thna removed story
+        if (storyID < storiesLength) {
+            for (var i = storyID; i < storiesLength; i++) {
+                this.stories[i + 1].id--;
+            }
+            ;
+        }
+        ;
+        //removes story by ID#
+        this.stories.splice(storyID, 1);
+        this.storyService.saveStories(this.stories, this.ids);
+        this.goToPage('table');
+    };
+    StoryDetailComponent.prototype.goToPage = function (page) {
+        var link = ['/' + page];
+        this.router.navigate(link);
+    };
+    StoryDetailComponent.prototype.saveStory = function () {
+        var storyID = this.story.id;
+        this.stories[storyID] = this.displayStory;
+        this.storyService.saveStories(this.stories, this.ids);
+        this.goToPage('table');
     };
     StoryDetailComponent = __decorate([
         core_1.Component({
             selector: 'story-detail',
             styleUrls: ['styles/story-detail.component.css'],
-            templateUrl: 'templates/story-detail.component.html'
+            templateUrl: 'templates/story-detail.component.html',
+            directives: [router_1.ROUTER_DIRECTIVES],
         }), 
-        __metadata('design:paramtypes', [story_service_1.StoryService, router_1.ActivatedRoute])
+        __metadata('design:paramtypes', [story_service_1.StoryService, router_1.ActivatedRoute, router_1.Router])
     ], StoryDetailComponent);
     return StoryDetailComponent;
 }());

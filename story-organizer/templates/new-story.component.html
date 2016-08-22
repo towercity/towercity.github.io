@@ -10,41 +10,58 @@
           <label for="title">Title:</label>
           <input [(ngModel)]="newStory.title" type="text" placeholder="title" class="form-control">
         </div>
+
         <div class="form-group">
           <label for="status">Status:</label>
-          <div class="input-group">
-            <span class="input-group-addon">{{ids.status[newStory.status]}}</span>
-            <input [(ngModel)]="newStory.status" class="form-control">
+
+          <div class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="btn btn-default">
+              {{ids.status[newStory.status]}}
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li *ngFor="let status of ids.status; let idx = index">
+                <a (click)="changeStatus(idx)">{{status}}</a>
+              </li>
+            </ul>
           </div>
         </div>
+
         <div>
           <label for="series">Series:</label>
           <div class="form-group">
-              <!-- TODO: add a separate input for each series, later "add series" and "remove item" buttons -->
             <span *ngFor="let ser of newStory.series; let idx = index">
-              <div class="input-group series-input-box">
-                <span class="input-group-addon">{{ids.series[ser]}}</span>
-                <input [(ngModel)]="newStory.series[idx]" class="form-control">
-                <span class="input-group-btn" (click)="removeSeries(idx)">
-                  <button class="btn btn-default">
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                  </button>
-                </span>
+              <div class="dropdown series-dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="btn btn-default">
+                  {{ids.series[ser]}}
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li *ngFor="let series of ids.series; let idsIdx = index">
+                    <a (click)="changeSeries(idx, idsIdx)">{{series}}</a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li><a (click)="removeSeries(idx)">
+                    Remove Series
+                  </a></li>
+                </ul>
               </div>
             </span>
 
-            <div class="input-group series-input-box">
-              <span class="input-group-addon">{{ids.series[newSeriesID]}}</span>
-              <input [(ngModel)]="newSeriesID" class="form-control">
-              <span class="input-group-btn" (click)="addSeries(newSeriesID)">
-                <button class="btn btn-default">
-                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                  Add series
-                </button>
-              </span>
+            <div class="dropdown series-dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="btn btn-default">
+                Add New Series
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li *ngFor="let series of ids.series; let idx = index">
+                  <a (click)="addSeries(idx)">{{series}}</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
+
         <div class="form-group">
           <label for="desc">Description:</label>
           <textarea class="form-control" rows="3" [(ngModel)]="newStory.desc"></textarea>

@@ -36,13 +36,11 @@ var SeriesListComponent = (function () {
         var link = ['/story', story.id];
         this.router.navigate(link);
     };
-    SeriesListComponent.prototype.getStories = function () {
-        var _this = this;
-        this.storyService.getStories().then(function (stories) { return _this.stories = stories; });
-    };
     SeriesListComponent.prototype.getIDs = function () {
-        var _this = this;
-        this.storyService.getIDs().then(function (ids) { return _this.ids = ids; });
+        this.ids = this.storyService.getIDs();
+    };
+    SeriesListComponent.prototype.getStories = function () {
+        this.stories = this.storyService.getStories();
     };
     SeriesListComponent.prototype.ngOnInit = function () {
         this.getStories();
