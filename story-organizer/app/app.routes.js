@@ -10,7 +10,7 @@ var edit_series_component_1 = require('./edit-series.component');
 var routes = [
     {
         path: '',
-        redirectTo: '/table',
+        redirectTo: '/status',
         pathMatch: 'full'
     },
     {

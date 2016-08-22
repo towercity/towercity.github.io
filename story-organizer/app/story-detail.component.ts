@@ -80,7 +80,7 @@ export class StoryDetailComponent implements OnInit {
     this.stories.splice(storyID, 1);
     this.storyService.saveStories(this.stories, this.ids);
 
-    this.goToPage('table');
+    this.goToPage('status');
   }
 
   goToPage(page: string) {
@@ -94,6 +94,6 @@ export class StoryDetailComponent implements OnInit {
 
     this.storyService.saveStories(this.stories, this.ids);
 
-    this.goToPage('table');
+    this.goToPage('status');
   }
 }

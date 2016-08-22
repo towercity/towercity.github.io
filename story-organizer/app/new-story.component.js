@@ -57,7 +57,7 @@ var NewStoryComponent = (function () {
         this.newStory.series.push(this.newSeriesID);
         this.stories.push(this.newStory);
         this.storyService.saveStories(this.stories, this.ids);
-        this.goToPage('table');
+        this.goToPage('status');
     };
     NewStoryComponent.prototype.goToPage = function (page) {
         var link = ['/' + page];

@@ -64,7 +64,7 @@ var StoryDetailComponent = (function () {
         //removes story by ID#
         this.stories.splice(storyID, 1);
         this.storyService.saveStories(this.stories, this.ids);
-        this.goToPage('table');
+        this.goToPage('status');
     };
     StoryDetailComponent.prototype.goToPage = function (page) {
         var link = ['/' + page];
@@ -74,7 +74,7 @@ var StoryDetailComponent = (function () {
         var storyID = this.story.id;
         this.stories[storyID] = this.displayStory;
         this.storyService.saveStories(this.stories, this.ids);
-        this.goToPage('table');
+        this.goToPage('status');
     };
     StoryDetailComponent = __decorate([
         core_1.Component({

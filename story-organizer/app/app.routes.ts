@@ -11,7 +11,7 @@ import { EditSeriesComponent } from './edit-series.component';
 const routes: RouterConfig = [
   {
     path: '',
-    redirectTo: '/table',
+    redirectTo: '/status',
     pathMatch: 'full'
   },
   {
