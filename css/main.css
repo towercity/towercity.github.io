@@ -5,14 +5,25 @@
     box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body,
 div,
 li,
-p {
+p,
+h1,
+h2 {
   padding: 0;
   margin: 0;
-  font-size: 16px;
   letter-spacing: 0.75px;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-family: 'Eczar', serif;
 }
 
 header {
@@ -20,8 +31,32 @@ header {
   left: 0;
   top: 0;
   width: 33.333vw;
-  background-color: black;
+  background-color: grey;
   height: 100vh;
+}
+
+.pagehead-wrap {
+  position: relative;
+  left: -8vw;
+}
+
+.title-wrap {
+  padding-top: 15px;
+  width: 702.31px;
+}
+
+.title {
+  font-weight: lighter;
+  font-size: 90px;
+  line-height: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.subtitle-wrap {
+  position: relative;
+  top: -13px;
+  left: 75px;
 }
 
 .content {
