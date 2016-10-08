@@ -1,0 +1,30 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+div,
+li,
+p {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0.75px;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 33.333vw;
+  background-color: black;
+  height: 100vh;
+}
+
+.content {
+  position: absolute;
+  left: 34vw;
+}
