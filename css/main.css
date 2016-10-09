@@ -36,7 +36,7 @@ header {
 
 .header-links {
   background-color: black;
-  position: fixed;;
+  position: fixed;
   width: 100px;
   left: calc(33.333vw - 100px - 2vh);
   height: 110px;
@@ -89,4 +89,17 @@ article {
 
 article p {
   text-align: justify;
+}
+
+/* Media queries */
+@media screen and (max-width: 725px) {
+  .title-wrap {
+    width: 510.56;
+    left: calc(66.6666vw - 530px)
+  }
+
+  .title {
+    font-size: 65px;
+    line-height: 65px;
+  }
 }
