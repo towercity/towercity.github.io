@@ -38,7 +38,7 @@ var headerView = {
     });
     printHTML += this.html.end;
 
-    $('body').append(printHTML);
+    $('body').prepend(printHTML);
   }
 };
 
