@@ -1,0 +1,16 @@
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 33.333vw;
+  height: 100vh;
+  background: url("../images/side.jpg") top left no-repeat;
+}
+
+.header-links {
+  position: fixed;
+  width: 100px;
+  left: calc(33.333vw - 100px - 2vh);
+  height: 110px;
+  bottom: 5vh;
+}

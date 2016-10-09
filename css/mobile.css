@@ -1,0 +1,21 @@
+header {
+  width: 100vw;
+  height: 150px;
+  background: url("../images/side.jpg") center center no-repeat;
+}
+
+.header-links {
+  position: absolute;
+  top: 150px;
+  width: 100vw;
+}
+
+.header-links ul {
+  margin: 0 auto;
+  width: 375px;
+}
+
+.header-links li {
+  display: inline;
+  padding: 0 2vw;
+}
