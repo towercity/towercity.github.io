@@ -25,6 +25,10 @@ h1 {
   font-family: 'Eczar', serif;
 }
 
+header {
+  z-index: -1;
+}
+
 .header-links {
   background-color: black;
 }
@@ -40,6 +44,11 @@ h1 {
   font-size: 12px;
   text-transform: uppercase;
   padding: 2.5px 0;
+}
+
+.header-links a {
+  color: white;
+  text-decoration: none;
 }
 
 .title {
