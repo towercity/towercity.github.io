@@ -36,6 +36,28 @@ header {
   height: 100vh;
 }
 
+.header-links {
+  background-color: black;
+  position: fixed;;
+  width: 100px;
+  left: calc(33.333vw - 100px - 2vh);
+  height: 110px;
+  bottom: 5vh;
+}
+
+.header-links ul {
+  margin: 0;
+  padding: 10px 15px;
+}
+
+.header-links li {
+  color: white;
+  list-style-type: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 2.5px 0;
+}
+
 .pagehead-wrap {
   position: relative;
   left: -8vw;
