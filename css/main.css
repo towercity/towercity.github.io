@@ -31,7 +31,6 @@ header {
   left: 0;
   top: 0;
   width: 33.333vw;
-  background-color: grey;
   background: url("../images/side.jpg") top left no-repeat;
   height: 100vh;
 }
@@ -58,14 +57,11 @@ header {
   padding: 2.5px 0;
 }
 
-.pagehead-wrap {
-  position: relative;
-  left: -8vw;
-}
-
 .title-wrap {
+  position: relative;
   padding-top: 15px;
   width: 702.31px;
+  left: calc(66.6666vw - 725px)
 }
 
 .title {
@@ -79,7 +75,6 @@ header {
 .subtitle-wrap {
   position: relative;
   top: -13px;
-  left: 75px;
 }
 
 .content {

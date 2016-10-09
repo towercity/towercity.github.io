@@ -1,0 +1,12 @@
+.pagehead-wrap {
+  position: relative;
+  left: -8vw;
+}
+
+.title-wrap {
+  left: 0;
+}
+
+.subtitle-wrap {
+  left: 75px;
+}
