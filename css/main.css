@@ -32,6 +32,7 @@ header {
   top: 0;
   width: 33.333vw;
   background-color: grey;
+  background: url("../images/side.jpg") top left no-repeat;
   height: 100vh;
 }
 
