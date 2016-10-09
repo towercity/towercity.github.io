@@ -42,50 +42,10 @@ h1 {
   padding: 2.5px 0;
 }
 
-.title-wrap {
-  position: relative;
-  padding-top: 15px;
-  width: 702.31px;
-  left: calc(66.6666vw - 725px)
-}
-
 .title {
   font-weight: lighter;
-  font-size: 90px;
-  line-height: 90px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.subtitle-wrap {
-  position: relative;
-  top: -13px;
-}
-
-.content {
-  position: absolute;
-  left: 34vw;
-}
-
-article {
-  width: 61.666vw;
-  max-width: 700px;
-  margin-left: 1vw;
 }
 
 article p {
   text-align: justify;
-}
-
-/* Media queries */
-@media screen and (max-width: 725px) {
-  .title-wrap {
-    width: 510.56;
-    left: calc(66.6666vw - 530px)
-  }
-
-  .title {
-    font-size: 65px;
-    line-height: 65px;
-  }
 }
