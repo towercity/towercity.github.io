@@ -3,10 +3,12 @@ var codeTemplate = {
     'start': '<div class="row code-row">',
     'sample': `<div class="code-sample">
       <img src="%image%">
-      <div class="code-sample-text">
-        <h3>%title%</h3>
-        <p>%description%</p>
-      </div>
+      <a href="%link%" target="_blank">
+        <div class="code-sample-text">
+          <h3>%title%</h3>
+          <p>%description%</p>
+        </div>
+      </a>
       </div>`,
     'end': '</div>'
   },
@@ -15,6 +17,7 @@ var codeTemplate = {
       'title': 'sonnet generator',
       'image': 'https://placekitten.com/232/232',
       'description': 'Generates a new Shakesperian sonnet using Markov chains',
+      'link': 'https://github.com/towercity/sonnet-generator',
       'langs': ['python', 'flask', 'html']
     }
   ],
@@ -24,7 +27,7 @@ var codeTemplate = {
 
     if (language === 'all') {
       this.samples.forEach(function(sample) {
-        htmlString += codeTemplate.html.sample.replace('%image%', sample.image).replace('%title%', sample.title).replace('%description%', sample.description);
+        htmlString += codeTemplate.html.sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title).replace('%description%', sample.description);
       });
     } else {
       console.log('welp');

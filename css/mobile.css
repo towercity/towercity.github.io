@@ -1,3 +1,7 @@
+.row {
+  justify-content: center;
+}
+
 header {
   width: 100vw;
   height: 150px;
