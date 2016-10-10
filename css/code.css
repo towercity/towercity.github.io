@@ -1,0 +1,10 @@
+.code-row {
+  margin: 0px;
+}
+
+.code-sample {
+  margin: 7.5px;
+  width: 232px;
+  height: 232px;
+  background-color: red;
+}

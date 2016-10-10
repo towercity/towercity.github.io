@@ -25,6 +25,14 @@ h1 {
   font-family: 'Eczar', serif;
 }
 
+.row {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
 header {
   z-index: -1;
 }
