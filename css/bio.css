@@ -1,0 +1,12 @@
+.biopic {
+  float: right;
+  width: 232px;
+  margin: 10px 25px;
+}
+
+@media screen and (max-width: 725px) {
+  .biopic {
+    float: none;
+    margin-left: calc(50% - 116px);
+  }
+}
