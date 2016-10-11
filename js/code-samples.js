@@ -18,7 +18,7 @@ var codeTemplate = {
       'image': 'images/sinkingcity.jpg',
       'description': "The University of Miami's Graduate lit mag",
       'link': 'http://sinkingcity.github.io',
-      'langs': ['html', 'css', 'javascript']
+      'langs': ['html', 'css', 'javascript', 'jQuery']
     },
     {
       'title': 'sonnet generator',
@@ -32,7 +32,7 @@ var codeTemplate = {
       'image': 'images/audio.jpg',
       'description': 'A web portfolio with a full working audio player',
       'link': 'http://towercity.github.io/web-portfolio',
-      'langs': ['html', 'css', 'javascript', 'angular', 'angular 1']
+      'langs': ['html', 'css', 'javascript', 'angular', 'angular 1', 'jQuery']
     },
     {
       'title': 'story organizer',
@@ -64,5 +64,29 @@ var codeTemplate = {
     $('#code-projects').append(htmlString);
   }
 };
+
+$('#js').click(function() {
+  codeTemplate.render('javascript');
+});
+
+$('#jq').click(function() {
+  codeTemplate.render('jQuery');
+});
+
+$('#ts').click(function() {
+  codeTemplate.render('typescript');
+});
+
+$('#python').click(function() {
+  codeTemplate.render('python');
+});
+
+$('#ang').click(function() {
+  codeTemplate.render('angular');
+});
+
+$('#all').click(function() {
+  codeTemplate.render('');
+});
 
 codeTemplate.render('');

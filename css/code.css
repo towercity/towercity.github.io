@@ -1,3 +1,17 @@
+.language-bar h3 {
+  margin: 0;
+}
+
+.language-bar ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+.language-bar li {
+  text-decoration: none;
+  display: inline;
+}
+
 .code-row {
   margin: 0px;
 }
