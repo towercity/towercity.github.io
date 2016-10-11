@@ -46,18 +46,23 @@ var codeTemplate = {
   render: function(language) {
     var htmlString = this.html.start;
 
-    if (language === 'all') {
+    if (language === 'all' | language === '') {
       this.samples.forEach(function(sample) {
         htmlString += codeTemplate.html.sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title).replace('%description%', sample.description);
       });
     } else {
-      console.log('welp');
+      this.samples.forEach(function(sample) {
+        if (sample.langs.indexOf(language) > -1) {
+          htmlString += codeTemplate.html.sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title).replace('%description%', sample.description);
+        }
+      });
     }
 
     htmlString += this.html.end;
 
+    $('#code-projects').empty();
     $('#code-projects').append(htmlString);
   }
 };
 
-codeTemplate.render('all');
+codeTemplate.render('');
