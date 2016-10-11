@@ -14,12 +14,26 @@ var codeTemplate = {
   },
   'samples': [
     {
+      'title': 'Sinking City',
+      'image': 'images/sinkingcity.jpg',
+      'description': "The University of Miami's Graduate lit mag",
+      'link': 'http://sinkingcity.github.io',
+      'langs': ['html', 'css', 'javascript']
+    },
+    {
       'title': 'sonnet generator',
-      'image': 'https://placekitten.com/232/232',
+      'image': 'images/shakespeare.jpg',
       'description': 'Generates a new Shakesperian sonnet using Markov chains',
       'link': 'https://github.com/towercity/sonnet-generator',
       'langs': ['python', 'flask', 'html']
     }
+    /*----------------------
+      ADD:
+        * story orgonizer
+        * sinking city
+        * portfolio page
+        * snake
+    ------------------------------*/
   ],
 
   render: function(language) {
