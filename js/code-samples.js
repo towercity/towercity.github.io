@@ -26,11 +26,17 @@ var codeTemplate = {
       'description': 'Generates a new Shakesperian sonnet using Markov chains',
       'link': 'https://github.com/towercity/sonnet-generator',
       'langs': ['python', 'flask', 'html']
+    },
+    {
+      'title': 'audio portfolio',
+      'image': 'images/audio.jpg',
+      'description': 'A web portfolio with a full working audio player',
+      'link': 'http://towercity.github.io/web-portfolio',
+      'langs': ['html', 'css', 'javascript', 'angular', 'angular 1']
     }
     /*----------------------
       ADD:
         * story orgonizer
-        * sinking city
         * portfolio page
         * snake
     ------------------------------*/
