@@ -33,13 +33,14 @@ var codeTemplate = {
       'description': 'A web portfolio with a full working audio player',
       'link': 'http://towercity.github.io/web-portfolio',
       'langs': ['html', 'css', 'javascript', 'angular', 'angular 1']
+    },
+    {
+      'title': 'story organizer',
+      'image': 'images/book.jpg',
+      'description': 'A web app for organizing short stories',
+      'link': 'http://towercity.github.io/story-organizer',
+      'langs': ['html', 'css', 'javascript', 'angular', 'angular 2', 'typescript']
     }
-    /*----------------------
-      ADD:
-        * story orgonizer
-        * portfolio page
-        * snake
-    ------------------------------*/
   ],
 
   render: function(language) {
