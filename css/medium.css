@@ -37,6 +37,7 @@ header {
 .content {
   position: absolute;
   left: 34vw;
+  width: 64vw;
 }
 
 article {
