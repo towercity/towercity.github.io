@@ -1,15 +1,22 @@
 .language-bar h3 {
   margin: 0;
+  display: inline;
+  font-size: 1em;
+  padding-left: 15px;
 }
 
 .language-bar ul {
   padding-left: 0;
   margin: 0;
+  display: inline;
 }
 
 .language-bar li {
   text-decoration: none;
   display: inline;
+  cursor: pointer;
+  font-size: 0.75em;
+  padding: 0 2.5px;
 }
 
 .code-row {
