@@ -7,14 +7,29 @@ article {
   top: 525px;
 }
 
-.lang-list {
-  max-width: 968px;
+#lang-list {
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   color: white;
+  padding: 5px 0;
 }
 
-.lang-list li {
+#lang-list.fixed-lang {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+#lang-list.lang-background {
+  background-color: #73cac4;
+}
+
+#lang-list ul {
+  margin: 0;
+}
+
+#lang-list li {
   display: inline-block;
   cursor: pointer;
   padding: 0 5px;
