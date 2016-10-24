@@ -42,7 +42,7 @@ h2 {
   left: 0;
   top: 0;
   width: 100vw;
-  height: 525px;
+  height: 125px;
   background-color: #73cac4;
   opacity: 0.9;
   z-index: -1;
@@ -53,8 +53,8 @@ h2 {
   left: 0;
   top: 0;
   width: 100vw;
-  height: 525px;
-  background: url("../images/focus.jpg") top left no-repeat;
+  height: 125px;
+  background: url("../images/focus.jpg") center left no-repeat;
   z-index: -1;
 }
 
@@ -121,7 +121,7 @@ h2 {
 
 .pagehead-wrap {
   text-align: justify;
-  width: 968px;
+  max-width: 968px;
   margin: 0 auto;
   margin-top: 200px;
   text-align: center;
@@ -144,7 +144,7 @@ h2 {
 
 article {
   position: absolute;
-  top: 525px;
+  top: 125px;
   background-color: #f2788f;
   width: 100%;
 }
@@ -153,6 +153,6 @@ article p {
   padding-top: 25px;
   text-align: justify;
   color: white;
-  width: 968px;
+  max-width: 968px;
   margin: 0 auto;
 }
