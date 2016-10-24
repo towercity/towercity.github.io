@@ -21,10 +21,6 @@ h2 {
   font-family: 'Raleway', sans-serif;
 }
 
-h1 {
-  font-family: 'Eczar', serif;
-}
-
 .float-left {
   float: left;
 }
@@ -47,7 +43,7 @@ h1 {
   top: 0;
   width: 100vw;
   height: 525px;
-  background-color: #f2788f;
+  background-color: #73cac4;
   opacity: 0.9;
   z-index: -1;
 }
@@ -133,8 +129,9 @@ h1 {
 }
 
 .title {
-  font-weight: lighter;
   color: white;
+  font-size: 90px;
+  line-height: 90px;
 }
 
 .subtitle {
@@ -144,9 +141,14 @@ h1 {
 article {
   position: absolute;
   top: 525px;
-  background-color: #b9e4e1;
+  background-color: #f2788f;
+  width: 100%;
 }
 
 article p {
+  padding-top: 25px;
   text-align: justify;
+  color: white;
+  width: 968px;
+  margin: 0 auto;
 }
