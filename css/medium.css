@@ -1,12 +1,3 @@
-header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 33.333vw;
-  height: 100vh;
-  background: url("../images/side.jpg") top left no-repeat;
-}
-
 .header-links {
   position: fixed;
   width: 100px;
@@ -17,7 +8,7 @@ header {
 
 .title-wrap {
   position: relative;
-  padding-top: 15px;
+  padding-top: 150px;
   width: 702.31px;
   left: calc(66.6666vw - 725px)
 }

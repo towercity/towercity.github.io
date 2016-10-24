@@ -1,8 +1,8 @@
 var headerView = {
   'html': {
-    'start': '<header><div class="header-links"><ul>',
+    'start': '<header><div class="header-img"><div class="header-links"><ul>',
     'link': '<li><a href="%url%" alt="%alt%" %blank%>%title%</a></li>',
-    'end': '</ul></div></header>'
+    'end': '</ul></div></div><div class="header-color"></div></header>'
   },
   'links': [
     {

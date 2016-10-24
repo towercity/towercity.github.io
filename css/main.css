@@ -37,6 +37,25 @@ header {
   z-index: -1;
 }
 
+.header-color {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 525px;
+  background-color: #f2788f;
+  opacity: 0.5;
+}
+
+.header-img {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 525px;
+  background: url("../images/focus.jpg") top left no-repeat;
+}
+
 .header-links {
   background-color: black;
 }

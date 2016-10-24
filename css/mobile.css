@@ -2,12 +2,6 @@
   justify-content: center;
 }
 
-header {
-  width: 100vw;
-  height: 150px;
-  background: url("../images/side.jpg") center center no-repeat;
-}
-
 .header-links {
   position: absolute;
   top: 150px;
