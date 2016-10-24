@@ -60,25 +60,53 @@ h1 {
   background: url("../images/focus.jpg") top left no-repeat;
 }
 
+.logo {
+  position: absolute;
+  left: 50%;
+  margin-left: -60px;
+  width: 120px;
+  z-index: 1;
+  padding-top: 10px;
+}
+
+.logo img {
+  width: 120px;
+  height: 50px;
+}
+
 .header-links {
-  position: fixed;
+  position: absolute;
+  float: left;
   z-index: 1;
   text-align: center;
   width: 100%;
 }
 
 .header-links ul {
-  margin: 0;
+  margin: 0 auto;
   padding: 10px 15px;
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+
+.header-links ul:first-child {
+  text-align: right;
+  padding-right: calc(60px + 5vw);
+}
+
+.header-links ul:last-child {
+  text-align: left;
+  padding-left: calc(60px + 5vw);
 }
 
 .header-links li {
   list-style-type: none;
-  display: inline-block;
   font-size: 24px;
   text-transform: capitalize;
   padding: 2.5px 2.5vw;
   font-family: 'Eczar', serif;
+  display: inline-block;
 }
 
 .header-links a {

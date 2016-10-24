@@ -1,14 +1,14 @@
 var headerView = {
   'html': {
     'start': '<header><div class="header-img"></div>',
-    'logo': '<div class="logo"><a href="index.html"><img src="%img%" alt="%alt%"></a></div>',
-    'middle': '<nav class="header-links"><ul>',
+    'linkStart': '<nav class="header-links"><ul>',
     'link': '<li><a href="%url%" alt="%alt%" %blank% class="%class%">%title%</a></li>',
+    'logo': '</ul><div class="logo"><a href="index.html"><img src="%img%" alt="%alt%"></a></div><ul>',
     'end': '</ul></nav><div class="header-color"></div></header>'
   },
   'logo': {
-    'img': '',
-    'alt': ''
+    'img': 'images/logo.jpg',
+    'alt': 'logo'
   },
   'links': {
     'left': [
@@ -41,12 +41,13 @@ var headerView = {
   render: function() {
     var printHTML = this.html.start;
 
-    printHTML += this.html.logo.replace("%img%", this.logo.img).replace("%alt%", this.logo.alt);
-    printHTML += this.html.middle;
+    printHTML += this.html.linkStart;
 
     this.links.left.forEach(function(link) {
       printHTML += headerView.htmlFromLinks(link, 'float-left');
     });
+
+    printHTML += this.html.logo.replace("%img%", this.logo.img).replace("%alt%", this.logo.alt);
 
     this.links.right.forEach(function(link) {
       printHTML += headerView.htmlFromLinks(link, 'float-right');
