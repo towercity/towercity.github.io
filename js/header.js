@@ -1,7 +1,7 @@
 var headerView = {
   'html': {
     'start': '<header><div class="header-links"><ul>',
-    'link': '<li><a href="%url%" alt="%alt%">%title%</a></li>',
+    'link': '<li><a href="%url%" alt="%alt%" %blank%>%title%</a></li>',
     'end': '</ul></div></header>'
   },
   'links': [
@@ -21,20 +21,25 @@ var headerView = {
       'alt': 'code samples'
     },
     {
-      'title': 'prose',
-      'url': 'prose.html',
-      'alt': 'writing samples'
+      'title': 'github',
+      'url': 'https://github.com/towercity',
+      'alt': 'github profile',
+      'newTab': true
     },
     {
       'title': 'contact',
-      'url': 'contact.html',
+      'url': 'mailto:matthewjnerger3@gmail.com',
       'alt': 'contact me'
     }
   ],
   render: function() {
     var printHTML = this.html.start;
     this.links.forEach(function(link) {
-      printHTML += headerView.html.link.replace("%url%", link.url).replace("%alt%", link.alt).replace("%title%", link.title);
+      if (link.newTab === true) {
+        printHTML += headerView.html.link.replace("%url%", link.url).replace("%alt%", link.alt).replace("%title%", link.title).replace("%blank%", 'target="_blank"');
+      } else {
+        printHTML += headerView.html.link.replace("%url%", link.url).replace("%alt%", link.alt).replace("%title%", link.title).replace("%blank%", '');
+      }
     });
     printHTML += this.html.end;
 
