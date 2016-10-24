@@ -1,11 +1,3 @@
-.header-links {
-  position: fixed;
-  width: 100px;
-  left: calc(33.333vw - 100px - 2vh);
-  height: 110px;
-  bottom: 5vh;
-}
-
 .title-wrap {
   position: relative;
   padding-top: 150px;

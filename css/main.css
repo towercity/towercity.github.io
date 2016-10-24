@@ -25,16 +25,20 @@ h1 {
   font-family: 'Eczar', serif;
 }
 
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
 .row {
     display: flex;
     display: -webkit-flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-}
-
-header {
-  z-index: -1;
 }
 
 .header-color {
@@ -57,7 +61,10 @@ header {
 }
 
 .header-links {
-  background-color: black;
+  position: fixed;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
 }
 
 .header-links ul {
@@ -66,15 +73,16 @@ header {
 }
 
 .header-links li {
-  color: white;
   list-style-type: none;
-  font-size: 12px;
-  text-transform: uppercase;
-  padding: 2.5px 0;
+  display: inline-block;
+  font-size: 24px;
+  text-transform: capitalize;
+  padding: 2.5px 2.5vw;
+  font-family: 'Eczar', serif;
 }
 
 .header-links a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
