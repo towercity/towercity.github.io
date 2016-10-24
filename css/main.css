@@ -123,7 +123,7 @@ h2 {
   text-align: justify;
   width: 968px;
   margin: 0 auto;
-  margin-top: 250px;
+  margin-top: 200px;
   text-align: center;
   padding-bottom: 50px;
 }
@@ -136,6 +136,10 @@ h2 {
 
 .subtitle {
   color: white;
+  font-weight: lighter;
+  position: relative;
+  top: -10px;
+  left: 115px;
 }
 
 article {
