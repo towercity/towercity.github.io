@@ -13,12 +13,12 @@ var headerView = {
   'links': {
     'left': [
       {
-        'title': 'bio',
+        'title': 'about',
         'url': 'bio.html',
         'alt': 'biography page'
       },
       {
-        'title': 'code',
+        'title': 'portfolio',
         'url': 'code.html',
         'alt': 'code samples'
       }
