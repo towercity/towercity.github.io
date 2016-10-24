@@ -64,7 +64,7 @@ h2 {
   margin-left: -60px;
   width: 120px;
   z-index: 1;
-  padding-top: 10px;
+  padding-top: 25px;
 }
 
 .logo img {
@@ -81,7 +81,7 @@ h2 {
 }
 
 .header-links ul {
-  margin: 0 auto;
+  margin: 15 auto;
   padding: 10px 15px;
   display: inline-block;
   float: left;
