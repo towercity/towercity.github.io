@@ -6,3 +6,16 @@
 article {
   top: 525px;
 }
+
+.lang-list {
+  max-width: 968px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.lang-list li {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 5px;
+}
