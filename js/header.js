@@ -35,11 +35,25 @@ var headerView = {
   render: function() {
     var printHTML = this.html.start;
     this.links.forEach(function(link) {
-      if (link.newTab === true) {
-        printHTML += headerView.html.link.replace("%url%", link.url).replace("%alt%", link.alt).replace("%title%", link.title).replace("%blank%", 'target="_blank"');
+      var linkHTML = headerView.html.link.replace("%url%", link.url).replace("%alt%", link.alt);
+
+      //Checks for current page
+      var href = document.location.href;
+      if (href.substr(href.lastIndexOf('/') + 1) === link.url) {
+        linkHTML = linkHTML.replace("%title%", ("> " + link.title));
       } else {
-        printHTML += headerView.html.link.replace("%url%", link.url).replace("%alt%", link.alt).replace("%title%", link.title).replace("%blank%", '');
+        linkHTML = linkHTML.replace("%title%", link.title);
       }
+
+      //Check for target_blank
+      if (link.newTab) {
+        linkHTML = linkHTML.replace("%blank%", 'target="_blank"');
+      } else {
+        linkHTML = linkHTML.replace("%blank%", '');
+      }
+
+      console.log(linkHTML);
+      printHTML += linkHTML;
     });
     printHTML += this.html.end;
 
