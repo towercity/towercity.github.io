@@ -62,14 +62,14 @@ var projects = {
     },
     {
       'title': 'sonnet generator',
-      'image': 'images/shakespeare.jpg',
+      'image': 'images/shakespeare.png',
       'description': 'Generates a new Shakesperian sonnet using Markov chains',
       'link': 'https://github.com/towercity/sonnet-generator',
       'langs': ['Python', 'Flask', 'HTML']
     },
     {
       'title': 'audio portfolio',
-      'image': 'images/audio.jpg',
+      'image': 'images/audio.png',
       'description': 'A web portfolio with a full working audio player',
       'link': 'http://towercity.github.io/web-portfolio',
       'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 1', 'jQuery']
