@@ -76,7 +76,7 @@ var projects = {
     },
     {
       'title': 'story organizer',
-      'image': 'images/book.jpg',
+      'image': 'images/book.png',
       'description': 'A web app for organizing short stories',
       'link': 'http://towercity.github.io/story-organizer',
       'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 2', 'Typescript']
