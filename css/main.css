@@ -34,7 +34,8 @@ h2 {
   display: -webkit-flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+  align-content: stretch;
 }
 
 .header-color {
@@ -146,6 +147,7 @@ article {
   top: 125px;
   background-color: #f2788f;
   width: 100%;
+  margin: 0;
 }
 
 article p {
