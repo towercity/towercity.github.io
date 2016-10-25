@@ -46,7 +46,6 @@ var projects = {
       <a href="%link%" target="_blank">
         <div class="code-sample-text">
           <h3>%title%</h3>
-          <p>%description%</p>
         </div>
       </a>
       </div>`,
@@ -56,6 +55,7 @@ var projects = {
     {
       'title': 'Sinking City',
       'image': 'images/sinkingcity.png',
+      'color':'',
       'description': "The University of Miami's Graduate lit mag",
       'link': 'http://sinkingcity.github.io',
       'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
@@ -63,6 +63,7 @@ var projects = {
     {
       'title': 'sonnet generator',
       'image': 'images/shakespeare.png',
+      'color':'',
       'description': 'Generates a new Shakesperian sonnet using Markov chains',
       'link': 'https://github.com/towercity/sonnet-generator',
       'langs': ['Python', 'Flask', 'HTML']
@@ -70,6 +71,7 @@ var projects = {
     {
       'title': 'audio portfolio',
       'image': 'images/audio.png',
+      'color':'',
       'description': 'A web portfolio with a full working audio player',
       'link': 'http://towercity.github.io/web-portfolio',
       'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 1', 'jQuery']
@@ -77,6 +79,7 @@ var projects = {
     {
       'title': 'story organizer',
       'image': 'images/book.png',
+      'color':'',
       'description': 'A web app for organizing short stories',
       'link': 'http://towercity.github.io/story-organizer',
       'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 2', 'Typescript']
@@ -88,12 +91,12 @@ var projects = {
 
     if (language === 'all' | language === '') {
       this.samples.forEach(function(sample) {
-        HTMLString += projects.HTML.sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title).replace('%description%', sample.description);
+        HTMLString += projects.HTML.sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title);
       });
     } else {
       this.samples.forEach(function(sample) {
         if (sample.langs.indexOf(language) > -1) {
-          HTMLString += projects.HTML.sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title).replace('%description%', sample.description);
+          HTMLString += projects.HTML.sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title);
         }
       });
     }
