@@ -55,7 +55,7 @@ var projects = {
   'samples': [
     {
       'title': 'Sinking City',
-      'image': 'images/sinkingcity.jpg',
+      'image': 'images/sinkingcity.png',
       'description': "The University of Miami's Graduate lit mag",
       'link': 'http://sinkingcity.github.io',
       'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
