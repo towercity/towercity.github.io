@@ -110,7 +110,7 @@ var projects = {
 		var color = projects.colors[i];
 		while (color === undefined) {
 			i -= projects.colors.length;
-			color = projects.colors[j];
+			color = projects.colors[i];
 		}
 
 		return color;
@@ -127,8 +127,12 @@ var projects = {
 				idx++;
 			});
 
-			if (idx % 2 != 0) {
+			if (idx % 3 != 0) {
 				HTMLString += projects.drawDummyProject(idx);
+
+				if (idx % 2 === 0 || idx === 1) {
+					HTMLString += projects.drawDummyProject(idx + 1);
+				}
 			}
 
 		} else {
@@ -140,8 +144,12 @@ var projects = {
 				}
 			});
 
-			if (idx % 2 != 0) {
+			if (idx % 3 != 0) {
 				HTMLString += projects.drawDummyProject(idx);
+
+				if (idx % 2 === 0 || idx === 1) {
+					HTMLString += projects.drawDummyProject(idx + 1);
+				}
 			}
 		}
 
