@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Matthew J Nerger</title>
+	<title>Matthew J Nerger</title>
 
-  <!--Google fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Eczar|Raleway" rel="stylesheet">
+	<!--Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Eczar|Raleway" rel="stylesheet">
 
-  <link href="css/main.css" rel="stylesheet">
-  <link rel="stylesheet" media="(min-width:960px)" href="css/large.css">
-  <link rel="stylesheet" media="(min-width:525px)" href="css/medium.css">
-  <link rel="stylesheet" media="(max-width:524px)" href="css/mobile.css">
-  <link rel="stylesheet" href="css/index.css">
+	<link href="css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-  <!--main page-->
-  <div class="content">
-    <!--page title bar-->
-    <div class="pagehead-wrap">
-      <div class="title-wrap">
-        <h1 class="title">Matthew J Nerger</h1>
-      </div>
-      <div class="subtitle-wrap">
-        <h2 class="subtitle">Front-End Developer</h2>
-      </div>
-    </div>
+	<!--main page-->
+	<div class="content">
+		<!--page title bar-->
+		<div class="pagehead-wrap">
+			<div class="title-wrap">
+				<h1 class="title">Matthew J Nerger</h1>
+			</div>
+			<div class="subtitle-wrap">
+				<h2 class="subtitle">Front-End Developer</h2>
+			</div>
+		</div>
 
-    <!--languages list-->
-    <div id="lang-list">
-    </div>
+		<!--languages list-->
+		<div id="lang-list">
+		</div>
 
-    <!--page content-->
-    <article>
-      <div id="code-projects"></div>
-    </article>
-  </div>
+		<!--page content-->
+		<article>
+			<div id="code-projects"></div>
+		</article>
+	</div>
 
-  <script src="lib/jQuery.js"></script>
-  <script src="js/header.js"></script>
-  <script src="js/portfolio.js"></script>
-  <script>
-    var $langs = $("#lang-list");
+	<script src="lib/jQuery.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/portfolio.js"></script>
+	<script>
+		var $langs = $("#lang-list");
 
-    $(document).on("scroll", function(e) {
-      var scrollTop = $(document).scrollTop();
-      if (scrollTop > 490) {
-        $langs.addClass("lang-background").addClass("fixed-lang");
-      } else if (scrollTop > 317) {
-        $langs.addClass("fixed-lang").removeClass("lang-background");
-      } else {
-        $langs.removeClass("fixed-lang").removeClass("lang-background");
-      }
-    });
-  </script>
+		$(document).on("scroll", function(e) {
+			var scrollTop = $(document).scrollTop();
+			if (scrollTop > 490) {
+				$langs.addClass("lang-background").addClass("fixed-lang");
+			} else if (scrollTop > 317) {
+				$langs.addClass("fixed-lang").removeClass("lang-background");
+			} else {
+				$langs.removeClass("fixed-lang").removeClass("lang-background");
+			}
+		});
+
+	</script>
 </body>
+
 </html>
