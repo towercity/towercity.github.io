@@ -1,127 +1,145 @@
 var languages = {
-  'html': {
-    'start': '<ul>',
-    'language': '<li id="%id%">%lang%</li>-',
-    'end':'<li id="view-all">View All</li></ul>'
-  },
-  'langs': [
+	'html': {
+		'start': '<ul>',
+		'language': '<li id="%id%">%lang%</li>-',
+		'end': '<li id="view-all">View All</li></ul>'
+	},
+	'langs': [
     'HTML', 'CSS', 'Javascript', 'Python'
   ],
 
-  'render': function() {
-    //add html to page
-    var HTMLString = this.html.start;
+	'render': function () {
+		//add html to page
+		var HTMLString = this.html.start;
 
-    this.langs.forEach(function(lang) {
-      HTMLString += languages.html.language.replace("%id%", lang).replace("%lang%", lang);
-    });
+		this.langs.forEach(function (lang) {
+			HTMLString += languages.html.language.replace("%id%", lang).replace("%lang%", lang);
+		});
 
-    HTMLString += this.html.end;
+		HTMLString += this.html.end;
 
-    $('#lang-list').append(HTMLString);
-  },
+		$('#lang-list').append(HTMLString);
+	},
 
-  'init': function() {
-    this.render();
+	'init': function () {
+		this.render();
 
-    this.langs.forEach(function(lang) {
-      var hash = '#' + lang;
+		this.langs.forEach(function (lang) {
+			var hash = '#' + lang;
 
-      $(hash).click(function(){
-        projects.render(lang);
-      });
-    });
+			$(hash).click(function () {
+				projects.render(lang);
+			});
+		});
 
-    $('#view-all').click(function() {
-      projects.render('');
-    });
-  }
+		$('#view-all').click(function () {
+			projects.render('');
+		});
+	}
 };
 
 var projects = {
-  'HTML': {
-    'start': '<div class="row code-row">',
-    'sample': `<div class="code-sample %color%">
-      <img src="%image%">
-      <a href="%link%" target="_blank">
-        <div class="code-sample-text">
-          <h3>%title%</h3>
-        </div>
-      </a>
-      </div>`,
-    'end': '</div>'
-  },
-  'colors': ['c1', 'c2', 'c3', 'c4', 'c5'],
-  'samples': [
-    {
-      'title': 'Sinking City',
-      'image': 'images/sinkingcity.png',
-      'description': "The University of Miami's Graduate lit mag",
-      'link': 'http://sinkingcity.github.io',
-      'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
+	'HTML': {
+		'start': '<div class="row code-row">',
+		'sample': '<div class="code-sample %color%"><a href="%link%" target="_blank"><img src="%image%"><div class="code-sample-text"><h3>%title%</h3></div></a></div>',
+		'end': '</div>'
+	},
+	'colors': ['c1', 'c2', 'c3', 'c4', 'c5'],
+	'samples': [
+		{
+			'title': 'Sinking City',
+			'image': 'images/sinkingcity.png',
+			'description': "The University of Miami's Graduate lit mag",
+			'link': 'http://sinkingcity.github.io',
+			'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
     },
-    {
-      'title': 'sonnet generator',
-      'image': 'images/shakespeare.png',
-      'description': 'Generates a new Shakesperian sonnet using Markov chains',
-      'link': 'https://github.com/towercity/sonnet-generator',
-      'langs': ['Python', 'Flask', 'HTML']
+		{
+			'title': 'sonnet generator',
+			'image': 'images/shakespeare.png',
+			'description': 'Generates a new Shakesperian sonnet using Markov chains',
+			'link': 'https://github.com/towercity/sonnet-generator',
+			'langs': ['Python', 'Flask', 'HTML']
     },
-    {
-      'title': 'audio portfolio',
-      'image': 'images/audio.png',
-      'description': 'A web portfolio with a full working audio player',
-      'link': 'http://towercity.github.io/web-portfolio',
-      'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 1', 'jQuery']
+		{
+			'title': 'audio portfolio',
+			'image': 'images/audio.png',
+			'description': 'A web portfolio with a full working audio player',
+			'link': 'http://towercity.github.io/web-portfolio',
+			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 1', 'jQuery']
     },
-    {
-      'title': 'story organizer',
-      'image': 'images/book.png',
-      'description': 'A web app for organizing short stories',
-      'link': 'http://towercity.github.io/story-organizer',
-      'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 2', 'Typescript']
+		{
+			'title': 'story organizer',
+			'image': 'images/book.png',
+			'description': 'A web app for organizing short stories',
+			'link': 'http://towercity.github.io/story-organizer',
+			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 2', 'Typescript']
     }
   ],
 
-  'drawProjects': function(HTMLString, sample, i) {
-    var color = projects.colors[i];
-    var j = i;
-    while (color === undefined) {
-      j -= projects.colors.length;
-      color = projects.colors[j];
-    }
+	'drawProjects': function (sample, i) {
+		var color = this.returnColor(i);
 
-    HTMLString += projects.HTML.sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title).replace("%color%", color);
+		var HTMLString = projects.HTML.sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title).replace("%color%", color);
 
-    return HTMLString;
-  },
+		return HTMLString;
+	},
 
-  'render': function(language) {
-    var HTMLString = this.HTML.start;
+	'drawDummyProject': function (i) {
+		var color = this.returnColor(i);
 
-    if (language === 'all' | language === '') {
-      this.samples.forEach(function(sample, i) {
-        HTMLString = projects.drawProjects(HTMLString, sample, i);
-      });
-    } else {
-      var idx = 0;
-      this.samples.forEach(function(sample) {
-        if (sample.langs.indexOf(language) > -1) {
-          HTMLString = projects.drawProjects(HTMLString, sample, idx);
-          idx++;
-        }
-      });
-    }
+		var HTMLString = projects.HTML.sample.replace("%color%", color).replace('<img src="%image%">', '').replace('<div class="code-sample-text"><h3>%title%</h3></div>', '');
 
-    HTMLString += this.HTML.end;
+		return HTMLString;
+	},
 
-    $('#code-projects').empty();
-    $('#code-projects').append(HTMLString);
-  },
+	'returnColor': function (i) {
+		var color = projects.colors[i];
+		while (color === undefined) {
+			i -= projects.colors.length;
+			color = projects.colors[j];
+		}
 
-  'init': function() {
-    this.render('');
-  }
+		return color;
+	},
+
+	'render': function (language) {
+		var HTMLString = this.HTML.start;
+
+		var idx = 0;
+
+		if (language === 'all' | language === '') {
+			this.samples.forEach(function (sample) {
+				HTMLString += projects.drawProjects(sample, idx);
+				idx++;
+			});
+
+			if (idx % 2 != 0) {
+				HTMLString += projects.drawDummyProject(idx);
+			}
+
+		} else {
+			var idx = 0;
+			this.samples.forEach(function (sample) {
+				if (sample.langs.indexOf(language) > -1) {
+					HTMLString += projects.drawProjects(sample, idx);
+					idx++;
+				}
+			});
+
+			if (idx % 2 != 0) {
+				HTMLString += projects.drawDummyProject(idx);
+			}
+		}
+
+		HTMLString += this.HTML.end;
+
+		$('#code-projects').empty();
+		$('#code-projects').append(HTMLString);
+	},
+
+	'init': function () {
+		this.render('');
+	}
 };
 
 languages.init();
