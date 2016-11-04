@@ -5,8 +5,9 @@ var languages = {
 		'end': '<li id="view-all">View All</li></ul>'
 	},
 	'langs': [
-    'HTML', 'CSS', 'Javascript', 'Python'
-  ],
+    	'HTML', 'CSS', 'Javascript', 'Python'
+	],
+
 
 	'render': function () {
 		//add html to page
@@ -23,17 +24,30 @@ var languages = {
 
 	'init': function () {
 		this.render();
+		var scrollPosition = $(document).scrollTop();
 
 		this.langs.forEach(function (lang) {
 			var hash = '#' + lang;
 
 			$(hash).click(function () {
 				projects.render(lang);
+
+				if (scrollPosition < 490) {
+					$('html, body').animate({
+						scrollTop: 496
+					}, 250);
+				}
 			});
 		});
 
 		$('#view-all').click(function () {
 			projects.render('');
+
+			if (scrollPosition < 490) {
+				$('html, body').animate({
+					scrollTop: 496
+				}, 200);
+			}
 		});
 	}
 };
