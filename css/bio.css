@@ -8,14 +8,18 @@
 	color: black;
 }
 .vertical-rule {
-	width: 400px;
+	width: 75vw;
+	max-width: 400px;
 	height: 5px;
 	background-color: black;
 	margin: 75px auto;
 }
 .bio {
 	margin: 0 auto;
-	width: 750px;
+	max-width: 750px;
+	font-size: 20px;
+	line-height: 25px;
+	padding: 0 10px 150px 10px;
 }
 .biopic {
 	width: 150px;
