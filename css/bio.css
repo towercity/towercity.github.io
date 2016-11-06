@@ -1,0 +1,24 @@
+.title-wrap {
+	width: 100%;
+	text-align: center;
+	margin-top: 100px;
+}
+.title {
+	font-size: 100px;
+	color: black;
+}
+.vertical-rule {
+	width: 400px;
+	height: 5px;
+	background-color: black;
+	margin: 75px auto;
+}
+.bio {
+	margin: 0 auto;
+	width: 750px;
+}
+.biopic {
+	width: 150px;
+	float: left;
+	margin-right: 25px;
+}

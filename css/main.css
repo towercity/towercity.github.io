@@ -7,9 +7,6 @@ body {
 	max-width: 100%;
 	overflow-x: hidden;
 }
-body {
-	background-color: #73cac4;
-}
 body,
 div,
 li,
@@ -137,14 +134,23 @@ h2 {
 article {
 	position: absolute;
 	top: 125px;
-	background-color: #f2788f;
 	width: 100%;
 	margin: 0;
 }
 article p {
 	padding-top: 25px;
 	text-align: justify;
-	color: white;
 	max-width: 968px;
 	margin: 0 auto;
+}
+@media screen and (max-width: 525px) {
+	.title {
+		font-size: 45px;
+		line-height: 45px;
+		padding-top: 40px;
+	}
+	.subtitle {
+		top: 0px;
+		left: 0;
+	}
 }

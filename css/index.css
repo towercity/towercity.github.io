@@ -95,15 +95,6 @@ article {
 	}
 }
 @media screen and (max-width: 525px) {
-	.title {
-		font-size: 45px;
-		line-height: 45px;
-		padding-top: 40px;
-	}
-	.subtitle {
-		top: 0px;
-		left: 0;
-	}
 	.code-sample {
 		width: 100%;
 	}
