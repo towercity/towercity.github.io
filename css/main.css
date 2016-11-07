@@ -23,6 +23,9 @@ h2 {
 .float-right {
 	float: right;
 }
+.clear-both {
+	clear: both;
+}
 .row {
 	display: -webkit-box;
 	display: -ms-flexbox;
