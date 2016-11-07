@@ -24,12 +24,20 @@ article {
 	max-width: 750px;
 	font-size: 20px;
 	line-height: 25px;
-	padding: 0 10px 150px 10px;
+	padding: 0 10px 20px 10px;
 }
 .biopic {
 	width: 150px;
 	float: left;
 	margin-right: 25px;
+}
+.svgs {
+	margin: 0 auto;
+	max-width: 610px;
+}
+.svgs img {
+	width: 100px;
+	margin: 15px 50px;
 }
 footer {
 	color: white;
@@ -39,4 +47,10 @@ footer {
 	position: fixed;
 	bottom: 0;
 	z-index: -2;
+}
+@media screen and (max-width: 625px) {
+	.svgs img {
+		width: 16.66vw;
+		margin: 15px 7.33333vw;
+	}
 }
