@@ -142,7 +142,7 @@ article {
 }
 .sub-heading {
 	font-size: 50px;
-	margin-bottom: 10px;
+	margin: 15px 0;
 	padding-left: 50px;
 }
 article p {
@@ -150,6 +150,20 @@ article p {
 	text-align: justify;
 	max-width: 968px;
 	margin: 0 auto;
+}
+.contact {
+	max-width: 750px;
+	padding: 0 10px;
+	margin: 0 auto 95px auto;
+}
+.contact p {
+	font-size: 30px;
+	font-weight: bolder;
+	text-align: center;
+}
+.contact a {
+	text-decoration: none;
+	color: #3B7D79;
 }
 @media screen and (max-width: 525px) {
 	.title {
