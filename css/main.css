@@ -122,6 +122,12 @@ h2 {
 	margin-top: 200px;
 	text-align: center;
 }
+article {
+	position: absolute;
+	top: 125px;
+	width: 100%;
+	margin: 0;
+}
 .title {
 	color: white;
 	font-size: 90px;
@@ -134,11 +140,10 @@ h2 {
 	top: -10px;
 	left: 115px;
 }
-article {
-	position: absolute;
-	top: 125px;
-	width: 100%;
-	margin: 0;
+.sub-heading {
+	font-size: 50px;
+	margin-bottom: 10px;
+	padding-left: 50px;
 }
 article p {
 	padding-top: 25px;
