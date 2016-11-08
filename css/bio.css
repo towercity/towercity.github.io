@@ -24,10 +24,11 @@ article {
 	max-width: 750px;
 	font-size: 20px;
 	line-height: 25px;
-	padding: 0 10px 20px 10px;
+	padding: 100px 10px 0 10px;
 }
 .svgs {
-	margin: 90px auto;
+	padding-top: 100px;
+	margin: 0 auto;
 	max-width: 610px;
 }
 .svgs img {
