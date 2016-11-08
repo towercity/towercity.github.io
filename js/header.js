@@ -19,7 +19,7 @@ var headerView = {
       },
 			{
 				'title': 'portfolio',
-				'url': 'index.html',
+				'url': 'code.html',
 				'alt': 'code samples'
       }
     ],

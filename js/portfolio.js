@@ -59,6 +59,11 @@ var projects = {
 			'sample': '<div class="code-sample %color%"><a href="%link%" target="_blank"><img src="%image%"><div class="code-sample-text"><h3>%title%</h3></div></a></div>',
 			'end': '</div>'
 		},
+		'code': {
+			'start': '<div class="section"><div class="title-wrap"><h1 class="title">portfolio</h1></div></div>',
+			'sample': '<div class="section"><a href="%link%" target="_blank"><img src="%image%"><div class="code-sample-text"><h3>%title%</h3></div></a></div>',
+			'end': ''
+		}
 	},
 	'colors': ['c1', 'c2', 'c3', 'c4', 'c5'],
 	'samples': [
@@ -131,7 +136,7 @@ var projects = {
 				idx++;
 			});
 
-			if (idx % 3 != 0) {
+			if (page === 'index' && idx % 3 != 0) {
 				HTMLString += projects.drawDummyProject(idx, page);
 
 				if (idx % 2 === 0 || idx === 1) {
