@@ -128,17 +128,13 @@ article {
 	width: 100%;
 	margin: 0;
 }
-.title {
-	color: white;
-	font-size: 90px;
-	line-height: 90px;
+.title-wrap {
+	width: 100%;
+	text-align: center;
+	padding-top: 125px;
 }
-.subtitle {
-	color: white;
-	font-weight: lighter;
-	position: relative;
-	top: -10px;
-	left: 115px;
+.title {
+	font-size: 100px;
 }
 .sub-heading {
 	font-size: 50px;
