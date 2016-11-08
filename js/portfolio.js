@@ -54,9 +54,11 @@ var languages = {
 
 var projects = {
 	'HTML': {
-		'start': '<div class="row code-row">',
-		'sample': '<div class="code-sample %color%"><a href="%link%" target="_blank"><img src="%image%"><div class="code-sample-text"><h3>%title%</h3></div></a></div>',
-		'end': '</div>'
+		'index': {
+			'start': '<div class="row code-row">',
+			'sample': '<div class="code-sample %color%"><a href="%link%" target="_blank"><img src="%image%"><div class="code-sample-text"><h3>%title%</h3></div></a></div>',
+			'end': '</div>'
+		},
 	},
 	'colors': ['c1', 'c2', 'c3', 'c4', 'c5'],
 	'samples': [
@@ -90,18 +92,18 @@ var projects = {
     }
   ],
 
-	'drawProjects': function (sample, i) {
+	'drawProjects': function (sample, i, page) {
 		var color = this.returnColor(i);
 
-		var HTMLString = projects.HTML.sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title).replace("%color%", color);
+		var HTMLString = projects.HTML[page].sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title).replace("%color%", color);
 
 		return HTMLString;
 	},
 
-	'drawDummyProject': function (i) {
+	'drawDummyProject': function (i, page) {
 		var color = this.returnColor(i);
 
-		var HTMLString = projects.HTML.sample.replace("%color%", color).replace('<img src="%image%">', '').replace('<div class="code-sample-text"><h3>%title%</h3></div>', '');
+		var HTMLString = projects.HTML[page].sample.replace("%color%", color).replace('<img src="%image%">', '').replace('<div class="code-sample-text"><h3>%title%</h3></div>', '');
 
 		return HTMLString;
 	},
@@ -116,22 +118,24 @@ var projects = {
 		return color;
 	},
 
-	'renderIndex': function (language) {
-		var HTMLString = this.HTML.start;
+	'render': function (page, language) {
+		var HTMLobject = this.HTML[page];
+
+		var HTMLString = HTMLobject.start;
 
 		var idx = 0;
 
 		if (language === 'all' | language === '') {
 			this.samples.forEach(function (sample) {
-				HTMLString += projects.drawProjects(sample, idx);
+				HTMLString += projects.drawProjects(sample, idx, page);
 				idx++;
 			});
 
 			if (idx % 3 != 0) {
-				HTMLString += projects.drawDummyProject(idx);
+				HTMLString += projects.drawDummyProject(idx, page);
 
 				if (idx % 2 === 0 || idx === 1) {
-					HTMLString += projects.drawDummyProject(idx + 1);
+					HTMLString += projects.drawDummyProject(idx + 1, page);
 				}
 			}
 
@@ -139,27 +143,27 @@ var projects = {
 			var idx = 0;
 			this.samples.forEach(function (sample) {
 				if (sample.langs.indexOf(language) > -1) {
-					HTMLString += projects.drawProjects(sample, idx);
+					HTMLString += projects.drawProjects(sample, idx, page);
 					idx++;
 				}
 			});
 
 			if (idx % 3 != 0) {
-				HTMLString += projects.drawDummyProject(idx);
+				HTMLString += projects.drawDummyProject(idx, page);
 
 				if (idx % 2 === 0 || idx === 1) {
-					HTMLString += projects.drawDummyProject(idx + 1);
+					HTMLString += projects.drawDummyProject(idx + 1, page);
 				}
 			}
 		}
 
-		HTMLString += this.HTML.end;
+		HTMLString += HTMLobject.end;
 
 		$('#code-projects').empty();
 		$('#code-projects').append(HTMLString);
 	},
 
-	'initIndex': function () {
-		this.renderIndex('');
+	'init': function (page) {
+		this.render(page, '');
 	}
 };
