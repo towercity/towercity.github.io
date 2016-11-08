@@ -1,3 +1,6 @@
+.header-color {
+	background-color: #f2788f;
+}
 article {
 	z-index: 1;
 	background-color: white;
@@ -10,14 +13,17 @@ article {
 }
 .title {
 	font-size: 100px;
-	color: black;
+	color: #f2788f;
 }
 .vertical-rule {
 	width: 75vw;
 	max-width: 400px;
 	height: 5px;
-	background-color: #3B7D79;
+	background-color: #f2788f;
 	margin: 75px auto;
+}
+.sub-heading {
+	color: #f2788f;
 }
 .bio {
 	margin: 0 auto;
@@ -33,13 +39,12 @@ article {
 .svgs img {
 	width: 100px;
 	margin: 15px 50px;
-	color: #3B7D79;
 }
 footer {
 	color: white;
 	width: 100%;
 	height: 175px;
-	background-color: #73cac4;
+	background-color: #f2788f;
 	position: fixed;
 	bottom: 0;
 	z-index: -2;
@@ -52,6 +57,9 @@ footer {
 	width: 150px;
 	float: left;
 	margin: 12.5px;
+}
+.contact a {
+	color: #f2788f;
 }
 @media screen and (max-width: 625px) {
 	.svgs img {
