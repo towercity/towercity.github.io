@@ -116,7 +116,7 @@ var projects = {
 		return color;
 	},
 
-	'render': function (language) {
+	'renderIndex': function (language) {
 		var HTMLString = this.HTML.start;
 
 		var idx = 0;
@@ -159,10 +159,7 @@ var projects = {
 		$('#code-projects').append(HTMLString);
 	},
 
-	'init': function () {
-		this.render('');
+	'initIndex': function () {
+		this.renderIndex('');
 	}
 };
-
-languages.init();
-projects.init();
