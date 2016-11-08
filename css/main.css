@@ -144,6 +144,25 @@ article {
 	font-size: 50px;
 	margin: 15px 0;
 }
+.section {
+	width: 100vw;
+	height: 350px;
+}
+.section:nth-of-type(5n+1) {
+	background-color: #eeebeb;
+}
+.section:nth-of-type(5n+2) {
+	background-color: #dbdbdb;
+}
+.section:nth-of-type(5n+3) {
+	background-color: #cecccc;
+}
+.section:nth-of-type(5n+4) {
+	background-color: #dddddd;
+}
+.section:nth-of-type(5n+0) {
+	background-color: #d2d2d4;
+}
 article p {
 	padding-top: 25px;
 	text-align: justify;
