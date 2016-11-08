@@ -7,3 +7,27 @@
 .title {
 	color: #fbad4b;
 }
+.code-sample-text {
+	font-size: 18px;
+	padding: 0 10px;
+}
+.code-sample-text h3 {
+	margin-top: 0;
+	text-transform: capitalize;
+	font-size: 35px;
+	padding-top: 25px;
+}
+.code-sample-image {
+	width: 300px;
+	margin-top: 5px;
+	margin: 0 25px;
+}
+.even-section img {
+	float: left;
+}
+.odd-section img {
+	float: right;
+}
+.odd-section .code-sample-text {
+	text-align: right;
+}

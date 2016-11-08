@@ -56,12 +56,12 @@ var projects = {
 	'HTML': {
 		'index': {
 			'start': '<div class="row code-row">',
-			'sample': '<div class="code-sample %color%"><a href="%link%" target="_blank"><img src="%image%"><div class="code-sample-text"><h3>%title%</h3></div></a></div>',
+			'sample': '<div class="code-sample %color%"><a href="%link%"><img src="%image%"><div class="code-sample-text"><h3>%title%</h3></div></a></div>',
 			'end': '</div>'
 		},
 		'code': {
 			'start': '<div class="section"><div class="title-wrap"><h1 class="title">portfolio</h1></div></div>',
-			'sample': '<div class="section"><a href="%link%" target="_blank"><img src="%image%"><div class="code-sample-text"><h3>%title%</h3></div></a></div>',
+			'sample': '<div class="section %even?%"><img src="%image%" class="code-sample-image"><div class="code-sample-text"><h3>%title%</h3><a href="%link%" target="_blank">x</a></div></div><div class="clear-both"></div>',
 			'end': ''
 		}
 	},
@@ -101,6 +101,12 @@ var projects = {
 		var color = this.returnColor(i);
 
 		var HTMLString = projects.HTML[page].sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title).replace("%color%", color);
+
+		if (i % 2 === 0) {
+			HTMLString = HTMLString.replace('%even?%', 'even-section');
+		} else {
+			HTMLString = HTMLString.replace('%even?%', 'odd-section');
+		}
 
 		return HTMLString;
 	},
