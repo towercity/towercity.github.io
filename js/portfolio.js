@@ -61,8 +61,8 @@ var projects = {
 		},
 		'code': {
 			'start': '<div class="section"><div class="title-wrap"><h1 class="title">portfolio</h1></div></div>',
-			'sample': '<div class="section %even?%"><img src="%image%" class="code-sample-image"><div class="code-sample-text"><h3>%title%</h3><a href="%link%" target="_blank">x</a></div></div><div class="clear-both"></div>',
-			'end': ''
+			'sample': '<div class="section %even?%"><img src="%site_image%" class="code-sample-image"><div class="code-sample-text"><h3>%title%</h3><a href="%link%" target="_blank">x</a></div></div><div class="clear-both"></div>',
+			'end': '<div class="section"><div class="contact"><p>Let\'s talk about your project. <a href="mailto:matthewjnerger3@gmail.com">Drop me an email!</a></p></div></div>'
 		}
 	},
 	'colors': ['c1', 'c2', 'c3', 'c4', 'c5'],
@@ -70,6 +70,7 @@ var projects = {
 		{
 			'title': 'Sinking City',
 			'image': 'images/sinkingcity.png',
+			'siteImage': 'images/sinkingcity-site.png',
 			'description': "The University of Miami's Graduate lit mag",
 			'link': 'http://sinkingcity.github.io',
 			'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
@@ -77,6 +78,7 @@ var projects = {
 		{
 			'title': 'sonnet generator',
 			'image': 'images/shakespeare.png',
+			'siteImage': 'images/shakespeare.png',
 			'description': 'Generates a new Shakesperian sonnet using Markov chains',
 			'link': 'https://github.com/towercity/sonnet-generator',
 			'langs': ['Python', 'Flask', 'HTML']
@@ -84,6 +86,7 @@ var projects = {
 		{
 			'title': 'audio portfolio',
 			'image': 'images/audio.png',
+			'siteImage': 'images/audio-site.png',
 			'description': 'A web portfolio with a full working audio player',
 			'link': 'http://towercity.github.io/web-portfolio',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 1', 'jQuery']
@@ -91,6 +94,7 @@ var projects = {
 		{
 			'title': 'story organizer',
 			'image': 'images/book.png',
+			'siteImage': 'images/organizer-site.png',
 			'description': 'A web app for organizing short stories',
 			'link': 'http://towercity.github.io/story-organizer',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 2', 'Typescript']
@@ -100,7 +104,11 @@ var projects = {
 	'drawProjects': function (sample, i, page) {
 		var color = this.returnColor(i);
 
-		var HTMLString = projects.HTML[page].sample.replace('%image%', sample.image).replace('%link%', sample.link).replace('%title%', sample.title).replace("%color%", color);
+		var HTMLString = projects.HTML[page].sample.replace('%image%', sample.image)
+			.replace('%link%', sample.link)
+			.replace('%title%', sample.title)
+			.replace("%color%", color)
+			.replace('%site_image%', sample.siteImage);
 
 		if (i % 2 === 0) {
 			HTMLString = HTMLString.replace('%even?%', 'even-section');

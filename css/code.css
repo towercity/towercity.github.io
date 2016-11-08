@@ -18,9 +18,9 @@
 	padding-top: 25px;
 }
 .code-sample-image {
-	width: 300px;
+	height: 300px;
 	margin-top: 5px;
-	margin: 0 25px;
+	margin: 25px;
 }
 .even-section img {
 	float: left;
