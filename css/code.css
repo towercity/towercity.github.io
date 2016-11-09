@@ -7,6 +7,9 @@
 .title {
 	color: #fbad4b;
 }
+.section {
+	overflow: hidden;
+}
 .code-sample-text {
 	font-size: 18px;
 	padding: 0 10px;
@@ -17,15 +20,32 @@
 	font-size: 35px;
 	padding-top: 25px;
 }
+.code-image {
+	width: auto;
+	margin: 40px 3vw 0 3vw;
+	border: 3px solid grey;
+	padding: 0;
+	border-top: none;
+	border-bottom: none;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, .05);
+}
+.browser {
+	height: 10px;
+	background-color: grey;
+}
+.browser img {
+	position: relative;
+	top: -7px;
+	left: 3px;
+}
 .code-sample-image {
 	height: 300px;
-	margin-top: 5px;
-	margin: 25px;
+	padding: 0;
 }
-.even-section img {
+.even-section .code-image {
 	float: left;
 }
-.odd-section img {
+.odd-section .code-image {
 	float: right;
 }
 .odd-section .code-sample-text {
