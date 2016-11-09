@@ -30,7 +30,7 @@ var languages = {
 			var hash = '#' + lang;
 
 			$(hash).click(function () {
-				projects.render(lang);
+				projects.render(lang, 'index');
 
 				if (scrollPosition < 490) {
 					$('html, body').animate({
@@ -41,7 +41,7 @@ var languages = {
 		});
 
 		$('#view-all').click(function () {
-			projects.render('');
+			projects.render('', 'index');
 
 			if (scrollPosition < 490) {
 				$('html, body').animate({
@@ -56,12 +56,12 @@ var projects = {
 	'HTML': {
 		'index': {
 			'start': '<div class="row code-row">',
-			'sample': '<div class="code-sample %color%"><a href="%link%"><img src="%image%"><div class="code-sample-text"><h3>%title%</h3></div></a></div>',
+			'sample': '<div class="code-sample %color%"><a href="%id_link%"><img src="%image%"><div class="code-sample-text"><h3>%title%</h3></div></a></div>',
 			'end': '</div>'
 		},
 		'code': {
 			'start': '<div class="section"><div class="title-wrap"><h1 class="title">portfolio</h1></div></div>',
-			'sample': '<div class="section %even?%"><img src="%site_image%" class="code-sample-image"><div class="code-sample-text"><h3>%title%</h3><a href="%link%" target="_blank">x</a></div></div><div class="clear-both"></div>',
+			'sample': '<div class="section %even?%" id="%id%"><div class="code-image"><div class="browser"><img src="images/svg/dots.svg"></div><img src="%site_image%" class="code-sample-image"></div><div class="code-sample-text"><h3>%title%</h3><a href="%link%" target="_blank">x</a></div></div><div class="clear-both"></div>',
 			'end': '<div class="section"><div class="contact"><p>Let\'s talk about your project. <a href="mailto:matthewjnerger3@gmail.com">Drop me an email!</a></p></div></div>'
 		}
 	},
@@ -73,6 +73,7 @@ var projects = {
 			'siteImage': 'images/sinkingcity-site.png',
 			'description': "The University of Miami's Graduate lit mag",
 			'link': 'http://sinkingcity.github.io',
+			'id': 'sinking-city',
 			'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
     },
 		{
@@ -81,6 +82,7 @@ var projects = {
 			'siteImage': 'images/shakespeare.png',
 			'description': 'Generates a new Shakesperian sonnet using Markov chains',
 			'link': 'https://github.com/towercity/sonnet-generator',
+			'id': 'sonnets',
 			'langs': ['Python', 'Flask', 'HTML']
     },
 		{
@@ -89,6 +91,7 @@ var projects = {
 			'siteImage': 'images/audio-site.png',
 			'description': 'A web portfolio with a full working audio player',
 			'link': 'http://towercity.github.io/web-portfolio',
+			'id': 'portfolio',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 1', 'jQuery']
     },
 		{
@@ -97,6 +100,7 @@ var projects = {
 			'siteImage': 'images/organizer-site.png',
 			'description': 'A web app for organizing short stories',
 			'link': 'http://towercity.github.io/story-organizer',
+			'id': 'story-org',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 2', 'Typescript']
     }
   ],
@@ -106,6 +110,8 @@ var projects = {
 
 		var HTMLString = projects.HTML[page].sample.replace('%image%', sample.image)
 			.replace('%link%', sample.link)
+			.replace('%id_link%', ('/code.html#' + sample.id))
+			.replace('%id%', sample.id)
 			.replace('%title%', sample.title)
 			.replace("%color%", color)
 			.replace('%site_image%', sample.siteImage);
@@ -122,7 +128,9 @@ var projects = {
 	'drawDummyProject': function (i, page) {
 		var color = this.returnColor(i);
 
-		var HTMLString = projects.HTML[page].sample.replace("%color%", color).replace('<img src="%image%">', '').replace('<div class="code-sample-text"><h3>%title%</h3></div>', '');
+		var HTMLString = projects.HTML[page].sample.replace("%color%", color)
+			.replace('<img src="%image%">', '')
+			.replace('<div class="code-sample-text"><h3>%title%</h3></div>', '');
 
 		return HTMLString;
 	},
@@ -137,7 +145,7 @@ var projects = {
 		return color;
 	},
 
-	'render': function (page, language) {
+	'render': function (language, page) {
 		var HTMLobject = this.HTML[page];
 
 		var HTMLString = HTMLobject.start;
@@ -183,6 +191,6 @@ var projects = {
 	},
 
 	'init': function (page) {
-		this.render(page, '');
+		this.render('', page);
 	}
 };
