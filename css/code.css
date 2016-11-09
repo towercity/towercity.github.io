@@ -51,3 +51,6 @@
 .odd-section .code-sample-text {
 	text-align: right;
 }
+.odd-section .code-sample-text p {
+	text-align: right;
+}

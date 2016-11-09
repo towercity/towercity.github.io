@@ -150,13 +150,13 @@ article {
 .section:nth-of-type(5n+2) {
 	background-color: #cecccc;
 }
-.section:nth-of-type(5n+3) {
+.section:nth-of-type(5n+0) {
 	background-color: #dbdbdb;
 }
-.section:nth-of-type(5n+4) {
+.section:nth-of-type(5n+3) {
 	background-color: #dddddd;
 }
-.section:nth-of-type(5n+0) {
+.section:nth-of-type(5n+4) {
 	background-color: #d2d2d4;
 }
 article p {
