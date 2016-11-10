@@ -101,6 +101,9 @@ article {
 	text-align: center;
 	text-transform: capitalize;
 }
+footer {
+	background-color: #73cac4;
+}
 @media screen and (max-width: 770px) {
 	.code-sample {
 		width: 50%;
