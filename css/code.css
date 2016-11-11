@@ -25,10 +25,10 @@
 	position: relative;
 	padding: 7px;
 	border-radius: 5px;
-	top: 15px;
+	top: 20px;
 	color: black;
 	text-decoration: none;
-	background-color: rgb(255, 255, 255);
+	background-color: rgba(0, 0, 0, 0.09);
 }
 .code-image {
 	width: auto;
