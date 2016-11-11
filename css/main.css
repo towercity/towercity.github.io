@@ -127,7 +127,7 @@ article {
 	top: 125px;
 	width: 100%;
 	margin: 0;
-	margin-bottom: 175px;
+	margin-bottom: 210px;
 }
 .title-wrap {
 	width: 100%;
@@ -183,19 +183,31 @@ article p {
 .footer-wrap {
 	max-width: 968px;
 	margin: 0 auto;
+	padding-top: 15px;
 }
 .biopic {
-	width: 150px;
+	width: 19%;
 	float: left;
-	margin: 12.5px;
+	padding: 12.5px;
 }
 footer {
 	color: white;
 	width: 100%;
-	height: 175px;
+	height: 210px;
 	position: fixed;
 	bottom: 0;
 	z-index: -2;
+}
+.footer-box {
+	font-size: 12px;
+	padding-top: 15px;
+	margin: 0 2%;
+	text-align: justify;
+	float: left;
+	width: 23%;
+}
+.footer-box a {
+	color: white;
 }
 @media screen and (max-width: 525px) {
 	.title {
