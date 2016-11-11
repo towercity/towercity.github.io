@@ -55,6 +55,9 @@
 .even-section .code-image {
 	float: left;
 }
+.even-section .code-sample-text p {
+	text-align: left;
+}
 .odd-section .code-image {
 	float: right;
 }
@@ -66,4 +69,16 @@
 }
 footer {
 	background-color: #fbad4b;
+}
+@media screen and (max-width: 525px) {
+	.code-sample-text {
+		font-size: 15px;
+		margin-right: 15px;
+	}
+	.code-sample-text h3 {
+		font-size: 20px;
+	}
+	.code-sample-image {
+		width: 50vw;
+	}
 }

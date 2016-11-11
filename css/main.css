@@ -219,4 +219,19 @@ footer {
 		top: 0px;
 		left: 0;
 	}
+	article {
+		margin-bottom: 400px;
+	}
+	footer {
+		height: 400px;
+	}
+	.biopic {
+		width: 33%;
+		position: relative;
+		left: calc(50vw - 16.5%);
+		float: none;
+	}
+	.footer-box {
+		width: auto;
+	}
 }
