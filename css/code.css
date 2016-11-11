@@ -20,6 +20,16 @@
 	font-size: 35px;
 	padding-top: 25px;
 }
+.code-sample-text a {
+	border: 1px solid black;
+	position: relative;
+	padding: 7px;
+	border-radius: 5px;
+	top: 15px;
+	color: black;
+	text-decoration: none;
+	background-color: rgb(255, 255, 255);
+}
 .code-image {
 	width: auto;
 	margin: 40px 3vw 0 3vw;
