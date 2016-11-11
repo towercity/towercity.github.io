@@ -8,13 +8,6 @@ article {
 .title {
 	color: #f2788f;
 }
-.vertical-rule {
-	width: 75vw;
-	max-width: 400px;
-	height: 5px;
-	background-color: #f2788f;
-	margin: 75px auto;
-}
 .sub-heading {
 	color: #f2788f;
 }
@@ -33,6 +26,11 @@ article {
 .svgs img {
 	width: 100px;
 	margin: 15px 50px;
+}
+.code-list {
+	width: 365px;
+	float: left;
+	padding: 0 100px;
 }
 .contact a {
 	color: #f2788f;
