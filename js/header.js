@@ -7,7 +7,7 @@ var headerView = {
 		'end': '</ul></nav><div class="header-color"></div></header>'
 	},
 	'logo': {
-		'img': 'images/logo.jpg',
+		'img': 'images/logo.png',
 		'alt': 'logo'
 	},
 	'links': {
