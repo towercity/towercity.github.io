@@ -79,7 +79,7 @@ var projects = {
 		{
 			'title': 'sonnet generator',
 			'image': 'images/shakespeare.png',
-			'siteImage': 'images/shakespeare.png',
+			'siteImage': 'images/shakespeare-site.png',
 			'description': 'Generates a new Shakesperian sonnet using Markov chains',
 			'link': 'https://github.com/towercity/sonnet-generator',
 			'id': 'sonnets',
