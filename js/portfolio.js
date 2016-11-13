@@ -99,7 +99,7 @@ var projects = {
 			'image': 'images/snake.png',
 			'siteImage': 'images/snake-site.png',
 			'description': 'A clone of the classic game snake built on the HTML5 canvas',
-			'link': 'https://towercity.github.io/snake',
+			'link': 'http://towercity.github.io/snake',
 			'id': 'snake',
 			'langs': ['HTML', 'HTML5 Canvas', 'Javascript']
     },
@@ -108,7 +108,7 @@ var projects = {
 			'image': 'images/shakespeare.png',
 			'siteImage': 'images/shakespeare-site.png',
 			'description': 'Generates a new Shakesperian sonnet using Markov chains',
-			'link': 'https://github.com/towercity/sonnet-generator',
+			'link': 'http://github.com/towercity/sonnet-generator',
 			'id': 'sonnets',
 			'langs': ['Python']
     }
