@@ -110,7 +110,7 @@ var projects = {
 			'description': 'Generates a new Shakesperian sonnet using Markov chains',
 			'link': 'https://github.com/towercity/sonnet-generator',
 			'id': 'sonnets',
-			'langs': ['Python', 'Flask', 'HTML']
+			'langs': ['Python']
     }
   ],
 
