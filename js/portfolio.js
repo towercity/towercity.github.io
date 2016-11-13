@@ -77,15 +77,6 @@ var projects = {
 			'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
     },
 		{
-			'title': 'sonnet generator',
-			'image': 'images/shakespeare.png',
-			'siteImage': 'images/shakespeare-site.png',
-			'description': 'Generates a new Shakesperian sonnet using Markov chains',
-			'link': 'https://github.com/towercity/sonnet-generator',
-			'id': 'sonnets',
-			'langs': ['Python', 'Flask', 'HTML']
-    },
-		{
 			'title': 'audio portfolio',
 			'image': 'images/audio.png',
 			'siteImage': 'images/audio-site.png',
@@ -102,6 +93,24 @@ var projects = {
 			'link': 'http://towercity.github.io/story-organizer',
 			'id': 'story-org',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 2', 'Typescript']
+    },
+		{
+			'title': 'snake',
+			'image': 'images/snake.png',
+			'siteImage': 'images/snake-site.png',
+			'description': 'A clone of the classic game snake built on the HTML5 canvas',
+			'link': 'https://towercity.github.io/snake',
+			'id': 'snake',
+			'langs': ['HTML', 'HTML5 Canvas', 'Javascript']
+    },
+		{
+			'title': 'sonnet generator',
+			'image': 'images/shakespeare.png',
+			'siteImage': 'images/shakespeare-site.png',
+			'description': 'Generates a new Shakesperian sonnet using Markov chains',
+			'link': 'https://github.com/towercity/sonnet-generator',
+			'id': 'sonnets',
+			'langs': ['Python', 'Flask', 'HTML']
     }
   ],
 
