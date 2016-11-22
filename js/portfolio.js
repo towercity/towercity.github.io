@@ -71,7 +71,7 @@ var projects = {
 			'title': 'Sinking City',
 			'image': 'images/sinkingcity.png',
 			'siteImage': 'images/sinkingcity-site.png',
-			'description': "The University of Miami's Graduate lit mag",
+			'description': "The University of Miami's Graduate lit mag.",
 			'link': 'http://sinkingcity.github.io',
 			'id': 'sinking-city',
 			'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
@@ -80,7 +80,7 @@ var projects = {
 			'title': 'audio portfolio',
 			'image': 'images/audio.png',
 			'siteImage': 'images/audio-site.png',
-			'description': 'A web portfolio with a full working audio player',
+			'description': 'A web portfolio with a full working audio player.',
 			'link': 'http://towercity.github.io/web-portfolio',
 			'id': 'portfolio',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 1', 'jQuery']
@@ -89,16 +89,25 @@ var projects = {
 			'title': 'story organizer',
 			'image': 'images/book.png',
 			'siteImage': 'images/organizer-site.png',
-			'description': 'A web app for organizing short stories',
+			'description': 'A web app for organizing short stories.',
 			'link': 'http://towercity.github.io/story-organizer',
 			'id': 'story-org',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 2', 'Typescript']
     },
 		{
+			'title': 'cat clicker',
+			'image': 'images/cat.png',
+			'siteImage': 'images/cat-site.png',
+			'description': 'A simple cat clicker game built with knockout.js and styled with material design.',
+			'link': 'http://towercity.github.io/cat-clicker',
+			'id': 'cat',
+			'langs': ['HTML', 'CSS', 'Javascript', 'knockout.js', 'material design']
+    },
+		{
 			'title': 'snake',
 			'image': 'images/snake.png',
 			'siteImage': 'images/snake-site.png',
-			'description': 'A clone of the classic game snake built on the HTML5 canvas',
+			'description': 'A clone of the classic game snake built on the HTML5 canvas.',
 			'link': 'http://towercity.github.io/snake',
 			'id': 'snake',
 			'langs': ['HTML', 'HTML5 Canvas', 'Javascript']
