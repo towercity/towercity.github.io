@@ -95,6 +95,15 @@ var projects = {
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 2', 'Typescript']
     },
 		{
+			'title': 'author blog',
+			'image': 'images/author.png',
+			'siteImage': 'images/author-site.png',
+			'description': 'A simple biography/blog page for an author.',
+			'link': 'http://towercity.github.io/author-blog',
+			'id': 'author-blog',
+			'langs': ['HTML', 'CSS', 'Javascript', 'Jekyll']
+    },
+		{
 			'title': 'cat clicker',
 			'image': 'images/cat.png',
 			'siteImage': 'images/cat-site.png',
@@ -103,7 +112,7 @@ var projects = {
 			'id': 'cat',
 			'langs': ['HTML', 'CSS', 'Javascript', 'knockout.js', 'material design']
     },
-		{
+		/*{
 			'title': 'snake',
 			'image': 'images/snake.png',
 			'siteImage': 'images/snake-site.png',
@@ -111,7 +120,7 @@ var projects = {
 			'link': 'http://towercity.github.io/snake',
 			'id': 'snake',
 			'langs': ['HTML', 'HTML5 Canvas', 'Javascript']
-    },
+    },*/
 		{
 			'title': 'sonnet generator',
 			'image': 'images/shakespeare.png',
