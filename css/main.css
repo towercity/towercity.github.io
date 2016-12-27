@@ -219,7 +219,7 @@ footer {
 	}
 	.header-links ul:last-child {
 		text-align: left;
-		padding-left: calc(40px + 1vw);
+		padding-left: calc(30px + 1vw);
 	}
 	.pagehead-wrap {
 		margin-top: 125px;
