@@ -196,7 +196,7 @@ footer {
 	height: 210px;
 	position: fixed;
 	bottom: 0;
-	z-index: -2;
+	z-index: -5;
 }
 .footer-box {
 	font-size: 12px;
