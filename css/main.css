@@ -210,6 +210,9 @@ footer {
 	color: white;
 }
 @media screen and (max-width: 525px) {
+	.pagehead-wrap {
+		margin-top: 125px;
+	}
 	.title {
 		font-size: 45px;
 		line-height: 45px;
@@ -220,16 +223,20 @@ footer {
 		left: 0;
 	}
 	article {
-		margin-bottom: 400px;
-	}
-	footer {
-		height: 400px;
+		position: static;
+		margin-bottom: 0;
 	}
 	.biopic {
 		width: 33%;
 		position: relative;
 		left: calc(50vw - 16.5%);
 		float: none;
+	}
+	footer {
+		position: static;
+		bottom: auto;
+		padding-top: 25px;
+		height: 400px;
 	}
 	.footer-box {
 		width: auto;
