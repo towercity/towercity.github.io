@@ -2,6 +2,9 @@
 .header-img {
 	height: 525px;
 }
+body {
+	background-color: #73cac4;
+}
 article {
 	top: 525px;
 	background-color: white;
@@ -103,7 +106,7 @@ article {
 	text-transform: capitalize;
 }
 footer {
-	background-color: #73cac4;
+	display: none;
 }
 @media screen and (max-width: 770px) {
 	.code-sample {
