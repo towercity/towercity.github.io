@@ -61,6 +61,7 @@ article {
 }
 #lang-list ul {
 	margin: 0;
+	padding: 0;
 }
 #lang-list li {
 	display: inline-block;
@@ -117,6 +118,17 @@ footer {
 	}
 }
 @media screen and (max-width: 525px) {
+	.title {
+		font-size: 45px;
+		line-height: 45px;
+		padding-top: 0px;
+	}
+	.subtitle {
+		font-size: 15px;
+		top: 0px;
+		left: 0;
+		margin-bottom: 20px;
+	}
 	.code-sample {
 		width: 100%;
 	}
