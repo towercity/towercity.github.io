@@ -75,7 +75,7 @@ footer {
 		padding-top: 50px;
 	}
 	.section {
-		padding-top: 65px;
+		padding-top: 80px;
 	}
 	.code-sample-text {
 		font-size: 15px;
@@ -92,6 +92,7 @@ footer {
 	.code-image {
 		border-bottom: 3px solid grey;
 		margin: 40px 6vw 0 6vw;
+		display: none;
 	}
 	.contact {
 		padding-top: 50px;
