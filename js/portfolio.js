@@ -5,7 +5,7 @@ var languages = {
 		'end': '<li id="view-all">View All</li></ul>'
 	},
 	'langs': [
-    	'HTML', 'CSS', 'Javascript', 'Python'
+    	'HTML', 'jQuery', 'Angular', 'Python'
 	],
 
 
@@ -203,10 +203,13 @@ var projects = {
 				}
 			});
 
+			console.log(language + ": " + idx);
+			console.log(idx % 3);
+
 			if (idx % 3 != 0) {
 				HTMLString += projects.drawDummyProject(idx, page);
 
-				if (idx % 2 === 0 || idx === 1) {
+				if (idx === 1) {
 					HTMLString += projects.drawDummyProject(idx + 1, page);
 				}
 			}
