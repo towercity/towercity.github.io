@@ -32,7 +32,7 @@ var headerView = {
       },
 			{
 				'title': 'contact',
-				'url': 'mailto:matthewjnerger3@gmail.com',
+				'url': 'contact.html',
 				'alt': 'contact me'
       }
     ]
