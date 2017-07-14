@@ -17,6 +17,11 @@ h2 {
 	letter-spacing: 0.75px;
 	font-family: 'Raleway', sans-serif;
 }
+h1,
+h2 {
+	font-family: 'Eczar', serif;
+	font-weight: normal;
+}
 .float-left {
 	float: left;
 }
