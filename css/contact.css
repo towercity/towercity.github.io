@@ -1,0 +1,46 @@
+.header-color {
+	background-color: #b846b7;
+}
+.contact a {
+	color: #b846b7;
+}
+.title {
+	color: #b846b7;
+}
+.section {
+	overflow: hidden;
+}
+footer {
+	background-color: #b846b7;
+}
+@media screen and (max-width: 525px) {
+	.title-wrap {
+		padding-top: 50px;
+	}
+	.section {
+		padding-top: 80px;
+	}
+	.code-sample-text {
+		font-size: 15px;
+		margin-right: 15px;
+	}
+	.code-sample-text h3 {
+		font-size: 20px;
+	}
+	.code-sample-image {
+		width: 33vw;
+		height: auto;
+		margin-bottom: -4px;
+	}
+	.code-image {
+		border-bottom: 3px solid grey;
+		margin: 40px 6vw 0 6vw;
+		display: none;
+	}
+	.contact {
+		padding-top: 50px;
+	}
+	footer {
+		padding: 0 15px;
+	}
+}
