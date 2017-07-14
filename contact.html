@@ -18,12 +18,20 @@
         <article>
             <div class="row">
                 <div id="contact-form">
-                    <form action="https://formspree.io/matthewjnerger3@gmail.com" method="POST">
-                        Name: <br>
-                        <input type="text" name="name"><br>
-                        Email: <br>
-                        <input type="email" name="_replyto"><br>
-                        Message<br>
+                    <div class="text">
+                        <p>Drop me an email at <a href="mailto:matthewjnerger3@gmail.com">matthewjnerger3@gmail.com</a> or, if you prefer, fill out the contact form below. Let's see what I can do for you.</p>
+                    </div>
+                    <br><br>
+                    <br>
+                    <form class="form-section" action="https://formspree.io/matthewjnerger3@gmail.com" method="POST">
+                        Name:
+                        <br>
+                        <input type="text" name="name">
+                        <br> Email:
+                        <br>
+                        <input type="email" name="_replyto">
+                        <br> Message
+                        <br>
                         <textarea name="message" rows="10" cols="50"></textarea>
                         <br>
                         <input type="submit" value="Send">
