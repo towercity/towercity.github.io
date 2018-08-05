@@ -15,8 +15,25 @@
 	<link rel="stylesheet" href="css/index.css">
   -->
 </head>
+<body style="">
+  <header>
+    <div class="header-img"></div>
+    <nav class="header-links">
+      <ul>
+        <li><a href="bio.html" alt="biography page" class="float-left">about</a></li>
+        <li><a href="code.html" alt="code samples" class="float-left">portfolio</a></li>
+      </ul>
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+      </div>
+      <ul>
+        <li><a href="https://github.com/towercity" alt="github profile" target="_blank" class="float-right">github</a></li>
+        <li><a href="contact.html" alt="contact me" class="float-right">contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-color"></div>
+  </header>
 
-<body>
 	<!--main page-->
 	<div class="content">
 		<!--page title bar-->
@@ -28,43 +45,8 @@
 				<h2 class="subtitle">Front-End Developer</h2>
 			</div>
 		</div>
-
-		<!--languages list-->
-		<div id="lang-list">
-		</div>
-
-		<!--page content-->
-		<article>
-			<div id="code-projects"></div>
-		</article>
 	</div>
 
-	<footer></footer>
-
-
-	<script src="lib/jQuery.js"></script>
-	<script src="js/header.js"></script>
-	<script src="js/portfolio.js"></script>
-	<script>
-		languages.init();
-		projects.init('index');
-
-	</script>
-	<script>
-		var $langs = $("#lang-list");
-
-		$(document).on("scroll", function(e) {
-			var scrollTop = $(document).scrollTop();
-			if (scrollTop > 490) {
-				$langs.addClass("lang-background").addClass("fixed-lang");
-			} else if (scrollTop > 317) {
-				$langs.addClass("fixed-lang").removeClass("lang-background");
-			} else {
-				$langs.removeClass("fixed-lang").removeClass("lang-background");
-			}
-		});
-
-	</script>
 </body>
 
 </html>
