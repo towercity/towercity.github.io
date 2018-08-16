@@ -70,32 +70,6 @@ h2 {
 	-ms-flex-line-pack: stretch;
 	align-content: stretch;
 }
-.header-color {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: 125px;
-	opacity: 0.9;
-	z-index: -1;
-}
-.header-img {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: 125px;
-	z-index: -1;
-}
-.logo {
-	position: absolute;
-	left: 50%;
-	margin-left: -60px;
-	width: 120px;
-	z-index: 1;
-	padding-top: 25px;
-}
-
 .pagehead-wrap {
 	text-align: justify;
 	margin-top: calc(50vh - 73px);
@@ -107,13 +81,6 @@ h2 {
 	background-color: #97c0bd;
 	border-radius: 5px;
 	box-shadow: 2px 4px 2px rgba(0, 0, 0, 0.25);
-}
-article {
-	position: absolute;
-	top: 125px;
-	width: 100%;
-	margin: 0;
-	margin-bottom: 210px;
 }
 .title-wrap {
 	text-align: center;
@@ -128,21 +95,6 @@ article {
 .section {
 	width: 100vw;
 	height: 350px;
-}
-.section:nth-of-type(5n+1) {
-	background-color: #eeebeb;
-}
-.section:nth-of-type(5n+2) {
-	background-color: #cecccc;
-}
-.section:nth-of-type(5n+0) {
-	background-color: #dbdbdb;
-}
-.section:nth-of-type(5n+3) {
-	background-color: #dddddd;
-}
-.section:nth-of-type(5n+4) {
-	background-color: #d2d2d4;
 }
 article p {
 	padding-top: 25px;

@@ -56,7 +56,6 @@
 	top: calc(50vh + 115px);
 	right: calc(50vw - 275px);
 }
-
 @media screen and (max-width: 525px) {
 	.title {
 		font-size: 45px;
