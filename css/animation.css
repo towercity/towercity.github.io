@@ -21,3 +21,7 @@
 #triangle-shadow {
   animation: float-vertical 7s infinite ease-in;
 }
+
+.page-links div {
+  animation: float-vertical 8s infinite alternate;
+}
