@@ -13,7 +13,7 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: -2;
+	z-index: -10;
 	background: url("../images/focus.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -224,7 +224,7 @@ footer {
 	height: 210px;
 	position: fixed;
 	bottom: 0;
-	z-index: -5;
+	z-index: -20;
 }
 .footer-box {
 	font-size: 12px;
