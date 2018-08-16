@@ -142,10 +142,14 @@ h2 {
 }
 .pagehead-wrap {
 	text-align: justify;
-	max-width: 968px;
-	margin: 0 auto;
-	margin-top: 200px;
+	margin-top: calc(50vh - 69px);
+	margin-left: calc(50vw - 375px);
+	padding-top: 15px;
+	height: 138px;
+	width: 750px;
 	text-align: center;
+	background-color: #97c0bd;
+	border-radius: 5px;
 }
 article {
 	position: absolute;
@@ -155,9 +159,7 @@ article {
 	margin-bottom: 210px;
 }
 .title-wrap {
-	width: 100%;
 	text-align: center;
-	padding-top: 125px;
 }
 .title {
 	font-size: 100px;
