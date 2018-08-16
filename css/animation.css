@@ -1,15 +1,23 @@
 @keyframes float-vertical {
   0% {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
   }
   66% {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
   }
   100% {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
   }
 }
 
 .pagehead-wrap {
-  animation: float-vertical 7s infinite ease-out;
+  animation: float-vertical 10s infinite ease-out;
+}
+
+#triangle {
+  animation: float-vertical 7s infinite ease-in;
+}
+
+#triangle-shadow {
+  animation: float-vertical 7s infinite ease-in;
 }
