@@ -2,6 +2,9 @@ body {
 	background-color: #7D787E;
 	color: #d8d6d8;
 }
+.section a {
+	color: #d2cbe9;
+}
 .code-list {
 	width: 315px;
 	float: left;
@@ -9,7 +12,7 @@ body {
 	margin: 0;
 }
 .footer-links li a {
-	color: #d8d6d8;
+	color: #d2cbe9;
 }
 #biopic {
 	position: fixed;
