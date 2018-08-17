@@ -1,8 +1,23 @@
-@keyframes float-vertical {
+@keyframes float-shadow {
+  0% {
+    transform: translateY(8px);
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  }
+  50% {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+  }
+  100% {
+    transform: translateY(8px);
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  }
+}
+
+@keyframes float-clean {
   0% {
     transform: translateY(-4px);
   }
-  66% {
+  50% {
     transform: translateY(-8px);
   }
   100% {
@@ -10,18 +25,7 @@
   }
 }
 
-.pagehead-wrap {
-  animation: float-vertical 10s infinite ease-out;
-}
-
-#triangle {
-  animation: float-vertical 7s infinite ease-in;
-}
-
-#triangle-shadow {
-  animation: float-vertical 7s infinite ease-in;
-}
-
+/* .pagehead-wrap,
 .page-links div {
-  animation: float-vertical 8s infinite alternate;
-}
+  animation: float-shadow 5s infinite;
+} */
