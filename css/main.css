@@ -47,6 +47,30 @@ article {
 .section p {
 	line-height: 25px;
 }
+footer {
+	margin: 10px auto;
+	max-width: 650px;
+	text-align: center;
+}
+.footer-links {
+	list-style-type: none;
+	font-weight: 100;
+}
+.footer-links li {
+	display: inline;
+}
+.footer-links li a {
+	text-decoration: none;
+}
+.footer-links li a:hover {
+	text-decoration: underline;
+}
+.footer-links li::after {
+	content: ' | ';
+}
+.footer-links li:last-of-type::after {
+	content: '';
+}
 @media screen and (max-width: 525px) {
 	.header-links ul {
 		margin-top: 0;
