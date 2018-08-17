@@ -13,6 +13,8 @@ h1,
 h2 {
 	padding: 0;
 	margin: 0;
+	font-family: sans-serif;
+	font-weight: lighter;
 }
 h1,
 h2 {
@@ -27,24 +29,23 @@ h2 {
 .clear-both {
 	clear: both;
 }
+article {
+	margin: 75px auto;
+	text-align: justify;
+}
 .section {
-	margin: 0 auto;
-	max-width: 750px;
+	margin: 75px auto 0 auto;
+	max-width: 650px;
 	font-size: 20px;
-	line-height: 25px;
 	padding: 0 10px;
 	clear: both;
 }
-article p {
-	padding-top: 25px;
-	text-align: justify;
-	max-width: 968px;
-	margin: 0 auto;
-}
-.contact p {
-	font-size: 30px;
-	font-weight: bolder;
+.section h2 {
 	text-align: center;
+	margin-bottom: 35px;
+}
+.section p {
+	line-height: 25px;
 }
 @media screen and (max-width: 525px) {
 	.header-links ul {
@@ -69,10 +70,6 @@ article p {
 	.subtitle {
 		top: 0px;
 		left: 0;
-	}
-	article {
-		position: static;
-		margin-bottom: 0;
 	}
 	.biopic {
 		width: 33%;
