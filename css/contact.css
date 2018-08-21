@@ -1,65 +1,15 @@
-.header-color {
-	background-color: #b846b7;
+body {
+	background-color: #75807e;
+	color: #c7cccb;
+}
+a {
+	color: #b2acad;
 }
 #contact-form {
-	background-color: #eeebeb;
 	width: 100%;
 	padding: 100px 25px;
-}
-#contact-form a {
-	color: #b846b7;
-}
-.text {
-	margin: 0 auto;
-	max-width: 750px;
-	font-size: 20px;
-	line-height: 25px;
-	padding: 0 10px 50px 10px;
 }
 .form-section {
 	width: 500px;
 	margin: 0 auto;
-}
-.contact a {
-	color: #b846b7;
-}
-.title {
-	color: #b846b7;
-}
-.section {
-	overflow: hidden;
-}
-footer {
-	background-color: #b846b7;
-}
-@media screen and (max-width: 525px) {
-	.title-wrap {
-		padding-top: 50px;
-	}
-	.section {
-		padding-top: 80px;
-	}
-	.code-sample-text {
-		font-size: 15px;
-		margin-right: 15px;
-	}
-	.code-sample-text h3 {
-		font-size: 20px;
-	}
-	.code-sample-image {
-		width: 33vw;
-		height: auto;
-		margin-bottom: -4px;
-	}
-	.code-image {
-		border-bottom: 3px solid grey;
-		margin: 40px 6vw 0 6vw;
-		display: none;
-	}
-	.contact {
-		padding-top: 50px;
-	}
-	footer {
-		padding: 0 15px;
-	}
 }
