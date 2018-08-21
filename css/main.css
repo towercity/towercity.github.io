@@ -33,6 +33,10 @@ article {
 	margin: 75px auto;
 	text-align: justify;
 }
+.article-right {
+	max-width: 750px;
+	padding-left: 100px;
+}
 .section {
 	margin: 75px auto 0 auto;
 	max-width: 650px;
@@ -70,6 +74,21 @@ footer {
 }
 .footer-links li:last-of-type::after {
 	content: '';
+}#biopic {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+}
+#biopic img {
+	max-width: 100vw;
+	opacity: 0.33;
+	filter: invert(100%);
+}
+@media screen and (max-width: 850px) {
+	.article-right {
+		padding-left: 0;
+	}
 }
 @media screen and (max-width: 525px) {
 	.header-links ul {
