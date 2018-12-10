@@ -7,20 +7,17 @@
 
 	<title>Matthew J Nerger</title>
 
+	<!--Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Eczar|Raleway" rel="stylesheet">
+
 	<link href="css/main.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/index.css">
-	<link rel="stylesheet" href="css/animation.css">
 </head>
-<body style="">
-  <!-- background -->
-  <div id="background">
-    <div id="background-color">
-    </div>
-  </div>
 
-
-	<!--The logo, display in the middle of the screen-->
-	<div class="splash">
+<body>
+	<!--main page-->
+	<div class="content">
+		<!--page title bar-->
 		<div class="pagehead-wrap">
 			<div class="title-wrap">
 				<h1 class="title">Matthew J Nerger</h1>
@@ -30,22 +27,41 @@
 			</div>
 		</div>
 
-		<!--the triangle. It's made with border trick, so the shadow is an identical tranparent div lower down-->
-		<div id="triangle"></div>
-		<div id="triangle-shadow"></div>
+		<!--languages list-->
+		<div id="lang-list">
+		</div>
+
+		<!--page content-->
+		<article>
+			<div id="code-projects"></div>
+		</article>
 	</div>
 
-	<div class="page-links">
-		<div id="about-link"><a href="bio.html" alt="biography page">about</a></div>
-		<div id="portfolio-link"><a href="code.html" alt="code samples">portfolio</a></div>
-		<!--
-		<div><a href="https://github.com/towercity" alt="github profile" target="_blank">github</a></div>
-		<div><a href="contact.html" alt="contact me">contact</a></div>
-		-->
-	</div>
+	<footer></footer>
 
+	<script src="lib/jQuery.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/portfolio.js"></script>
+	<script>
+		languages.init();
+		projects.init('index');
 
+	</script>
+	<script>
+		var $langs = $("#lang-list");
 
+		$(document).on("scroll", function(e) {
+			var scrollTop = $(document).scrollTop();
+			if (scrollTop > 490) {
+				$langs.addClass("lang-background").addClass("fixed-lang");
+			} else if (scrollTop > 317) {
+				$langs.addClass("fixed-lang").removeClass("lang-background");
+			} else {
+				$langs.removeClass("fixed-lang").removeClass("lang-background");
+			}
+		});
+
+	</script>
 </body>
 
 </html>
