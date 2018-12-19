@@ -65,7 +65,6 @@ var projects = {
 			'end': '<div class="section"><div class="contact"><p>Let\'s talk about your project. <a href="mailto:matthewjnerger3@gmail.com">Drop me an email!</a></p></div></div>'
 		}
 	},
-	'colors': ['c1', 'c2', 'c3', 'c4', 'c5'],
 	'samples': [
 		{
 			'title': 'Sinking City',
@@ -126,7 +125,6 @@ var projects = {
   ],
 
 	'drawProjects': function (sample, i, page) {
-		var color = this.returnColor(i);
 
 		var HTMLString = projects.HTML[page].sample.replace('%image%', sample.image)
 			.replace('%link%', sample.link)
@@ -134,7 +132,6 @@ var projects = {
 			.replace('%id%', sample.id)
 			.replace('%title%', sample.title)
 			.replace('%desc%', sample.description)
-			.replace("%color%", color)
 			.replace('%site_image%', sample.siteImage);
 
 		if (i % 2 === 0) {
@@ -144,26 +141,6 @@ var projects = {
 		}
 
 		return HTMLString;
-	},
-
-	'drawDummyProject': function (i, page) {
-		var color = this.returnColor(i);
-
-		var HTMLString = projects.HTML[page].sample.replace("%color%", color)
-			.replace('<img src="%image%">', '')
-			.replace('<div class="code-sample-text"><h3>%title%</h3></div>', '');
-
-		return HTMLString;
-	},
-
-	'returnColor': function (i) {
-		var color = projects.colors[i];
-		while (color === undefined) {
-			i -= projects.colors.length;
-			color = projects.colors[i];
-		}
-
-		return color;
 	},
 
 	'render': function (language, page) {
@@ -179,14 +156,6 @@ var projects = {
 				idx++;
 			});
 
-			if (page === 'index' && idx % 3 != 0) {
-				HTMLString += projects.drawDummyProject(idx, page);
-
-				if (idx % 2 === 0 || idx === 1) {
-					HTMLString += projects.drawDummyProject(idx + 1, page);
-				}
-			}
-
 		} else {
 			var idx = 0;
 			this.samples.forEach(function (sample) {
@@ -195,17 +164,6 @@ var projects = {
 					idx++;
 				}
 			});
-
-			console.log(language + ": " + idx);
-			console.log(idx % 3);
-
-			if (idx % 3 != 0) {
-				HTMLString += projects.drawDummyProject(idx, page);
-
-				if (idx === 1) {
-					HTMLString += projects.drawDummyProject(idx + 1, page);
-				}
-			}
 		}
 
 		HTMLString += HTMLobject.end;
