@@ -69,8 +69,7 @@ var projects = {
 	'samples': [
 		{
 			'title': 'Sinking City',
-			'image': 'images/sinkingcity.png',
-			'siteImage': 'images/sinkingcity-site.png',
+			'image': 'images/sinkingcity-site.png',
 			'description': "The University of Miami's Graduate lit mag.",
 			'link': 'http://sinkingcity.github.io',
 			'id': 'sinking-city',
@@ -78,8 +77,7 @@ var projects = {
     },
 		{
 			'title': 'audio portfolio',
-			'image': 'images/audio.png',
-			'siteImage': 'images/audio-site.png',
+			'image': 'images/audio-site.png',
 			'description': 'A web portfolio with a full working audio player.',
 			'link': 'http://towercity.github.io/web-portfolio',
 			'id': 'portfolio',
@@ -87,8 +85,7 @@ var projects = {
     },
 		{
 			'title': 'story organizer',
-			'image': 'images/book.png',
-			'siteImage': 'images/organizer-site.png',
+			'image': 'images/organizer-site.png',
 			'description': 'A web app for organizing short stories.',
 			'link': 'http://towercity.github.io/story-organizer',
 			'id': 'story-org',
@@ -96,8 +93,7 @@ var projects = {
     },
 		{
 			'title': 'author blog',
-			'image': 'images/author.png',
-			'siteImage': 'images/author-site.png',
+			'image': 'images/author-site.png',
 			'description': 'A simple biography/blog page for an author.',
 			'link': 'http://towercity.github.io/author-blog',
 			'id': 'author-blog',
@@ -105,26 +101,23 @@ var projects = {
     },
 		{
 			'title': 'cat clicker',
-			'image': 'images/cat.png',
-			'siteImage': 'images/cat-site.png',
+			'image': 'images/cat-site.png',
 			'description': 'A simple cat clicker game built with knockout.js and styled with material design.',
 			'link': 'http://towercity.github.io/cat-clicker',
 			'id': 'cat',
 			'langs': ['HTML', 'CSS', 'Javascript', 'knockout.js', 'material design']
     },
-		/*{
+		{
 			'title': 'snake',
-			'image': 'images/snake.png',
-			'siteImage': 'images/snake-site.png',
+			'image': 'images/snake-site.png',
 			'description': 'A clone of the classic game snake built on the HTML5 canvas.',
 			'link': 'http://towercity.github.io/snake',
 			'id': 'snake',
 			'langs': ['HTML', 'HTML5 Canvas', 'Javascript']
-    },*/
+    },
 		{
 			'title': 'sonnet generator',
-			'image': 'images/shakespeare.png',
-			'siteImage': 'images/shakespeare-site.png',
+			'image': 'images/shakespeare-site.png',
 			'description': 'Generates a new Shakesperian sonnet using Markov chains',
 			'link': 'http://github.com/towercity/sonnet-generator',
 			'id': 'sonnets',
