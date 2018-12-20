@@ -56,7 +56,7 @@ var projects = {
 	'HTML': {
 		'index': {
 			'start': '<div class="row code-row">',
-			'sample': '<div class="code-sample"><a href="%id_link%"><div class="code-img-box"><img src="%image%"></div><div class="code-sample-text"><h3>%title%</h3></div></a><p>%desc%</p></div>',
+			'sample': '<div class="code-sample"><a href="%id_link%"><img src="%image%"><div class="code-sample-text"><h3>%title%</h3></div></a><p>%desc%</p></div>',
 			'end': '</div>'
 		},
 		'code': {
@@ -134,10 +134,10 @@ var projects = {
 			.replace('%desc%', sample.description)
 			.replace('%site_image%', sample.siteImage);
 
-		if (i % 2 === 0) {
-			HTMLString = HTMLString.replace('%even?%', 'even-section');
+		if (i % 1 === 0) {
+			HTMLString = HTMLString.replace('%float%', 'float-left');
 		} else {
-			HTMLString = HTMLString.replace('%even?%', 'odd-section');
+			HTMLString = HTMLString.replace('%float%', 'float-right');
 		}
 
 		return HTMLString;

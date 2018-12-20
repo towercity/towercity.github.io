@@ -273,24 +273,20 @@ article {
 	max-width: 1380px;
 }
 .code-sample {
-	width: calc(33.3333333% - 30px);
-	min-width: 250px;
+	width: calc(50% - 30px);
 	margin: 15px;
-	padding: 20px;
+	padding: 15px 10px;
 	background-color: grey;
-}
-.code-img-box {
-	height: 480px;
-	margin-bottom: 15px;
 }
 .code-sample a {
 	text-decoration: none;
 }
 .code-sample img {
-	width: 100%;
+	width: 50%;
+	margin: 0 5px;
+	float: left;
 }
 .code-sample-text {
-	width: 100%;
 	color: black;
 }
 .code-sample-text h3 {
@@ -298,7 +294,6 @@ article {
 	margin: 0;
 	line-height: 25px;
 	font-size: 25px;
-	width: 100%;
 	text-align: right;
 	text-transform: capitalize;
 }
