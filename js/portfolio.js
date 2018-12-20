@@ -56,7 +56,7 @@ var projects = {
 	'HTML': {
 		'index': {
 			'start': '<div class="row code-row">',
-			'sample': '<div class="code-sample"><img src="%image%"><a href="%id_link%"><div class="code-sample-text"><h3>%title%</h3></div></a><p>%desc%</p></div>',
+			'sample': '<div class="code-sample"><a href="%id_link%"><div class="code-img-box"><img src="%image%"></div><div class="code-sample-text"><h3>%title%</h3></div></a><p>%desc%</p></div>',
 			'end': '</div>'
 		},
 		'code': {

@@ -273,9 +273,15 @@ article {
 	max-width: 1380px;
 }
 .code-sample {
-	width: 33.3333333%;
+	width: calc(33.3333333% - 30px);
 	min-width: 250px;
-	padding: 15px;
+	margin: 15px;
+	padding: 20px;
+	background-color: grey;
+}
+.code-img-box {
+	height: 480px;
+	margin-bottom: 15px;
 }
 .code-sample a {
 	text-decoration: none;
