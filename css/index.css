@@ -53,7 +53,6 @@ h2 {
 	left: 0;
 	top: 0;
 	width: 100vw;
-	height: 125px;
 	background-color: #73cac4;
 	opacity: 0.9;
 	z-index: -1;
@@ -63,7 +62,6 @@ h2 {
 	left: 0;
 	top: 0;
 	width: 100vw;
-	height: 125px;
 	background: url("../images/focus.jpg") center left no-repeat;
 	z-index: -1;
 }
@@ -275,15 +273,15 @@ article {
 .code-sample {
 	width: calc(50% - 30px);
 	margin: 15px;
-	padding: 15px 10px;
+	padding: 15px 20px 15px 10px;
 	background-color: grey;
 }
 .code-sample a {
 	text-decoration: none;
 }
 .code-sample img {
-	width: 50%;
-	margin: 0 5px;
+	width: 250px;
+	margin: 0 15px 0 5px;
 	float: left;
 }
 .code-sample-text {
