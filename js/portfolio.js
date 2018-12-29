@@ -56,7 +56,7 @@ var projects = {
 	'HTML': {
 		'index': {
 			'start': '<div class="row code-row">',
-			'sample': '<div class="code-sample"><a href="%id_link%"><img src="%image%"><div class="code-sample-text"><h3>%title%</h3></div></a><p>%desc%</p></div>',
+			'sample': '<div class="code-sample"><a href="%id_link%"><img src="%small_image%"><div class="code-sample-text"><h3>%title%</h3></div></a><p>%desc%</p></div>',
 			'end': '</div>'
 		},
 		'code': {
@@ -68,6 +68,7 @@ var projects = {
 	'samples': [
 		{
 			'title': 'Sinking City',
+			'smallImage': '',
 			'image': 'images/sinkingcity-site.png',
 			'description': "The University of Miami's Graduate lit mag.",
 			'link': 'http://sinkingcity.github.io',
@@ -131,14 +132,15 @@ var projects = {
 			.replace('%id_link%', ('/code.html#' + sample.id))
 			.replace('%id%', sample.id)
 			.replace('%title%', sample.title)
-			.replace('%desc%', sample.description)
-			.replace('%site_image%', sample.siteImage);
+			.replace('%desc%', sample.description);
 
-		if (i % 1 === 0) {
-			HTMLString = HTMLString.replace('%float%', 'float-left');
+		if(sample.smallImage) {
+			HTMLString = HTMLString.replace('%small_image%', sample.smallImage);
 		} else {
-			HTMLString = HTMLString.replace('%float%', 'float-right');
+			HTMLString = HTMLString.replace('%small_image%', 'images/dummy-index.png');
 		}
+
+		console.log (HTMLString);
 
 		return HTMLString;
 	},
