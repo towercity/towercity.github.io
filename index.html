@@ -53,10 +53,18 @@
 			var scrollTop = $(document).scrollTop();
 			console.log("scroll: " + scrollTop);
 
-			if ($(window).width() > 702) { // Scroll points for when header is single line
+			if ($(window).width() > 702) { // Scroll points for when headertext is single line
 				if (scrollTop > 495) {
 					$langs.addClass("lang-background").addClass("fixed-lang");
 				} else if (scrollTop > 332) {
+					$langs.addClass("fixed-lang").removeClass("lang-background");
+				} else {
+					$langs.removeClass("fixed-lang").removeClass("lang-background");
+				}
+			} else if ($(window).width() > 0) { // Scroll points for when headertext is two lines
+				if (scrollTop > 495) {
+					$langs.addClass("lang-background").addClass("fixed-lang");
+				} else if (scrollTop > 421) {
 					$langs.addClass("fixed-lang").removeClass("lang-background");
 				} else {
 					$langs.removeClass("fixed-lang").removeClass("lang-background");
