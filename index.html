@@ -47,7 +47,7 @@
 	<script>
 		var $langs = $("#lang-list");
 
-
+		// Function to keep the language list hugging the top of the screen onec scrolled past
 		$(document).on("scroll", function(e) {
 			// Set pixels from top into an easily accessed variable
 			var scrollTop = $(document).scrollTop();
@@ -61,11 +61,17 @@
 				} else {
 					$langs.removeClass("fixed-lang").removeClass("lang-background");
 				}
-			} else if ($(window).width() > 0) { // Scroll points for when headertext is two lines
+			} else if ($(window).width() > 475) { // Scroll points for when headertext is two lines
 				if (scrollTop > 495) {
 					$langs.addClass("lang-background").addClass("fixed-lang");
 				} else if (scrollTop > 421) {
 					$langs.addClass("fixed-lang").removeClass("lang-background");
+				} else {
+					$langs.removeClass("fixed-lang").removeClass("lang-background");
+				}
+			} else { // Scroll points for the smallest of screens
+				if (scrollTop > 256) {
+					$langs.addClass("lang-background").addClass("fixed-lang");
 				} else {
 					$langs.removeClass("fixed-lang").removeClass("lang-background");
 				}
