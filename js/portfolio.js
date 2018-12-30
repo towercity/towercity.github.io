@@ -139,9 +139,7 @@ var projects = {
 		} else {
 			HTMLString = HTMLString.replace('%small_image%', 'images/dummy-index.png');
 		}
-
-		console.log (HTMLString);
-
+		
 		return HTMLString;
 	},
 
