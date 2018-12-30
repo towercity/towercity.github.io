@@ -168,7 +168,7 @@ article p {
 	text-decoration: none;
 	color: #3B7D79;
 }
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 475px) {
 	.header-links ul {
 		margin-top: 0;
 	}
@@ -313,16 +313,6 @@ article {
 }
 
 @media screen and (max-width: 620px) {
-	.title {
-		font-size: 45px;
-		line-height: 45px;
-	}
-	.subtitle {
-		font-size: 15px;
-		top: 0px;
-		left: 0;
-		margin-bottom: 20px;
-	}
 	.code-sample {
 		width: 100%;
 		padding: 15px 20px 15px 10px;
@@ -333,6 +323,16 @@ article {
 }
 
 @media screen and (max-width: 475px) {
+	.title {
+		font-size: 45px;
+		line-height: 45px;
+	}
+	.subtitle {
+		font-size: 15px;
+		top: 0px;
+		left: 0;
+		margin-bottom: 20px;
+	}
 	.code-sample img {
 		float: none;
 		margin: 15px auto;

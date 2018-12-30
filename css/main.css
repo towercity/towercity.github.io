@@ -85,12 +85,8 @@ footer {
 	opacity: 0.33;
 	filter: invert(100%);
 }
-@media screen and (max-width: 850px) {
-	.article-right {
-		padding-left: 0;
-	}
-}
-@media screen and (max-width: 525px) {
+
+@media screen and (max-width: 475px) {
 	.header-links ul {
 		margin-top: 0;
 	}
