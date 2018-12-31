@@ -62,7 +62,7 @@ h2 {
 	left: 0;
 	top: 0;
 	width: 100vw;
-	background: url("../images/focus.jpg") center left no-repeat;
+	background: url('../images/focus-big.jpg') center center no-repeat;
 	z-index: -1;
 }
 .logo {
@@ -294,6 +294,18 @@ article {
 	font-size: 25px;
 	text-align: right;
 	text-transform: capitalize;
+}
+
+@media screen and (max-width: 2200px) {
+	.header-img {
+		background: url("../images/focus-med.jpg") center center no-repeat;
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	.header-img {
+		background: url("../images/focus-sml.jpg") center center no-repeat;
+	}
 }
 
 @media screen and (max-width: 925px) {
