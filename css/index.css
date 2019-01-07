@@ -16,7 +16,7 @@ body, div, li, h1, h2 {
 }
 
 body {
-  background-color: #73cac4;
+  background-color: #736983;
 }
 
 h1, h2 {
@@ -59,7 +59,7 @@ h1, h2 {
   left: 0;
   top: 0;
   width: 100vw;
-  background-color: #73cac4;
+  background-color: #736983;
   opacity: 0.9;
   z-index: -1;
 }
@@ -125,11 +125,11 @@ h1, h2 {
   font-family: 'Arial', sans-serif;
   display: inline-block;
   width: 120px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #f3faea;
 }
 
 .header-links a {
-  color: white;
+  color: #f3faea;
   text-decoration: none;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
@@ -152,7 +152,6 @@ article {
   width: 100%;
   margin: 0;
   top: 525px;
-  background-color: white;
   margin-bottom: 0;
 }
 
@@ -163,13 +162,13 @@ article {
 }
 
 .title {
-  color: white;
+  color: #f3faea;
   font-size: 90px;
   line-height: 90px;
 }
 
 .subtitle {
-  color: white;
+  color: #f3faea;
   font-weight: lighter;
   position: relative;
   top: -10px;
@@ -180,7 +179,7 @@ article {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  color: white;
+  color: #f3faea;
   padding: 5px 0;
   z-index: 100;
 }
@@ -192,7 +191,7 @@ article {
 }
 
 #lang-list.lang-background {
-  background-color: #73cac4;
+  background-color: #736983;
 }
 
 #lang-list ul {
@@ -216,6 +215,10 @@ article {
   height: 350px;
 }
 
+article {
+  background-color: #847e8f;
+}
+
 article p {
   padding-top: 25px;
   text-align: justify;
@@ -232,7 +235,7 @@ article p {
   width: calc(50% - 30px);
   margin: 15px;
   padding: 15px 20px 15px 10px;
-  background-color: grey;
+  background-color: #b0a2b7;
 }
 
 .code-sample a {
