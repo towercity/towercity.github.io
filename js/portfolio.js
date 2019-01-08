@@ -197,6 +197,15 @@ var projects = {
 
 		HTMLString += HTMLobject.end;
 
+		// checks if HTMLString is blank (string is what a blank project array
+		// produces), then removes hash and reloads page to show all
+		// TODO: make it less janky
+		if(HTMLString === '<div class="row code-row"></div>') {
+			console.log('check');
+			window.location.hash = '';
+			location.reload();
+		}
+
 		// Empty the div then rebuild it
 		$('#code-projects').empty();
 		$('#code-projects').append(HTMLString);
