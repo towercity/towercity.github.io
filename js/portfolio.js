@@ -198,8 +198,12 @@ var projects = {
 		$('#code-projects').append(HTMLString);
 	},
 
+	// Pulls the hash from the url, and uses it to filter by lang
+	// TODO: make non-case-sensitive
 	'init': function (page) {
-		// Runs with language='' so this.render() prints all available projects
-		this.render('', page);
+		var lang = window.location.hash;
+		lang = lang.slice(1, lang.length);
+
+		this.render(lang, page);
 	}
 };
