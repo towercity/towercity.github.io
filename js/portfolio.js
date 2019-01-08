@@ -68,8 +68,8 @@ var projects = {
 			'end': '</div>'
 		},
 		'code': {
-			'start': '<div class="section"><div class="title-wrap"><h1 class="title">portfolio</h1></div></div>',
-			'sample': '<div class="section %even?%" id="%id%"><div class="code-image"><img src="%site_image%" class="code-sample-image"></div><div class="code-sample-text"><h2>%title%</h2><p>%desc%</p><a href="%link%" target="_blank">View More</a></div></div><div class="clear-both"></div>',
+			'start': '<div class="section"><h1 class="title">portfolio</h1></div>',
+			'sample': '<div class="section %even?%" id="%id%"><h2>%title%</h2><div class="code-image"><img src="%site_image%"></div><p>%desc%</p><a href="%link%" target="_blank">View More</a></div><div class="clear-both"></div>',
 			'end': '<div class="section"><div class="contact"><p>Let\'s talk about your project. <a href="mailto:matthewjnerger3@gmail.com">Drop me an email!</a></p></div></div>'
 		}
 	},
@@ -81,8 +81,8 @@ var projects = {
 	'samples': [
 		{
 			'title': 'Sinking City',
-			'smallImage': '',
-			'image': 'images/sinkingcity-site.png',
+			'smallImage': 'images/sinking-wp-small.jpg',
+			'image': 'images/sinking-wp-large.jpg',
 			'description': "The University of Miami's Graduate lit mag.",
 			'link': 'http://sinkingcitylitmag.com/',
 			'id': 'sinking-city-wordpress',
@@ -157,7 +157,7 @@ var projects = {
 	// or portfolio), then returns a processed HTML string of the portfolio for the page
 	// to use
 	'drawProjects': function (sample, page) {
-		var HTMLString = projects.HTML[page].sample.replace('%image%', sample.image)
+		var HTMLString = projects.HTML[page].sample.replace('%site_image%', sample.image)
 			.replace('%link%', sample.link)
 			.replace('%id_link%', ('/code.html#' + sample.id))
 			.replace('%id%', sample.id)
