@@ -5,7 +5,7 @@ var languages = {
 		'end': '<li id="view-all">View All</li></ul>'
 	},
 	'langs': [
-    	'HTML', 'jQuery', 'Angular', 'Python'
+    	'HTML', 'jQuery', 'Angular', 'Wordpress'
 	],
 
 	// adds all the langs in this.langs to the lang list bar
@@ -72,7 +72,8 @@ var projects = {
 	// The actual samples. Printed to the page in order of array
 	// 'smallImage' goes on the index page, 'image' on the code page,
 	// id is the div id, title and description are self-explanatory.
-	// langs must be in languages.langs to be seen/accessible on the page
+	// Langs must be in languages.langs to be seen/accessible on the page, but it's
+	// worthwhile to keep them all listed, for future uses
 	'samples': [
 		{
 			'title': 'Sinking City',
@@ -80,11 +81,30 @@ var projects = {
 			'image': 'images/sinkingcity-site.png',
 			'description': "The University of Miami's Graduate lit mag.",
 			'link': 'http://sinkingcitylitmag.com/',
-			'id': 'sinking-city',
-			'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
+			'id': 'sinking-city-wordpress',
+			'langs': ['HTML', 'CSS', 'Wordpress']
     },
 		{
+			'title': 'author blog',
+			'smallImage': '',
+			'image': 'images/author-site.png',
+			'description': 'A simple biography/blog page for an author.',
+			'link': 'http://www.jakobkonger.com/',
+			'id': 'author-blog',
+			'langs': ['HTML', 'CSS', 'Javascript', 'Jekyll']
+    },
+		{
+			'title': 'Dexter Learn',
+			'smallImage': '',
+			'image': '',
+			'description': 'A (fake) machine learning app',
+			'link': 'http://www.matthewjnerger.com/machine-learning/',
+			'id': 'dexter-learn',
+			'langs' : ['HTML', 'CSS', 'Javascript', 'Bootstrap', 'jQuery']
+		},
+		{
 			'title': 'audio portfolio',
+			'smallImage': '',
 			'image': 'images/audio-site.png',
 			'description': 'A web portfolio with a full working audio player.',
 			'link': 'http://towercity.github.io/web-portfolio',
@@ -92,31 +112,26 @@ var projects = {
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 1', 'jQuery']
     },
 		{
-			'title': 'story organizer',
-			'image': 'images/organizer-site.png',
-			'description': 'A web app for organizing short stories.',
-			'link': 'http://towercity.github.io/story-organizer',
-			'id': 'story-org',
-			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 2', 'Typescript']
+			'title': 'the miami hurricane',
+			'smallImage': '',
+			'image': '',
+			'description': 'The University of Miami\'s student newspaper.',
+			'link': 'https://www.themiamihurricane.com/',
+			'id': 'miami-hurricane',
+			'langs': ['HTML', 'CSS', 'Wordpress']
     },
 		{
-			'title': 'author blog',
-			'image': 'images/author-site.png',
-			'description': 'A simple biography/blog page for an author.',
-			'link': 'http://towercity.github.io/author-blog',
-			'id': 'author-blog',
-			'langs': ['HTML', 'CSS', 'Javascript', 'Jekyll']
-    },
-		{
-			'title': 'cat clicker',
-			'image': 'images/cat-site.png',
-			'description': 'A simple cat clicker game built with knockout.js and styled with material design.',
-			'link': 'http://towercity.github.io/cat-clicker',
-			'id': 'cat',
-			'langs': ['HTML', 'CSS', 'Javascript', 'knockout.js', 'material design']
+			'title': 'Sinking City original website',
+			'smallImage': '',
+			'image': 'images/sinkingcity.png',
+			'description': "The origianl sinking city website, before Wordpress migration. Built from the ground up, with poetry and fiction templates for easy extendability.",
+			'link': 'http://sinkingcity.github.io',
+			'id': 'sinking-city-vanilla',
+			'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
     },
 		{
 			'title': 'snake',
+			'smallImage': '',
 			'image': 'images/snake-site.png',
 			'description': 'A clone of the classic game snake built on the HTML5 canvas.',
 			'link': 'http://towercity.github.io/snake',
@@ -124,12 +139,13 @@ var projects = {
 			'langs': ['HTML', 'HTML5 Canvas', 'Javascript']
     },
 		{
-			'title': 'sonnet generator',
-			'image': 'images/shakespeare-site.png',
-			'description': 'Generates a new Shakesperian sonnet using Markov chains',
-			'link': 'http://github.com/towercity/sonnet-generator',
-			'id': 'sonnets',
-			'langs': ['Python']
+			'title': 'if on a winter\'s night',
+			'smallImage': '',
+			'image': '',
+			'description': 'A text analysis tool based off of a program in Italo Calvin\'s "If on a Winter\'s Night..."',
+			'link': 'https://github.com/towercity/If-on-a-winters-night',
+			'id': 'winters-night',
+			'langs': ['HTML', 'CSS', 'NodeJs']
     }
   ],
 
