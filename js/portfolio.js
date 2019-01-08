@@ -69,7 +69,7 @@ var projects = {
 		},
 		'code': {
 			'start': '<div class="section"><div class="title-wrap"><h1 class="title">portfolio</h1></div></div>',
-			'sample': '<div class="section %even?%" id="%id%"><div class="code-image"><div class="browser"><img src="images/svg/dots.svg"></div><img src="%site_image%" class="code-sample-image"></div><div class="code-sample-text"><h3>%title%</h3><p>%desc%</p><a href="%link%" target="_blank">View More</a></div></div><div class="clear-both"></div>',
+			'sample': '<div class="section %even?%" id="%id%"><div class="code-image"><img src="%site_image%" class="code-sample-image"></div><div class="code-sample-text"><h2>%title%</h2><p>%desc%</p><a href="%link%" target="_blank">View More</a></div></div><div class="clear-both"></div>',
 			'end': '<div class="section"><div class="contact"><p>Let\'s talk about your project. <a href="mailto:matthewjnerger3@gmail.com">Drop me an email!</a></p></div></div>'
 		}
 	},
