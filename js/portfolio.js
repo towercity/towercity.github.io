@@ -70,13 +70,16 @@ var projects = {
 		}
 	},
 	// The actual samples. Printed to the page in order of array
+	// 'smallImage' goes on the index page, 'image' on the code page,
+	// id is the div id, title and description are self-explanatory.
+	// langs must be in languages.langs to be seen/accessible on the page
 	'samples': [
 		{
 			'title': 'Sinking City',
 			'smallImage': '',
 			'image': 'images/sinkingcity-site.png',
 			'description': "The University of Miami's Graduate lit mag.",
-			'link': 'http://sinkingcity.github.io',
+			'link': 'http://sinkingcitylitmag.com/',
 			'id': 'sinking-city',
 			'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
     },
