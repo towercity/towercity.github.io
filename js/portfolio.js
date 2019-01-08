@@ -29,6 +29,8 @@ var languages = {
 			var hash = '#' + lang;
 
 			$(hash).click(function () {
+				// Add the hash to the url
+				window.location.hash = hash;
 				projects.render(lang, 'index');
 
 				// If the user hasn't scrolled all the way to the portfolio, scrolls to
@@ -43,6 +45,8 @@ var languages = {
 
 		// Shows all projects of all languages when clicking on view all
 		$('#view-all').click(function () {
+			// Empty out the url hash
+			window.location.hash = '';
 			projects.render('', 'index');
 
 			if (scrollPosition < 490) {
