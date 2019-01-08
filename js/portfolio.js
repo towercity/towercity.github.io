@@ -8,9 +8,8 @@ var languages = {
     	'HTML', 'jQuery', 'Angular', 'Python'
 	],
 
-
+	// adds all the langs in this.langs to the lang list bar
 	'render': function () {
-		//add html to page
 		var HTMLString = this.html.start;
 
 		this.langs.forEach(function (lang) {
@@ -32,6 +31,8 @@ var languages = {
 			$(hash).click(function () {
 				projects.render(lang, 'index');
 
+				// If the user hasn't scrolled all the way to the portfolio, scrolls to
+				// it for them
 				if (scrollPosition < 490) {
 					$('html, body').animate({
 						scrollTop: 496
@@ -40,6 +41,7 @@ var languages = {
 			});
 		});
 
+		// Shows all projects of all languages when clicking on view all
 		$('#view-all').click(function () {
 			projects.render('', 'index');
 
@@ -53,6 +55,8 @@ var languages = {
 };
 
 var projects = {
+	// The basic HTML that populates the page; %'d sections are replaced with the
+	// information from the 'samples' section
 	'HTML': {
 		'index': {
 			'start': '<div class="row code-row">',
@@ -65,6 +69,7 @@ var projects = {
 			'end': '<div class="section"><div class="contact"><p>Let\'s talk about your project. <a href="mailto:matthewjnerger3@gmail.com">Drop me an email!</a></p></div></div>'
 		}
 	},
+	// The actual samples. Printed to the page in order of array
 	'samples': [
 		{
 			'title': 'Sinking City',
@@ -125,8 +130,10 @@ var projects = {
     }
   ],
 
-	'drawProjects': function (sample, i, page) {
-
+	// Takes in a sample (from projects.samples) and which page the user is on (index
+	// or portfolio), then returns a processed HTML string of the portfolio for the page
+	// to use
+	'drawProjects': function (sample, page) {
 		var HTMLString = projects.HTML[page].sample.replace('%image%', sample.image)
 			.replace('%link%', sample.link)
 			.replace('%id_link%', ('/code.html#' + sample.id))
@@ -134,45 +141,46 @@ var projects = {
 			.replace('%title%', sample.title)
 			.replace('%desc%', sample.description);
 
+		// Puts in a dummy image, if no small image available. Hopefully I never have
+		// to use this, but why not be safe?
 		if(sample.smallImage) {
 			HTMLString = HTMLString.replace('%small_image%', sample.smallImage);
 		} else {
 			HTMLString = HTMLString.replace('%small_image%', 'images/dummy-index.png');
 		}
-		
+
 		return HTMLString;
 	},
 
 	'render': function (language, page) {
+		// localizes the HTML object
 		var HTMLobject = this.HTML[page];
-
 		var HTMLString = HTMLobject.start;
 
-		var idx = 0;
-
+		// Adds all projects to the HTML string
 		if (language === 'all' | language === '') {
 			this.samples.forEach(function (sample) {
-				HTMLString += projects.drawProjects(sample, idx, page);
-				idx++;
+				HTMLString += projects.drawProjects(sample, page);
 			});
 
+		// Prints only codes of the specified language to the HTML string
 		} else {
-			var idx = 0;
 			this.samples.forEach(function (sample) {
 				if (sample.langs.indexOf(language) > -1) {
-					HTMLString += projects.drawProjects(sample, idx, page);
-					idx++;
+					HTMLString += projects.drawProjects(sample, page);
 				}
 			});
 		}
 
 		HTMLString += HTMLobject.end;
 
+		// Empty the div then rebuild it
 		$('#code-projects').empty();
 		$('#code-projects').append(HTMLString);
 	},
 
 	'init': function (page) {
+		// Runs with language='' so this.render() prints all available projects
 		this.render('', page);
 	}
 };
