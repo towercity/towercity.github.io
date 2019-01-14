@@ -83,7 +83,7 @@ var projects = {
 			'title': 'Sinking City',
 			'smallImage': 'images/sinking-wp-small.jpg',
 			'image': 'images/sinking-wp-large.jpg',
-			'description': "The University of Miami's Graduate lit mag.",
+			'description': "The University of Miami's Graduate literary magazine.<br><br>I migrated the site from a static page to a Wordpress blog, and since then have maintained the site and updated the content for each twice-yearly issue.",
 			'link': 'http://sinkingcitylitmag.com/',
 			'id': 'sinking-city-wordpress',
 			'langs': ['HTML', 'CSS', 'Wordpress']
