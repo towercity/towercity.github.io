@@ -159,7 +159,8 @@ var projects = {
 	'drawProjects': function (sample, page) {
 		var HTMLString = projects.HTML[page].sample.replace('%site_image%', sample.image)
 			.replace('%link%', sample.link)
-			.replace('%id_link%', ('/code.html#' + sample.id))
+			// .replace('%id_link%', ('/code.html#' + sample.id))
+			.replace('%id_link%', sample.link)
 			.replace('%id%', sample.id)
 			.replace('%title%', sample.title)
 			.replace('%desc%', sample.description);
