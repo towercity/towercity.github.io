@@ -95,7 +95,7 @@ var projects = {
 			'title': 'author blog',
 			'smallImage': 'images/konger.jpg',
 			'image': 'images/author-site.png',
-			'description': 'A simple biography/blog page for an author.',
+			'description': 'A simple biography page for a literary author which includes a fully operation blog with rss capabilities. Built with Jekyll through GitHub pages.',
 			'link': 'http://www.jakobkonger.com/',
 			'id': 'author-blog',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Jekyll']
