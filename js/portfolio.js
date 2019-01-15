@@ -113,7 +113,7 @@ var projects = {
 			'title': 'audio portfolio',
 			'smallImage': 'images/audio-site.jpg',
 			'image': 'images/audio-site.png',
-			'description': 'An audio web portfolio built with Angular 1 and featuring both responsive design and a fully function audio player built exclusively for the site.',
+			'description': 'An audio web portfolio built with Angular 1 and featuring both responsive design and a fully function audio player built from the ground up (minus jQuery, of course) exclusively for the site.',
 			'link': 'http://towercity.github.io/web-portfolio',
 			'id': 'portfolio',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular', 'jQuery']
