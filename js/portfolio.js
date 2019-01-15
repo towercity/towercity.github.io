@@ -102,9 +102,9 @@ var projects = {
     },
 		{
 			'title': 'Dexter Learn',
-			'smallImage': '',
+			'smallImage': 'images/dexter-learn.jpg',
 			'image': '',
-			'description': 'A (fake) machine learning app',
+			'description': 'A fake machine learning app which has no functionality and works as a something halfway between a do-nothing machine and a bad joke. Also, more seriously, I built it as a way to practice designing with Bootstrap, as well a few javascript libraries.',
 			'link': 'http://www.matthewjnerger.com/machine-learning/',
 			'id': 'dexter-learn',
 			'langs' : ['HTML', 'CSS', 'Javascript', 'Bootstrap', 'jQuery']
