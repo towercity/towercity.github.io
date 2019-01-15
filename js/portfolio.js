@@ -93,7 +93,7 @@ var projects = {
     },
 		{
 			'title': 'author blog',
-			'smallImage': '',
+			'smallImage': 'images/konger.jpg',
 			'image': 'images/author-site.png',
 			'description': 'A simple biography/blog page for an author.',
 			'link': 'http://www.jakobkonger.com/',
