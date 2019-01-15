@@ -120,9 +120,9 @@ var projects = {
     },
 		{
 			'title': 'the miami hurricane',
-			'smallImage': '',
+			'smallImage': 'images/tmh.png',
 			'image': '',
-			'description': 'The University of Miami\'s student newspaper.',
+			'description': 'The University of Miami\'s student-run newspaper. I\'m currently the webmaster, and I manage the paper\'s wordpress blog, and occasionally help udpate advertisement materials.',
 			'link': 'https://www.themiamihurricane.com/',
 			'id': 'miami-hurricane',
 			'langs': ['HTML', 'CSS', 'Wordpress']
