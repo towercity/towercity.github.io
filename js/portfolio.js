@@ -29,7 +29,10 @@ var languages = {
 			var hash = '#' + lang;
 
 			$(hash).click(function () {
+				console.log("clicked " + lang);
+
 				// Add the hash to the url
+
 				window.location.hash = hash;
 				projects.render(lang, 'index');
 
@@ -64,7 +67,7 @@ var projects = {
 	'HTML': {
 		'index': {
 			'start': '<div class="row code-row">',
-			'sample': '<div class="code-sample"><a href="%id_link%" target="_none"><img src="%small_image%"><div class="code-sample-text"><h3>%title%</h3></div></a><p>%desc%</p></div>',
+			'sample': '<div class="code-sample"><a href="%id_link%" target="_none"><img src="%small_image%"><div class="code-sample-text"><h3>%title%</h3></div></a><p>%desc%</p><ul class="code-tags">%langs%</ul></div>',
 			'end': '</div>'
 		},
 		'code': {
@@ -173,6 +176,34 @@ var projects = {
 			HTMLString = HTMLString.replace('%small_image%', 'images/dummy-index.png');
 		}
 
+		// Checks the langs array, adds a li for each to the string
+		var langList = "";
+		sample.langs.forEach(function(lang) {
+			langList += "<li id='" + lang + "'>" + lang + "</li>";
+
+				var hash = '#' + lang;
+				console.log(hash);
+
+				$(hash).click(function () {
+					console.log("clicked " + lang);
+
+					// Add the hash to the url
+
+					window.location.hash = hash;
+					projects.render(lang, 'index');
+
+					// If the user hasn't scrolled all the way to the portfolio, scrolls to
+					// it for them
+					if (scrollPosition < 490) {
+						$('html, body').animate({
+							scrollTop: 496
+						}, 250);
+					}
+				});
+
+		});
+		HTMLString = HTMLString.replace('%langs%', langList);
+
 		return HTMLString;
 	},
 
@@ -202,7 +233,6 @@ var projects = {
 		// produces), then removes hash and reloads page to show all
 		// TODO: make it less janky
 		if(HTMLString === '<div class="row code-row"></div>') {
-			console.log('check');
 			window.location.hash = '';
 			location.reload();
 		}

@@ -175,13 +175,17 @@ article {
   left: 115px;
 }
 
-#lang-list {
+#lang-list,
+.code-tags {
   width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  color: #f3faea;
   padding: 5px 0;
   z-index: 100;
+}
+
+#lang-list {
+  color: #f3faea;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #lang-list.fixed-lang {
@@ -199,10 +203,14 @@ article {
   padding: 0;
 }
 
-#lang-list li {
+#lang-list li,
+.code-tags li {
   display: inline-block;
-  cursor: pointer;
   padding: 0 5px;
+}
+
+#lang-list li {
+  cursor: pointer;
 }
 
 .sub-heading {
@@ -259,6 +267,10 @@ article p {
   font-size: 25px;
   text-align: right;
   text-transform: capitalize;
+}
+
+.code-tags {
+  font-size: .75em;
 }
 
 @media screen and (max-width: 475px) {}
