@@ -111,12 +111,12 @@ var projects = {
 		},
 		{
 			'title': 'audio portfolio',
-			'smallImage': '',
+			'smallImage': 'images/audio-site.jpg',
 			'image': 'images/audio-site.png',
-			'description': 'A web portfolio with a full working audio player.',
+			'description': 'An audio web portfolio built with Angular 1 and featuring both responsive design and a fully function audio player built exclusively for the site.',
 			'link': 'http://towercity.github.io/web-portfolio',
 			'id': 'portfolio',
-			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular 1', 'jQuery']
+			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular', 'jQuery']
     },
 		{
 			'title': 'the miami hurricane',
