@@ -147,9 +147,9 @@ var projects = {
     },
 		{
 			'title': 'if on a winter\'s night',
-			'smallImage': '',
+			'smallImage': 'images/winters-night.jpg',
 			'image': '',
-			'description': 'A text analysis tool based off of a program in Italo Calvin\'s "If on a Winter\'s Night..."',
+			'description': 'A node-based clone of the word counting program described in Italo Calvino\'s <i>If on a winter\'s night a traveler...</i> Takes in a text and displays data displays a graph of most commonly used words, excluding such meaning-sparse words such as \'as\' or \'or\'.',
 			'link': 'https://github.com/towercity/If-on-a-winters-night',
 			'id': 'winters-night',
 			'langs': ['HTML', 'CSS', 'NodeJs']
