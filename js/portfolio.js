@@ -138,9 +138,9 @@ var projects = {
     },
 		{
 			'title': 'snake',
-			'smallImage': '',
+			'smallImage': 'images/snake.jpg',
 			'image': 'images/snake-site.png',
-			'description': 'A clone of the classic game snake built on the HTML5 canvas.',
+			'description': 'A clone of the classic game snake built on the HTML5 canvas as a way to practice the HTML5 canvas and have fun doing it, and spread that fun to the net by creating another open-access, easy to play version of the classic game snake.',
 			'link': 'http://towercity.github.io/snake',
 			'id': 'snake',
 			'langs': ['HTML', 'HTML5 Canvas', 'Javascript']
