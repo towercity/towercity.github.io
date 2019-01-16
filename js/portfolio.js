@@ -129,9 +129,9 @@ var projects = {
     },
 		{
 			'title': 'Sinking City original website',
-			'smallImage': '',
+			'smallImage': 'images/sinking-van.jpg',
 			'image': 'images/sinkingcity.png',
-			'description': "The origianl sinking city website, before Wordpress migration. Built from the ground up, with poetry and fiction templates for easy extendability.",
+			'description': "The origianl sinking city website, before Wordpress migration. I built this site from the ground up based on a wireframe I was given, and created poetry and fiction templates for easy extendability.<br><br> In addition, I created a number of styling rules to display the complex layout of many of our poems correctly, which have since been adapted for use on the current Sinking City wordpress site.",
 			'link': 'http://sinkingcity.github.io',
 			'id': 'sinking-city-vanilla',
 			'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
