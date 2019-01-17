@@ -95,7 +95,7 @@ var projects = {
 			'title': 'author blog',
 			'smallImage': 'images/konger.jpg',
 			'image': 'images/author-site.png',
-			'description': 'A simple biography page for a literary author which includes a fully operation blog with rss capabilities. Built with Jekyll through GitHub pages.',
+			'description': 'A simple biography page for a literary author which includes a fully operational blog with rss capabilities. Built with Jekyll through GitHub pages.',
 			'link': 'http://www.jakobkonger.com/',
 			'id': 'author-blog',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Jekyll']
@@ -104,7 +104,7 @@ var projects = {
 			'title': 'Dexter Learn',
 			'smallImage': 'images/dexter-learn.jpg',
 			'image': '',
-			'description': 'A fake machine learning app which has no functionality and works as a something halfway between a do-nothing machine and a bad joke. Also, more seriously, I built it as a way to practice designing with Bootstrap, as well a few javascript libraries.',
+			'description': 'A fake machine learning app which has no functionality and works as something halfway between a do-nothing machine and a bad joke. Also, more seriously, I built it as a way to practice designing on top of Bootstrap, as well a few javascript libraries.',
 			'link': 'http://www.matthewjnerger.com/machine-learning/',
 			'id': 'dexter-learn',
 			'langs' : ['HTML', 'CSS', 'Javascript', 'Bootstrap', 'jQuery']
@@ -113,7 +113,7 @@ var projects = {
 			'title': 'audio portfolio',
 			'smallImage': 'images/audio-site.jpg',
 			'image': 'images/audio-site.png',
-			'description': 'An audio web portfolio built with Angular 1 and featuring both responsive design and a fully function audio player built from the ground up (minus jQuery, of course) exclusively for the site.',
+			'description': 'An audio web portfolio built with Angular 1, featuring both responsive design and a fully function audio player built from the ground up (minus jQuery, of course) exclusively for the site.',
 			'link': 'http://towercity.github.io/web-portfolio',
 			'id': 'portfolio',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular', 'jQuery']
@@ -122,16 +122,16 @@ var projects = {
 			'title': 'the miami hurricane',
 			'smallImage': 'images/tmh.png',
 			'image': '',
-			'description': 'The University of Miami\'s student-run newspaper. I\'m currently the webmaster, and I manage the paper\'s wordpress blog, and occasionally help udpate advertisement materials.',
+			'description': 'The University of Miami\'s student-run newspaper. I\'m currently the webmaster, and I manage the paper\'s wordpress blog, and occasionally help update advertisement materials.',
 			'link': 'https://www.themiamihurricane.com/',
 			'id': 'miami-hurricane',
 			'langs': ['HTML', 'CSS', 'Wordpress']
     },
 		{
-			'title': 'Sinking City original website',
+			'title': 'Sinking City (original site)',
 			'smallImage': 'images/sinking-van.jpg',
 			'image': 'images/sinkingcity.png',
-			'description': "The origianl sinking city website, before Wordpress migration. I built this site from the ground up based on a wireframe I was given, and created poetry and fiction templates for easy extendability.<br><br> In addition, I created a number of styling rules to display the complex layout of many of our poems correctly, which have since been adapted for use on the current Sinking City wordpress site.",
+			'description': "The origianl Sinking City website, before Wordpress migration. I built this site from the ground up based on a wireframe I was given, and developed poetry and fiction templates for easy extendability.<br><br> In addition, I created a number of styling rules to display the complex layout of many of our poems correctly, which have since been adapted for use on the current Sinking City wordpress site.",
 			'link': 'http://sinkingcity.github.io',
 			'id': 'sinking-city-vanilla',
 			'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
@@ -140,7 +140,7 @@ var projects = {
 			'title': 'snake',
 			'smallImage': 'images/snake.jpg',
 			'image': 'images/snake-site.png',
-			'description': 'A clone of the classic game snake built on the HTML5 canvas as a way to practice the HTML5 canvas and have fun doing it, and spread that fun to the net by creating another open-access, easy to play version of the classic game snake.',
+			'description': 'A clone of the classic game Snake built on the HTML5 canvas as a way to practice the HTML5 canvas and have fun doing so, as well as spread that fun to the net by creating another open-access, easy to play version of the classic game Snake.',
 			'link': 'http://towercity.github.io/snake',
 			'id': 'snake',
 			'langs': ['HTML', 'HTML5 Canvas', 'Javascript']
@@ -149,7 +149,7 @@ var projects = {
 			'title': 'if on a winter\'s night',
 			'smallImage': 'images/winters-night.jpg',
 			'image': '',
-			'description': 'A node-based clone of the word counting program described in Italo Calvino\'s <i>If on a winter\'s night a traveler...</i> Takes in a text and displays data displays a graph of most commonly used words, excluding such meaning-sparse words such as \'as\' or \'or\'.',
+			'description': 'A node-based clone of the word counting program described in Italo Calvino\'s <i>If on a winter\'s night a traveler...</i> Takes in a text and displays the data as a graph of the most commonly used words, excluding such meaning-sparse words such as \'as\' or \'or\'.',
 			'link': 'https://github.com/towercity/If-on-a-winters-night',
 			'id': 'winters-night',
 			'langs': ['HTML', 'CSS', 'NodeJs']
