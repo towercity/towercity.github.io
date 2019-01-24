@@ -245,8 +245,10 @@ var projects = {
 	// Pulls the hash from the url, and uses it to filter by lang
 	// TODO: make non-case-sensitive
 	'init': function (page) {
-		var lang = window.location.hash;
-		lang = lang.slice(1, lang.length);
+		//var lang = window.location.hash;
+		//lang = lang.slice(1, lang.length);
+
+		lang = "all";
 
 		this.render(lang, page);
 	}
