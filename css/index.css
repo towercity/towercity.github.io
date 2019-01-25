@@ -278,12 +278,17 @@ article p {
   background-color: #736983;
   color: white;
   z-index: -3;
-  max-width: 350px;
-  left: calc(50vw - 175px);
-  margin: 50px 0;
+  right: 20vw;
+  padding-left: 20vw;
+  min-height: 100vh;
+  padding-top: 20vh;
 }
 #about h1{
   font-size: 52px;
+  text-align: right;
+}
+#about p {
+  text-align: right;
 }
 #biopic {
 	position: fixed;
