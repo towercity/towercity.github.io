@@ -58,6 +58,18 @@ var languages = {
 				}, 200);
 			}
 		});
+
+		$('#all-link').click(function () {
+			// Empty out the url hash
+			window.location.hash = '';
+			projects.render('', 'index');
+
+			if (scrollPosition < 490) {
+				$('html, body').animate({
+					scrollTop: 496
+				}, 200);
+			}
+		});
 	}
 };
 
@@ -245,10 +257,10 @@ var projects = {
 	// Pulls the hash from the url, and uses it to filter by lang
 	// TODO: make non-case-sensitive
 	'init': function (page) {
-		//var lang = window.location.hash;
-		//lang = lang.slice(1, lang.length);
+		var lang = window.location.hash;
+		lang = lang.slice(1, lang.length);
 
-		lang = "all";
+		//lang = "all";
 
 		this.render(lang, page);
 	}
