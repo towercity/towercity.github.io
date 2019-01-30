@@ -5,7 +5,7 @@ var languages = {
 		'end': '<li id="view-all">View All</li></ul>'
 	},
 	'langs': [
-    	'HTML', 'jQuery', 'Angular', 'Wordpress'
+    	'HTML', 'jQuery', 'Angular', 'WordPress'
 	],
 
 	// adds all the langs in this.langs to the lang list bar
@@ -98,16 +98,16 @@ var projects = {
 			'title': 'Sinking City',
 			'smallImage': 'images/sinking-wp-small.jpg',
 			'image': 'images/sinking-wp-large.jpg',
-			'description': "The University of Miami's Graduate literary magazine.<br><br>I migrated the site from a static page to a Wordpress blog, and since then have maintained the site and updated the content for each twice-yearly issue.",
+			'description': "The University of Miami's Graduate literary magazine.<br><br>I migrated the site from a static page to a WordPress blog, and since then have maintained the site and updated the content for each twice-yearly issue.",
 			'link': 'http://sinkingcitylitmag.com/',
 			'id': 'sinking-city-wordpress',
-			'langs': ['HTML', 'CSS', 'Wordpress']
+			'langs': ['HTML', 'CSS', 'WordPress']
     },
 		{
 			'title': 'author blog',
 			'smallImage': 'images/konger.jpg',
 			'image': 'images/author-site.png',
-			'description': 'A simple biography page for a literary author which includes a fully operational blog with rss capabilities. Built with Jekyll through GitHub pages.',
+			'description': 'A simple biography page for a literary author which includes a fully operational blog with RSS capabilities. Built with Jekyll through GitHub pages.',
 			'link': 'http://www.jakobkonger.com/',
 			'id': 'author-blog',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Jekyll']
@@ -116,7 +116,7 @@ var projects = {
 			'title': 'Dexter Learn',
 			'smallImage': 'images/dexter-learn.jpg',
 			'image': '',
-			'description': 'A fake machine learning app which has no functionality and works as something halfway between a do-nothing machine and a bad joke. Also, more seriously, I built it as a way to practice designing on top of Bootstrap, as well a few javascript libraries.',
+			'description': 'A fake machine learning app I built it as a way to practice designing on top of Bootstrap, as well a few javascript libraries. It has no real functionality and works as something halfway between a do-nothing machine and a bad joke, but I learned a lot putting it together.',
 			'link': 'http://www.matthewjnerger.com/machine-learning/',
 			'id': 'dexter-learn',
 			'langs' : ['HTML', 'CSS', 'Javascript', 'Bootstrap', 'jQuery']
@@ -125,7 +125,7 @@ var projects = {
 			'title': 'audio portfolio',
 			'smallImage': 'images/audio-site.jpg',
 			'image': 'images/audio-site.png',
-			'description': 'An audio web portfolio built with Angular 1, featuring both responsive design and a fully function audio player built from the ground up (minus jQuery, of course) exclusively for the site.',
+			'description': 'An audio web portfolio built with Angular 1, featuring both responsive design and a fully functional audio player built from the ground up exclusively for the site.',
 			'link': 'http://towercity.github.io/web-portfolio',
 			'id': 'portfolio',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular', 'jQuery']
@@ -134,7 +134,7 @@ var projects = {
 			'title': 'the miami hurricane',
 			'smallImage': 'images/tmh.png',
 			'image': '',
-			'description': 'The University of Miami\'s student-run newspaper. I\'m currently the webmaster, and I manage the paper\'s wordpress blog, and occasionally help update advertisement materials.',
+			'description': 'The University of Miami\'s student-run newspaper. I\'m currently the webmaster, and I manage the paper\'s WordPress blog, and occasionally help update advertisement materials.',
 			'link': 'https://www.themiamihurricane.com/',
 			'id': 'miami-hurricane',
 			'langs': ['HTML', 'CSS', 'Wordpress']
@@ -143,7 +143,7 @@ var projects = {
 			'title': 'Sinking City (original site)',
 			'smallImage': 'images/sc-orig.jpg',
 			'image': 'images/sinkingcity.png',
-			'description': "The origianl Sinking City website, before Wordpress migration. I built this site from the ground up based on a wireframe I was given, and developed poetry and fiction templates for easy extendability.<br><br> In addition, I created a number of styling rules to display the complex layout of many of our poems correctly, which have since been adapted for use on the current Sinking City wordpress site.",
+			'description': "The original Sinking City website, before WordPress migration. I built this site from the ground up based on a design I was given, and developed poetry and fiction templates for easy extendability.<br><br> In addition, I created a number of style rules to display the complex layout of many of our poems correctly, which have since been adapted for use on the current Sinking City WordPress site.",
 			'link': 'http://sinkingcity.github.io',
 			'id': 'sinking-city-vanilla',
 			'langs': ['HTML', 'CSS', 'Javascript', 'jQuery']
@@ -152,7 +152,7 @@ var projects = {
 			'title': 'snake',
 			'smallImage': 'images/snake.jpg',
 			'image': 'images/snake-site.png',
-			'description': 'A clone of the classic game Snake built on the HTML5 canvas as a way to practice the HTML5 canvas and have fun doing so, as well as spread that fun to the net by creating another open-access, easy to play version of the classic game Snake.',
+			'description': 'A clone of the classic game Snake built on the HTML5 canvas. I built this to learn the functions of the HTML5 canvas, as well as how to handle user input.',
 			'link': 'http://towercity.github.io/snake',
 			'id': 'snake',
 			'langs': ['HTML', 'HTML5 Canvas', 'Javascript']
@@ -161,7 +161,7 @@ var projects = {
 			'title': 'if on a winter\'s night',
 			'smallImage': 'images/winters-night.jpg',
 			'image': '',
-			'description': 'A node-based clone of the word counting program described in Italo Calvino\'s <i>If on a winter\'s night a traveler...</i> Takes in a text and displays the data as a graph of the most commonly used words, excluding such meaning-sparse words such as \'as\' or \'or\'.',
+			'description': 'A node-based clone of the word counting program described in Italo Calvino\'s <i>If on a winter\'s night a traveler...</i><br><br> The user inputs a text, essay, or story, and the program displays a graph of the story\'s most commonly used words, excluding such meaning-sparse words such as \'as\' or \'or\'.',
 			'link': 'https://github.com/towercity/If-on-a-winters-night',
 			'id': 'winters-night',
 			'langs': ['HTML', 'CSS', 'NodeJs']
