@@ -203,14 +203,14 @@ article {
   padding: 0;
 }
 
-#lang-list li,
-.code-tags li {
+#lang-list li {
+  cursor: pointer;
   display: inline-block;
   padding: 0 5px;
 }
 
-#lang-list li {
-  cursor: pointer;
+#lang-list li:hover {
+  color: #d3d3d3;
 }
 
 .sub-heading {
