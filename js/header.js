@@ -14,25 +14,26 @@ var headerView = {
 		'left': [
 			{
 				'title': 'about',
-				'url': 'bio.html',
+				'url': '#about',
 				'alt': 'biography page'
       },
-			{
-				'title': 'portfolio',
-				'url': 'code.html',
-				'alt': 'code samples'
-      }
-    ],
-		'right': [
 			{
 				'title': 'github',
 				'url': 'https://github.com/towercity',
 				'alt': 'github profile',
 				'newTab': true
+      }
+    ],
+		'right': [
+			{
+				'title': 'resume',
+				'url': 'http://www.matthewjnerger.com/resume/',
+				'alt': 'view my resume',
+				'newTab': true
       },
 			{
 				'title': 'contact',
-				'url': 'contact.html',
+				'url': 'mailto:matthewjnerger3@gmail.com',
 				'alt': 'contact me'
       }
     ]
@@ -59,6 +60,8 @@ var headerView = {
 	},
 
 	htmlFromLinks: function (link, addClass) {
+		// TODO: Add a way to slow scroll, other 'special' tags
+		
 		var linkHTML = headerView.html.link.replace("%url%", link.url).replace("%alt%", link.alt);
 
 		//Checks for current page
