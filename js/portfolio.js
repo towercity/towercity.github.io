@@ -116,7 +116,7 @@ var projects = {
 			'title': 'Dexter Learn',
 			'smallImage': 'images/dexter-learn.jpg',
 			'image': '',
-			'description': 'A fake machine learning app I built it as a way to practice designing on top of Bootstrap, as well a few javascript libraries. It has no real functionality and works as something halfway between a do-nothing machine and a bad joke, but I learned a lot putting it together.',
+			'description': 'A fake machine learning app I built it as a way to practice designing on top of Bootstrap, as well a few javascript libraries. It has no real functionality and works as something halfway between a do-nothing machine and a bad joke, but I learned a lot putting it together.<br><br> Make sure to take a look at the \'old design\' <a href="http://www.matthewjnerger.com/machine-learning/old/index.html" target="_blank">here</a>.',
 			'link': 'http://www.matthewjnerger.com/machine-learning/',
 			'id': 'dexter-learn',
 			'langs' : ['HTML', 'CSS', 'Javascript', 'Bootstrap', 'jQuery']
