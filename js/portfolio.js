@@ -128,7 +128,7 @@ var projects = {
 			'description': 'An audio web portfolio built with Angular 1, featuring both responsive design and a fully functional audio player built from the ground up exclusively for the site.',
 			'link': 'http://towercity.github.io/web-portfolio',
 			'id': 'portfolio',
-			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'Angular', 'jQuery']
+			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'jQuery']
     },
 		{
 			'title': 'the miami hurricane',
@@ -138,6 +138,14 @@ var projects = {
 			'link': 'https://www.themiamihurricane.com/',
 			'id': 'miami-hurricane',
 			'langs': ['HTML', 'CSS', 'Wordpress']
+    },
+		{
+			'title': 'anki flashcard template',
+			'smallImage': 'images/anki.jpg',
+			'description': 'A vocabulary flashcard template for <a href="https://apps.ankiweb.net/" target="_blank">Anki</a>, a spaced repetition flashcard program.<br><br>Not only is this template visually appealing for both the desktop and mobile versions of the app, it also allows its user to enter a large number of example sentences onto each vocab card they make, and provides tools such as sentence display randomization to make studying vocabulary less overwhelming.',
+			'link': 'https://github.com/towercity/anki-adaptive-vobabulary-flashcards',
+			'id': 'anki',
+			'langs': ['HTML', 'CSS', 'Javascript']
     },
 		{
 			'title': 'Sinking City (original site)',
