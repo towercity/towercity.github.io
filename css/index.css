@@ -270,7 +270,7 @@ h1, h2 {
 }
 
 #content {
-  z-index: 1;
+  z-index: 2;
 }
 
 .pagehead-wrap {
@@ -279,7 +279,7 @@ h1, h2 {
   margin: 0 auto;
   margin-top: 200px;
   text-align: center;
-  z-index: 100;
+  z-index: 1;
   position: relative;
 }
 
@@ -483,6 +483,14 @@ article p {
     margin: 0 15px 0 5px;
   }
   @media screen and (max-width: 475px) {
+		#about {
+			padding-top: 12vh;
+			right: 10vw;
+			padding-left: 10vw;
+		}
+		#about h1 {
+			padding-bottom: 7vh;
+		}
     .header-links ul {
       margin-top: 0;
     }
@@ -509,8 +517,8 @@ article p {
       margin-bottom: 20px;
     }
     article {
-      position: static;
       margin-bottom: 0;
+			top: 50%;
     }
     .code-sample img {
       float: none;
