@@ -5,7 +5,7 @@ var languages = {
 		'end': '<li id="view-all">View All</li></ul>'
 	},
 	'langs': [
-    	'HTML', 'jQuery', 'Angular', 'WordPress'
+    	'HTML', 'jQuery', 'Bootstrap', 'WordPress'
 	],
 
 	// adds all the langs in this.langs to the lang list bar
@@ -125,7 +125,7 @@ var projects = {
 			'title': 'audio portfolio',
 			'smallImage': 'images/audio-site.jpg',
 			'image': 'images/audio-site.png',
-			'description': 'An audio web portfolio built with Angular 2, featuring both responsive design and a fully functional audio player built from the ground up exclusively for the site.',
+			'description': 'An audio web portfolio built with Bootsrap and Angular 2, featuring both responsive design and a fully functional audio player built exclusively for the site.',
 			'link': 'http://towercity.github.io/web-portfolio',
 			'id': 'portfolio',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'jQuery']
