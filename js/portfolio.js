@@ -128,7 +128,7 @@ var projects = {
 			'description': 'An audio web portfolio built with Bootsrap and Angular 2, featuring both responsive design and a fully functional audio player built exclusively for the site.',
 			'link': 'http://towercity.github.io/web-portfolio',
 			'id': 'portfolio',
-			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'jQuery']
+			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'jQuery', 'Bootsrap']
     },
 		{
 			'title': 'the miami hurricane',
