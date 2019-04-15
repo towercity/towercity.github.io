@@ -125,7 +125,7 @@ var projects = {
 			'title': 'audio portfolio',
 			'smallImage': 'images/audio-site.jpg',
 			'image': 'images/audio-site.png',
-			'description': 'An audio web portfolio built with Bootsrap and Angular 2, featuring both responsive design and a fully functional audio player built exclusively for the site.',
+			'description': 'An audio portfolio built with Bootsrap and Angular 2, featuring both responsive design and a fully functional audio player built exclusively for the site.',
 			'link': 'http://towercity.github.io/web-portfolio',
 			'id': 'portfolio',
 			'langs': ['HTML', 'CSS', 'Javascript', 'Angular', 'jQuery', 'Bootsrap']
