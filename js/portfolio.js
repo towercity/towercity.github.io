@@ -172,7 +172,7 @@ var projects = {
 			'description': 'A node-based clone of the word counting program described in Italo Calvino\'s <i>If on a winter\'s night a traveler...</i><br><br> The user inputs a text, essay, or story, and the program displays a graph of the story\'s most commonly used words, excluding such meaning-sparse words such as \'as\' or \'or\'.',
 			'link': 'https://github.com/towercity/If-on-a-winters-night',
 			'id': 'winters-night',
-			'langs': ['HTML', 'CSS', 'NodeJs']
+			'langs': ['HTML', 'CSS', 'NodeJs', 'Bootstrap']
     }
   ],
 
